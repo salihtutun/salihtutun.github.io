@@ -1,11 +1,26 @@
-## Machine Learning Deployment Place
+## Salih Tutun, PhD
 
-You can use the [editor on GitHub](https://github.com/stutun1/stutun1.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Salih Tutun, Doctor of Science in Industrial and Systems Engineering, is an expert in machine learning, psycho-social risk management, and computational social science for understanding human behaviors and risk analysis. My teaching, research and work experience in academia and industry have given me numerous opportunities to utilize my skills to generate value and make an impact. Now that I am an assistant professor at Washington University in St. Louis, and I am the co-founder of dnb analytics. For more detail about my research, it (the NEPAR framework) is ranked by National News Hits at Binghamton University (Circulation: Over 9 million). It is mentioned by more than 40 news in the world and is published as the front cover at "Industrial and Systems Engineering at work" magazine. Finally, I am studying on Deep Learning and NEPAR Learning to develop new models and tools.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Education
 
-### Markdown
+State University of New York (SUNY) at Binghamton                                                                                                                         Sep 2013 – May 2018
 
+Doctor of Philosophy (PhD), Industrial and Systems Engineering, GPA: 3.81/4.00
+
+Binghamton, New York, USA
+
+Erciyes University                                                                                                                                                                                     Sep 2010 – Sep 2012
+
+Master Degree (M.Sc.), Industrial Engineering, GPA: 3.13/4.00
+
+Kayseri, Turkey
+
+Sakarya University                                                                                                                                                                                    Sep 2006 – Sep 2010
+
+Bachelor Degree (B.Sc.), Industrial Engineering, GPA: 3.25/4.00
+
+Sakarya, Turkey
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
