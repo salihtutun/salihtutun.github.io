@@ -29,10 +29,10 @@
       
       <nav class="nav-menu" id="nav-menu">
         <a href="#about" class="nav-link">About</a>
-        <a href="#nepar-sim" class="nav-link">NEPAR Simulator</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#education" class="nav-link">Education</a>
         <a href="#projects" class="nav-link">Projects</a>
+        <a href="#nepar-sim" class="nav-link">NEPAR Simulator</a>
         <a href="#publications" class="nav-link">Publications</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
@@ -174,79 +174,7 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         INTERACTIVE SIMULATOR SECTION
-         ========================================================================== -->
-    <section class="section container reveal" id="nepar-sim">
-      <div class="section-header">
-        <h2 class="section-title">NEPAR Risk Cascade Simulator</h2>
-        <p class="section-subtitle">Click nodes to introduce risk variables, and witness how stress patterns propagate through networked mental and social states.</p>
-      </div>
-      
-      <div class="simulator-panel">
-        <div class="canvas-container">
-          <canvas id="nepar-canvas"></canvas>
-          <div class="canvas-overlay-text">INTERACTIVE VIEW: CLICK NODES TO STIMULATE RISK</div>
-        </div>
-        
-        <div class="simulator-controls">
-          <div class="control-group">
-            <h3>Simulation Engine</h3>
-            <p>Dr. Tutun's research models psychological variables as dynamic graphs. Risk flows when correlations exceed specific thresholds.</p>
-            
-            <!-- Slider 1 -->
-            <div class="slider-wrapper">
-              <div class="slider-label">
-                <span>Propagation Rate</span>
-                <span id="lbl-prop-rate">1.50</span>
-              </div>
-              <input type="range" id="sim-prop-rate" min="0.1" max="4.0" step="0.1" value="1.5">
-            </div>
-            
-            <!-- Slider 2 -->
-            <div class="slider-wrapper">
-              <div class="slider-label">
-                <span>Mitigation Strength</span>
-                <span id="lbl-mitig-rate">0.50</span>
-              </div>
-              <input type="range" id="sim-mitig-rate" min="0.0" max="1.5" step="0.05" value="0.5">
-            </div>
-            
-            <!-- Slider 3 -->
-            <div class="slider-wrapper">
-              <div class="slider-label">
-                <span>Network density</span>
-                <span id="lbl-density">0.50</span>
-              </div>
-              <input type="range" id="sim-density" min="0.0" max="1.0" step="0.05" value="0.5">
-            </div>
-            
-            <div class="sim-buttons">
-              <button class="btn btn-primary btn-sim" id="btn-sim-random">Inject Risk</button>
-              <button class="btn btn-secondary btn-sim" id="btn-sim-mitigate">Mitigate</button>
-              <button class="btn btn-secondary btn-sim" id="btn-sim-reset" style="background: rgba(239, 68, 68, 0.08); border-color: rgba(239,68,68,0.2); color: var(--accent-risk);">Reset</button>
-            </div>
-          </div>
-          
-          <div class="sim-stats">
-            <div class="sim-stats-grid">
-              <div class="sim-stat-box">
-                <div class="sim-stat-val" id="val-avg-risk">0%</div>
-                <div class="sim-stat-lbl">Avg Risk</div>
-              </div>
-              <div class="sim-stat-box">
-                <div class="sim-stat-val" id="val-cascades">0</div>
-                <div class="sim-stat-lbl">Cascades</div>
-              </div>
-              <div class="sim-stat-box">
-                <div class="sim-stat-val" id="val-mitig-rate">50%</div>
-                <div class="sim-stat-lbl">Recovery</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- ==========================================================================
          EXPERIENCE TIMELINE SECTION
@@ -502,6 +430,80 @@
               <span class="tech-tag">Decision Science</span>
             </div>
             <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Published</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE SIMULATOR SECTION
+         ========================================================================== -->
+    <section class="section container reveal" id="nepar-sim">
+      <div class="section-header">
+        <h2 class="section-title">NEPAR Risk Cascade Simulator</h2>
+        <p class="section-subtitle">Click nodes to introduce risk variables, and witness how stress patterns propagate through networked mental and social states.</p>
+      </div>
+      
+      <div class="simulator-panel">
+        <div class="canvas-container">
+          <canvas id="nepar-canvas"></canvas>
+          <div class="canvas-overlay-text">INTERACTIVE VIEW: CLICK NODES TO STIMULATE RISK</div>
+        </div>
+        
+        <div class="simulator-controls">
+          <div class="control-group">
+            <h3>Simulation Engine</h3>
+            <p>Dr. Tutun's research models psychological variables as dynamic graphs. Risk flows when correlations exceed specific thresholds.</p>
+            
+            <!-- Slider 1 -->
+            <div class="slider-wrapper">
+              <div class="slider-label">
+                <span>Propagation Rate</span>
+                <span id="lbl-prop-rate">1.50</span>
+              </div>
+              <input type="range" id="sim-prop-rate" min="0.1" max="4.0" step="0.1" value="1.5">
+            </div>
+            
+            <!-- Slider 2 -->
+            <div class="slider-wrapper">
+              <div class="slider-label">
+                <span>Mitigation Strength</span>
+                <span id="lbl-mitig-rate">0.50</span>
+              </div>
+              <input type="range" id="sim-mitig-rate" min="0.0" max="1.5" step="0.05" value="0.5">
+            </div>
+            
+            <!-- Slider 3 -->
+            <div class="slider-wrapper">
+              <div class="slider-label">
+                <span>Network density</span>
+                <span id="lbl-density">0.50</span>
+              </div>
+              <input type="range" id="sim-density" min="0.0" max="1.0" step="0.05" value="0.5">
+            </div>
+            
+            <div class="sim-buttons">
+              <button class="btn btn-primary btn-sim" id="btn-sim-random">Inject Risk</button>
+              <button class="btn btn-secondary btn-sim" id="btn-sim-mitigate">Mitigate</button>
+              <button class="btn btn-secondary btn-sim" id="btn-sim-reset" style="background: rgba(239, 68, 68, 0.08); border-color: rgba(239,68,68,0.2); color: var(--accent-risk);">Reset</button>
+            </div>
+          </div>
+          
+          <div class="sim-stats">
+            <div class="sim-stats-grid">
+              <div class="sim-stat-box">
+                <div class="sim-stat-val" id="val-avg-risk">0%</div>
+                <div class="sim-stat-lbl">Avg Risk</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-val" id="val-cascades">0</div>
+                <div class="sim-stat-lbl">Cascades</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-val" id="val-mitig-rate">50%</div>
+                <div class="sim-stat-lbl">Recovery</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
