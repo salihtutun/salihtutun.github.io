@@ -79,6 +79,14 @@ function initScrollReveal() {
       navbar.classList.remove('scrolled');
     }
     
+    // Scroll progress bar
+    const scrollProgress = document.getElementById('scroll-progress');
+    if (scrollProgress) {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+      scrollProgress.style.width = `${progress}%`;
+    }
+    
     // Smooth reveal animations
     reveals.forEach(reveal => {
       const windowHeight = window.innerHeight;
@@ -258,6 +266,7 @@ function initNEPARSimulator() {
   let networkDensity = parseFloat(densitySlider.value);
   
   let cascadeCount = 0;
+  let ripples = [];
   
   // Update sliders labels
   propagationSlider.addEventListener('input', (e) => {
@@ -454,6 +463,15 @@ function initNEPARSimulator() {
     const clickX = e.clientX - rect.left;
     const clickY = e.clientY - rect.top;
     
+    // Add ripple
+    ripples.push({
+      x: clickX,
+      y: clickY,
+      radius: 10,
+      maxRadius: 80,
+      opacity: 1.0
+    });
+    
     // Check if clicked a node
     for (let node of nodes) {
       const dist = Math.sqrt(Math.pow(node.x - clickX, 2) + Math.pow(node.y - clickY, 2));
@@ -491,6 +509,7 @@ function initNEPARSimulator() {
     });
     cascadeCount = 0;
     valCascades.textContent = '0';
+    ripples = [];
   });
   
   // Main simulator loops
@@ -521,6 +540,38 @@ function initNEPARSimulator() {
         ctx.lineWidth = 1 + conn.weight * 1;
       }
       ctx.stroke();
+      
+      // Draw flowing particle pulse along connections when risk flows
+      if (avgNodeRisk > 0.15 && Math.abs(conn.from.risk - conn.to.risk) > 0.08) {
+        const source = conn.from.risk > conn.to.risk ? conn.from : conn.to;
+        const target = conn.from.risk > conn.to.risk ? conn.to : conn.from;
+        
+        const speedFactor = 0.55 * propagationRate;
+        const t = ((Date.now() / 1000 * speedFactor) + conn.weight) % 1.0;
+        const px = source.x + (target.x - source.x) * t;
+        const py = source.y + (target.y - source.y) * t;
+        
+        ctx.beginPath();
+        ctx.arc(px, py, 3.5 + conn.weight * 1.5, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(239, 68, 68, ${0.55 + avgNodeRisk * 0.45})`;
+        ctx.fill();
+      }
+    });
+    
+    // Update and Draw Shockwave Ripples
+    ripples = ripples.filter(ripple => {
+      ripple.radius += 2.5;
+      ripple.opacity = 1 - (ripple.radius / ripple.maxRadius);
+      
+      if (ripple.opacity > 0) {
+        ctx.beginPath();
+        ctx.arc(ripple.x, ripple.y, ripple.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(239, 68, 68, ${ripple.opacity * 0.6})`;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        return true;
+      }
+      return false;
     });
     
     // Update & Draw Nodes
@@ -569,5 +620,36 @@ window.copyEmail = function() {
     }, 2000);
   }).catch(err => {
     console.error('Failed to copy text: ', err);
+  });
+}
+
+/* ==========================================================================
+   INTERACTIVE CITATION CONTROLS
+   ========================================================================== */
+window.toggleCitation = function(drawerId) {
+  const drawer = document.getElementById(drawerId);
+  if (!drawer) return;
+  drawer.classList.toggle('active');
+}
+
+window.copyCitation = function(textId, buttonEl) {
+  const preEl = document.getElementById(textId);
+  if (!preEl) return;
+  
+  navigator.clipboard.writeText(preEl.textContent).then(() => {
+    const originalText = buttonEl.innerHTML;
+    buttonEl.innerHTML = 'Copied!';
+    buttonEl.style.background = 'var(--accent-success)';
+    buttonEl.style.borderColor = 'transparent';
+    buttonEl.style.color = '#fff';
+    
+    setTimeout(() => {
+      buttonEl.innerHTML = originalText;
+      buttonEl.style.background = '';
+      buttonEl.style.borderColor = '';
+      buttonEl.style.color = '';
+    }, 2000);
+  }).catch(err => {
+    console.error('Failed to copy citation: ', err);
   });
 }

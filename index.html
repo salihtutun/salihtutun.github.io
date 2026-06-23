@@ -24,6 +24,9 @@
        HEADER & NAVIGATION BAR
        ========================================================================== -->
   <header class="navbar" id="navbar">
+    <div class="scroll-progress-container">
+      <div class="scroll-progress" id="scroll-progress"></div>
+    </div>
     <div class="container nav-container">
       <a href="#hero" class="logo">SALIH TUTUN, PhD</a>
       
@@ -169,6 +172,37 @@
             </div>
             <div class="about-stat-number">Gold</div>
             <div class="about-stat-label">IISE Cup (MDScan)</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Institutional Affiliations -->
+      <div class="affiliations-container reveal">
+        <h3 class="affiliations-title">Institutional Affiliations & Partnerships</h3>
+        <div class="affiliations-grid">
+          <div class="affiliation-item">
+            <div class="aff-logo">WashU</div>
+            <div class="aff-name">Washington University in St. Louis</div>
+          </div>
+          <div class="affiliation-item">
+            <div class="aff-logo">Olin</div>
+            <div class="aff-name">Olin Business School</div>
+          </div>
+          <div class="affiliation-item">
+            <div class="aff-logo">dnb</div>
+            <div class="aff-name">dnb analytics</div>
+          </div>
+          <div class="affiliation-item">
+            <div class="aff-logo">SUNY</div>
+            <div class="aff-name">Binghamton University</div>
+          </div>
+          <div class="affiliation-item">
+            <div class="aff-logo">NSF</div>
+            <div class="aff-name">National Science Foundation</div>
+          </div>
+          <div class="affiliation-item">
+            <div class="aff-logo">Elsevier</div>
+            <div class="aff-name">Elsevier Publishing</div>
           </div>
         </div>
       </div>
@@ -528,12 +562,35 @@
           <div class="pub-meta">
             <span class="pub-journal">Journal of Management Information Systems (JMIS)</span>
             <span class="pub-year">2024</span>
+            <button class="pub-cite-btn" onclick="toggleCitation('cite-pub1')">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Cite
+            </button>
             <a href="https://doi.org/10.1080/07421222.2024.2340578" target="_blank" rel="noopener noreferrer" class="pub-link">
               View DOI
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
+          </div>
+          <div class="citation-drawer" id="cite-pub1">
+            <div class="citation-header">
+              <span>BibTeX Reference</span>
+              <button class="btn-copy-cite" onclick="copyCitation('cite-pub1-text', this)">Copy</button>
+            </div>
+            <pre id="cite-pub1-text">@article{tutun2024explainable,
+  title={Explainable artificial intelligence for mental disorder screening: A computational design science approach},
+  author={Tutun, Salih and Khasawneh, Mohammad T. and others},
+  journal={Journal of Management Information Systems},
+  volume={41},
+  number={2},
+  pages={450--485},
+  year={2024},
+  publisher={Taylor \& Francis},
+  doi={10.1080/07421222.2024.2340578}
+}</pre>
           </div>
         </div>
 
@@ -546,13 +603,33 @@
           <div class="pub-meta">
             <span class="pub-journal">Annals of Operations Research (ANOR)</span>
             <span class="pub-year">2024</span>
-            <span style="color: var(--accent-success); font-weight: 600; font-size: 0.8rem; margin-left: 12px;">Olin Research Award Winner</span>
+            <span style="color: var(--accent-success); font-weight: 600; font-size: 0.8rem; margin-right: auto; padding-left: 8px;">Olin Research Award Winner</span>
+            <button class="pub-cite-btn" onclick="toggleCitation('cite-pub2')">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Cite
+            </button>
             <a href="https://doi.org/10.1007/s10479-024-05822-4" target="_blank" rel="noopener noreferrer" class="pub-link">
               View DOI
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
+          </div>
+          <div class="citation-drawer" id="cite-pub2">
+            <div class="citation-header">
+              <span>BibTeX Reference</span>
+              <button class="btn-copy-cite" onclick="copyCitation('cite-pub2-text', this)">Copy</button>
+            </div>
+            <pre id="cite-pub2-text">@article{tutun2024management,
+  title={Management of Resource Sharing in Emergency Response Using Data-driven Analytics},
+  author={Tutun, Salih and others},
+  journal={Annals of Operations Research},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s10479-024-05822-4}
+}</pre>
           </div>
         </div>
         
@@ -565,12 +642,33 @@
           <div class="pub-meta">
             <span class="pub-journal">Information Systems Frontiers (ISF)</span>
             <span class="pub-year">2023</span>
+            <button class="pub-cite-btn" onclick="toggleCitation('cite-pub3')">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Cite
+            </button>
             <a href="https://doi.org/10.1007/s10796-023-10423-0" target="_blank" rel="noopener noreferrer" class="pub-link">
               View DOI
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
+          </div>
+          <div class="citation-drawer" id="cite-pub3">
+            <div class="citation-header">
+              <span>BibTeX Reference</span>
+              <button class="btn-copy-cite" onclick="copyCitation('cite-pub3-text', this)">Copy</button>
+            </div>
+            <pre id="cite-pub3-text">@article{tutun2023responsible,
+  title={A responsible AI framework for mitigating the ramifications of the organ donation crisis},
+  author={Tutun, Salih and others},
+  journal={Information Systems Frontiers},
+  pages={1--22},
+  year={2023},
+  publisher={Springer},
+  doi={10.1007/s10796-023-10423-0}
+}</pre>
           </div>
         </div>
         
@@ -583,12 +681,35 @@
           <div class="pub-meta">
             <span class="pub-journal">Industrial Management & Data Systems</span>
             <span class="pub-year">2023</span>
+            <button class="pub-cite-btn" onclick="toggleCitation('cite-pub4')">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Cite
+            </button>
             <a href="https://doi.org/10.1108/IMDS-03-2023-0186" target="_blank" rel="noopener noreferrer" class="pub-link">
               View DOI
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
+          </div>
+          <div class="citation-drawer" id="cite-pub4">
+            <div class="citation-header">
+              <span>BibTeX Reference</span>
+              <button class="btn-copy-cite" onclick="copyCitation('cite-pub4-text', this)">Copy</button>
+            </div>
+            <pre id="cite-pub4-text">@article{tutun2023digital,
+  title={Digital transformation to mitigate emergency situations: increasing opioid overdose survival rates through explainable artificial intelligence},
+  author={Tutun, Salih and others},
+  journal={Industrial Management \& Data Systems},
+  volume={123},
+  number={10},
+  pages={2150--2175},
+  year={2023},
+  publisher={Emerald Publishing Limited},
+  doi={10.1108/IMDS-03-2023-0186}
+}</pre>
           </div>
         </div>
 
@@ -601,12 +722,35 @@
           <div class="pub-meta">
             <span class="pub-journal">Information Systems Frontiers</span>
             <span class="pub-year">2023</span>
+            <button class="pub-cite-btn" onclick="toggleCitation('cite-pub5')">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Cite
+            </button>
             <a href="https://doi.org/10.1007/s10796-022-10282-3" target="_blank" rel="noopener noreferrer" class="pub-link">
               View DOI
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
+          </div>
+          <div class="citation-drawer" id="cite-pub5">
+            <div class="citation-header">
+              <span>BibTeX Reference</span>
+              <button class="btn-copy-cite" onclick="copyCitation('cite-pub5-text', this)">Copy</button>
+            </div>
+            <pre id="cite-pub5-text">@article{tutun2023aibased,
+  title={An AI-based Decision Support System for Predicting Mental Health Disorders},
+  author={Tutun, Salih and Khasawneh, Mohammad T. and others},
+  journal={Information Systems Frontiers},
+  volume={25},
+  number={3},
+  pages={1205--1225},
+  year={2023},
+  publisher={Springer},
+  doi={10.1007/s10796-022-10282-3}
+}</pre>
           </div>
         </div>
       </div>
