@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Salih Tutun, PhD | Assistant Professor & AI Researcher</title>
+  <meta name="description" content="Official website of Dr. Salih Tutun, Lecturer/Assistant Professor in Data Analytics at Olin Business School, Washington University in St. Louis. Developer of the NEPAR framework and clinical explainable AI.">
+  <meta name="keywords" content="Salih Tutun, WashU, Olin Business School, NEPAR, Networked Pattern Recognition, Explainable AI, Psycho-social Risk, Machine Learning, Mental Health AI">
+  <meta name="author" content="Dr. Salih Tutun">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Salih Tutun, PhD | Assistant Professor & AI Researcher">
+  <meta property="og:description" content="Discover research in Networked Pattern Recognition (NEPAR), clinical explainable AI, and human behavior analysis.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">SALIH TUTUN, PhD</a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#nepar-sim" class="nav-link">NEPAR Simulator</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#publications" class="nav-link">Publications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark/light theme">
+          <svg id="theme-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;">
+            <!-- SVG content is dynamically populated by script.js -->
+          </svg>
+        </button>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle navigation menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px; height: 24px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero" id="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-gradient-orb orb-1"></div>
+      <div class="hero-gradient-orb orb-2"></div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364.364l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+            Machine Learning & Network Science
+          </div>
+          <h1 class="hero-title">Understanding Human Behavior Through <span>Explainable AI</span></h1>
+          <p class="hero-subtitle">
+            I am a faculty member and researcher in Data Analytics at Olin Business School, Washington University in St. Louis (WashU) and Co-Founder of dnb analytics. Recipient of the 2024 Olin Research Award and a 4-time Reid Teaching Award winner, my work designs bridging models between human psychology, medical operations, and complex network analytics.
+          </p>
+          <div class="hero-buttons">
+            <a href="#nepar-sim" class="btn btn-primary">
+              Run NEPAR Simulator
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+            <a href="#publications" class="btn btn-secondary">Selected Publications</a>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <!-- Glassmorphic Info Card -->
+          <div class="profile-card">
+            <div class="profile-card-header">
+              <div class="profile-avatar-container">
+                <!-- User avatar representation: Network connections inside a human profile silhouette -->
+                <svg class="profile-avatar-svg" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                </svg>
+              </div>
+              <div style="text-align: right;">
+                <span class="tech-tag" style="background: rgba(6, 182, 212, 0.1); color: var(--accent-secondary); font-weight: 600;">WashU Faculty</span>
+              </div>
+            </div>
+            
+            <div class="profile-card-details">
+              <h3>Salih Tutun, PhD</h3>
+              <p>Data Analytics & Deep Learning Specialist</p>
+              <div class="profile-tech-stack">
+                <span class="tech-tag">Explainable AI</span>
+                <span class="tech-tag">Network Science</span>
+                <span class="tech-tag">Olin Business School</span>
+              </div>
+            </div>
+            
+            <div class="profile-card-stats">
+              <div class="stat-item">
+                <div class="stat-val">15+</div>
+                <div class="stat-lbl">Papers</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-val">4x</div>
+                <div class="stat-lbl">Reid Awards</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-val">Gold</div>
+                <div class="stat-lbl">IISE Cup</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT ME SECTION
+         ========================================================================== -->
+    <section class="section container reveal" id="about">
+      <div class="section-header">
+        <h2 class="section-title">Academic & Professional Profile</h2>
+        <p class="section-subtitle">Blending complex system frameworks with practical mental diagnostics and organizational intelligence.</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I specialize in developing machine learning systems, psycho-social risk management methods, and computational social science designs. My ultimate research goal is to understand human behaviors through networked systems.
+          </p>
+          <p>
+            As a faculty member at the Olin Business School, <strong>Washington University in St. Louis (WashU)</strong> and the co-founder of <strong>dnb analytics / COBSMIND AI</strong>, I aim to implement human-centered AI that provides explainable insights to solve business and social crises.
+          </p>
+          <p>
+            I am a four-time recipient of the Olin Business School's **Reid Teaching Award** (2021, 2022, 2023, 2024), and was honored with the **2024 Olin Research Award** for emergency resource optimization studies. I also serve as a grant reviewer for the National Science Foundation (NSF) and a book editor for Elsevier.
+          </p>
+        </div>
+        
+        <div class="about-stats-grid">
+          <div class="about-stat-card">
+            <div class="about-stat-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px; height: 24px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <div class="about-stat-number">4x</div>
+            <div class="about-stat-label">Reid Teaching Awards</div>
+          </div>
+          
+          <div class="about-stat-card">
+            <div class="about-stat-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px; height: 24px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm0 13H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2h-8z" />
+              </svg>
+            </div>
+            <div class="about-stat-number">Gold</div>
+            <div class="about-stat-label">IISE Cup (MDScan)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE SIMULATOR SECTION
+         ========================================================================== -->
+    <section class="section container reveal" id="nepar-sim">
+      <div class="section-header">
+        <h2 class="section-title">NEPAR Risk Cascade Simulator</h2>
+        <p class="section-subtitle">Click nodes to introduce risk variables, and witness how stress patterns propagate through networked mental and social states.</p>
+      </div>
+      
+      <div class="simulator-panel">
+        <div class="canvas-container">
+          <canvas id="nepar-canvas"></canvas>
+          <div class="canvas-overlay-text">INTERACTIVE VIEW: CLICK NODES TO STIMULATE RISK</div>
+        </div>
+        
+        <div class="simulator-controls">
+          <div class="control-group">
+            <h3>Simulation Engine</h3>
+            <p>Dr. Tutun's research models psychological variables as dynamic graphs. Risk flows when correlations exceed specific thresholds.</p>
+            
+            <!-- Slider 1 -->
+            <div class="slider-wrapper">
+              <div class="slider-label">
+                <span>Propagation Rate</span>
+                <span id="lbl-prop-rate">1.50</span>
+              </div>
+              <input type="range" id="sim-prop-rate" min="0.1" max="4.0" step="0.1" value="1.5">
+            </div>
+            
+            <!-- Slider 2 -->
+            <div class="slider-wrapper">
+              <div class="slider-label">
+                <span>Mitigation Strength</span>
+                <span id="lbl-mitig-rate">0.50</span>
+              </div>
+              <input type="range" id="sim-mitig-rate" min="0.0" max="1.5" step="0.05" value="0.5">
+            </div>
+            
+            <!-- Slider 3 -->
+            <div class="slider-wrapper">
+              <div class="slider-label">
+                <span>Network density</span>
+                <span id="lbl-density">0.50</span>
+              </div>
+              <input type="range" id="sim-density" min="0.0" max="1.0" step="0.05" value="0.5">
+            </div>
+            
+            <div class="sim-buttons">
+              <button class="btn btn-primary btn-sim" id="btn-sim-random">Inject Risk</button>
+              <button class="btn btn-secondary btn-sim" id="btn-sim-mitigate">Mitigate</button>
+              <button class="btn btn-secondary btn-sim" id="btn-sim-reset" style="background: rgba(239, 68, 68, 0.08); border-color: rgba(239,68,68,0.2); color: var(--accent-risk);">Reset</button>
+            </div>
+          </div>
+          
+          <div class="sim-stats">
+            <div class="sim-stats-grid">
+              <div class="sim-stat-box">
+                <div class="sim-stat-val" id="val-avg-risk">0%</div>
+                <div class="sim-stat-lbl">Avg Risk</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-val" id="val-cascades">0</div>
+                <div class="sim-stat-lbl">Cascades</div>
+              </div>
+              <div class="sim-stat-box">
+                <div class="sim-stat-val" id="val-mitig-rate">50%</div>
+                <div class="sim-stat-lbl">Recovery</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXPERIENCE TIMELINE SECTION
+         ========================================================================== -->
+    <section class="section container reveal" id="experience">
+      <div class="section-header">
+        <h2 class="section-title">Professional Journey</h2>
+        <p class="section-subtitle">A chronological view of research roles, faculty appointments, and technological startups.</p>
+      </div>
+      
+      <div class="timeline">
+        <!-- Item 1 -->
+        <div class="timeline-item active">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Assistant Professor / Lecturer in Data Analytics</h3>
+                <span class="timeline-org">Washington University in St. Louis</span>
+              </div>
+              <span class="timeline-date">Jan 2020 – Present</span>
+            </div>
+            <div class="timeline-body">
+              <p>Faculty member at the Olin Business School teaching core data science, deep learning, and operations management modules while executing research inside human-in-the-loop AI systems.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Co-Founder & Director of AI</h3>
+                <span class="timeline-org">dnb analytics / COBSMIND AI</span>
+              </div>
+              <span class="timeline-date">Feb 2018 – Present</span>
+            </div>
+            <div class="timeline-body">
+              <p>Guiding engineering and product design teams in commercializing academic findings on mental healthcare platforms and workforce navigation engines.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Postdoctoral Research Fellow</h3>
+                <span class="timeline-org">State University of New York (SUNY) at Binghamton</span>
+              </div>
+              <span class="timeline-date">Feb 2019 – Dec 2019</span>
+            </div>
+            <div class="timeline-body">
+              <p>Investigated networked pattern recognition schemas for clinical data and psychosocial diagnostics under the supervision of leading research bodies.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Research Assistant / Data Scientist</h3>
+                <span class="timeline-org">SUNY Binghamton</span>
+              </div>
+              <span class="timeline-date">Jan 2013 – May 2018</span>
+            </div>
+            <div class="timeline-body">
+              <p>Assisted in mathematical formulation of deep learning classifiers and custom feature selection architectures for industrial safety operations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EDUCATION SECTION
+         ========================================================================== -->
+    <section class="section container reveal" id="education">
+      <div class="section-header">
+        <h2 class="section-title">Educational Foundation</h2>
+        <p class="section-subtitle">Academic degrees that formed my approach to engineering and system science.</p>
+      </div>
+      
+      <div class="edu-grid">
+        <!-- Degree 1 -->
+        <div class="edu-card">
+          <div class="edu-icon">🎓</div>
+          <h3 class="edu-degree">Doctor of Philosophy (PhD)</h3>
+          <p class="edu-school">Industrial & Systems Engineering</p>
+          <p style="color: var(--text-secondary); font-size: 0.85rem;">SUNY Binghamton</p>
+          <div class="edu-meta">
+            <span>GPA: 3.81 / 4.00</span>
+            <span>2013 – 2018</span>
+          </div>
+        </div>
+        
+        <!-- Degree 2 -->
+        <div class="edu-card">
+          <div class="edu-icon">📜</div>
+          <h3 class="edu-degree">Master of Science (M.Sc.)</h3>
+          <p class="edu-school">Industrial Engineering</p>
+          <p style="color: var(--text-secondary); font-size: 0.85rem;">Erciyes University</p>
+          <div class="edu-meta">
+            <span>GPA: 3.13 / 4.00</span>
+            <span>2010 – 2012</span>
+          </div>
+        </div>
+        
+        <!-- Degree 3 -->
+        <div class="edu-card">
+          <div class="edu-icon">🏛️</div>
+          <h3 class="edu-degree">Bachelor of Science (B.Sc.)</h3>
+          <p class="edu-school">Industrial Engineering</p>
+          <p style="color: var(--text-secondary); font-size: 0.85rem;">Sakarya University</p>
+          <div class="edu-meta">
+            <span>GPA: 3.25 / 4.00</span>
+            <span>2006 – 2010</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         RESEARCH & PROJECTS GALLERY
+         ========================================================================== -->
+    <section class="section container reveal" id="projects">
+      <div class="section-header">
+        <h2 class="section-title">Research Platforms & Initiatives</h2>
+        <p class="section-subtitle">AI-driven platforms built to assess, screen, and mitigate behavioral, clinical, and operational risks.</p>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge">Core Engine</span>
+            <span class="project-icon">🧠</span>
+          </div>
+          <div>
+            <h3 class="project-title">NEPAR Framework</h3>
+            <p class="project-desc">Networked Pattern Recognition engine designed for analyzing large scale dynamic graph structures. Used to model psychosocial risk flows and behavioral networks.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span class="tech-tag">Deep Learning</span>
+              <span class="tech-tag">Graph Theory</span>
+            </div>
+            <a href="#nepar-sim" class="project-link-btn">
+              Try Demo
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge gold">Gold Award (IISE Cup)</span>
+            <span class="project-icon">🏆</span>
+          </div>
+          <div>
+            <h3 class="project-title">MDScan</h3>
+            <p class="project-desc">Explainable AI (XAI) clinical screening system using chatbot interviews and color imaging to classify 10 mental disorders. Proved a 20% efficiency gain and won 1st Place in the IISE Cup.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span class="tech-tag">Clinical DSS</span>
+              <span class="tech-tag">XAI</span>
+            </div>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Award Winner</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge" style="background: rgba(16, 185, 129, 0.1); color: var(--accent-success); border-color: rgba(16, 185, 129, 0.2);">Olin Research Award</span>
+            <span class="project-icon">📞</span>
+          </div>
+          <div>
+            <h3 class="project-title">Emergency Response Analytics</h3>
+            <p class="project-desc">A data-driven optimization model designed to coordinate emergency medical resource sharing (like ventilators) during public health crises.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span class="tech-tag">Operations</span>
+              <span class="tech-tag">Reinforcement Learning</span>
+            </div>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">2024 Winner</span>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge">HR Analytics</span>
+            <span class="project-icon">👥</span>
+          </div>
+          <div>
+            <h3 class="project-title">KAEN Platform</h3>
+            <p class="project-desc">Knowledge and Expertise Navigation engine. An AI-powered system designed to analyze skill correlations and expertise mapping within corporate setups.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span class="tech-tag">Skill Mapping</span>
+              <span class="tech-tag">HR Tech</span>
+            </div>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Active Prototype</span>
+          </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge">Health Informatics</span>
+            <span class="project-icon">📱</span>
+          </div>
+          <div>
+            <h3 class="project-title">SASX Screen</h3>
+            <p class="project-desc">ADHD diagnostic and dynamic cognitive assessment tool that leverages attention-pattern recognition algorithms on dynamic mobile tests.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span class="tech-tag">ADHD Screen</span>
+              <span class="tech-tag">Mobile Analytics</span>
+            </div>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Beta Phase</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-badge">Crisis Mitigation</span>
+            <span class="project-icon">🚑</span>
+          </div>
+          <div>
+            <h3 class="project-title">Opioid Crisis Analytics</h3>
+            <p class="project-desc">Responsible explainable AI models built to assist emergency workers in identifying dynamic clinical factors to increase survival rates during opioid overdoses.</p>
+          </div>
+          <div class="project-footer">
+            <div class="project-tags">
+              <span class="tech-tag">Crisis XAI</span>
+              <span class="tech-tag">Decision Science</span>
+            </div>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">Published</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PUBLICATIONS SECTION
+         ========================================================================== -->
+    <section class="section container reveal" id="publications">
+      <div class="section-header">
+        <h2 class="section-title">Selected Publications</h2>
+        <p class="section-subtitle">Academic works detailing clinical diagnostic systems, operational research, and deep learning framework designs.</p>
+      </div>
+      
+      <div class="pub-list">
+        <!-- Pub 1 -->
+        <div class="pub-card">
+          <h3 class="pub-title">Explainable artificial intelligence for mental disorder screening: A computational design science approach</h3>
+          <p class="pub-authors">
+            <span class="me">Salih Tutun</span>, Mohammad T. Khasawneh, and collaborators.
+          </p>
+          <div class="pub-meta">
+            <span class="pub-journal">Journal of Management Information Systems (JMIS)</span>
+            <span class="pub-year">2024</span>
+            <a href="https://doi.org/10.1080/07421222.2024.2340578" target="_blank" rel="noopener noreferrer" class="pub-link">
+              View DOI
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pub 2 -->
+        <div class="pub-card">
+          <h3 class="pub-title">Management of Resource Sharing in Emergency Response Using Data-driven Analytics</h3>
+          <p class="pub-authors">
+            Collaborative research featuring <span class="me">Salih Tutun</span>.
+          </p>
+          <div class="pub-meta">
+            <span class="pub-journal">Annals of Operations Research (ANOR)</span>
+            <span class="pub-year">2024</span>
+            <span style="color: var(--accent-success); font-weight: 600; font-size: 0.8rem; margin-left: 12px;">Olin Research Award Winner</span>
+            <a href="https://doi.org/10.1007/s10479-024-05822-4" target="_blank" rel="noopener noreferrer" class="pub-link">
+              View DOI
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Pub 3 -->
+        <div class="pub-card">
+          <h3 class="pub-title">A responsible AI framework for mitigating the ramifications of the organ donation crisis</h3>
+          <p class="pub-authors">
+            Collaborative study including <span class="me">Salih Tutun</span>.
+          </p>
+          <div class="pub-meta">
+            <span class="pub-journal">Information Systems Frontiers (ISF)</span>
+            <span class="pub-year">2023</span>
+            <a href="https://doi.org/10.1007/s10796-023-10423-0" target="_blank" rel="noopener noreferrer" class="pub-link">
+              View DOI
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Pub 4 -->
+        <div class="pub-card">
+          <h3 class="pub-title">Digital transformation to mitigate emergency situations: increasing opioid overdose survival rates through explainable artificial intelligence</h3>
+          <p class="pub-authors">
+            <span class="me">Salih Tutun</span> and co-authors.
+          </p>
+          <div class="pub-meta">
+            <span class="pub-journal">Industrial Management & Data Systems</span>
+            <span class="pub-year">2023</span>
+            <a href="https://doi.org/10.1108/IMDS-03-2023-0186" target="_blank" rel="noopener noreferrer" class="pub-link">
+              View DOI
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pub 5 -->
+        <div class="pub-card">
+          <h3 class="pub-title">An AI-based Decision Support System for Predicting Mental Health Disorders</h3>
+          <p class="pub-authors">
+            <span class="me">Salih Tutun</span>, Mohammad T. Khasawneh, and collaborators.
+          </p>
+          <div class="pub-meta">
+            <span class="pub-journal">Information Systems Frontiers</span>
+            <span class="pub-year">2023</span>
+            <a href="https://doi.org/10.1007/s10796-022-10282-3" target="_blank" rel="noopener noreferrer" class="pub-link">
+              View DOI
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section class="section container reveal" id="contact">
+      <div class="contact-card">
+        <h2 class="contact-title">Connect & Collaborate</h2>
+        <p class="contact-desc">Feel free to reach out for academic research inquires, business collaborations, or speaker engagements.</p>
+        
+        <div class="contact-email-box">
+          <span class="contact-email">stutun1@binghamton.edu</span>
+          <button class="btn-copy" onclick="copyEmail()">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+            </svg>
+            Copy
+          </button>
+        </div>
+        
+        <div class="social-links">
+          <!-- Scholar Link -->
+          <a href="https://scholar.google.com/citations?user=Gk74P5cAAAAJ" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Google Scholar Profile">
+            🎓
+          </a>
+          <!-- ORCID Link -->
+          <a href="https://orcid.org/0000-0002-6902-6014" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="ORCID Profile">
+            🆔
+          </a>
+          <!-- LinkedIn Link -->
+          <a href="https://www.linkedin.com/in/salihtutun" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+            in
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">SALIH TUTUN, PhD</div>
+      <p>&copy; 2026 Salih Tutun. All rights reserved.</p>
+      <p style="font-size: 0.75rem; margin-top: 8px; color: var(--text-muted);">Built with Vanilla HTML, CSS, and JS</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
