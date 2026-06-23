@@ -552,7 +552,7 @@ function initNEPARSimulator() {
    COPY CONTACT TO CLIPBOARD
    ========================================================================== */
 window.copyEmail = function() {
-  const emailText = 'stutun1@binghamton.edu';
+  const emailText = 'salihtutun@wustl.edu';
   navigator.clipboard.writeText(emailText).then(() => {
     const copyBtn = document.querySelector('.btn-copy');
     const originalText = copyBtn.innerHTML;
