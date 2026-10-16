@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAT 5668 — Agentic AI: Autonomous Decision-Making</title>
+  <meta name="description" content="Fall 2026 course page for DAT 5668 at Olin Business School. Students follow the modules, open the notebooks, and fill them in class.">
+  <meta name="author" content="Salih Tutun and Gerald Onwujekwe">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a class="logo" href="https://salihtutun.github.io/">Salih Tutun, PhD</a>
+      <nav class="nav-menu" id="nav-menu">
+        <a class="nav-link" href="#follow">Follow</a>
+        <a class="nav-link" href="#modules">Modules</a>
+        <a class="nav-link" href="#families">Families</a>
+        <a class="nav-link" href="#grades">Grades</a>
+        <a class="nav-link" href="https://salihtutun.github.io/">Faculty site</a>
+      </nav>
+      <div style="display:flex;gap:8px;">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light and dark theme">◐</button>
+        <button class="menu-toggle-btn" id="menu-toggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="kicker">Olin Business School · Fall 2026 · 1.5 credits</p>
+        <h1 class="hero-title">DAT 5668<br><span>Agentic AI</span></h1>
+        <p class="hero-subtitle">Autonomous Decision-Making. Design agents that observe, decide, act, and use feedback. The course teaches language-model agents and reinforcement-learning agents as two ways to run that same loop.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#modules">Open the modules</a>
+          <a class="btn btn-secondary" href="https://github.com/salihtutun/Agentic-AI_Autonomous_Decision_Making">Student files on GitHub</a>
+          <a class="btn btn-secondary" href="https://github.com/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Syllabus.pdf">Syllabus</a>
+        </div>
+        <div class="banner">
+          <img src="banner.jpg" alt="DAT 5668 course banner: an orchestrator with agent modules and tools">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="follow">
+      <div class="container">
+        <h2 class="section-title">How to follow</h2>
+        <p class="section-subtitle">Each module is one week. Open the files from top to bottom. Instructors: Salih Tutun and Gerald Onwujekwe.</p>
+        <div class="steps">
+          <article class="card"><span class="step-num">Before Monday</span>Submit the Canvas quiz at least one hour before class. A late quiz is not accepted except with an excused absence.</article>
+          <article class="card"><span class="step-num">Monday</span>Open the fundamentals notebook. Run it from the top. Type the cells marked Fill this with me while we teach. Guess before you run.</article>
+          <article class="card"><span class="step-num">Wednesday</span>Finish the practice notebook in class. Groups may be 1 to 3 students. Module 7 is one project meeting.</article>
+          <article class="card"><span class="step-num">After Wednesday</span>Homework is individual. Canvas takes 10% off for each late day. After five days the work is not accepted.</article>
+        </div>
+        <p class="note">Open a notebook in Colab, or download the folder and run it in Python with NumPy. The cases are simulated course examples. Do not paste confidential data into a public tool. Quizzes stay on Canvas, so this page does not include quiz questions or answer keys.</p>
+      </div>
+    </section>
+
+    <section class="section" id="modules">
+      <div class="container">
+        <h2 class="section-title">Modules</h2>
+        <p class="section-subtitle">Monday explains the idea. Wednesday is the practice. Colab opens the student notebook. GitHub is the same file if you want to read it first.</p>
+        <div class="schedule">
+
+          <article class="module" id="module-1">
+            <div class="tags"><span class="tag">Module 1</span><span class="tag tag-both">Both, then LLM</span></div>
+            <h3>The agent loop</h3>
+            <p>Monday: one loop for both families. Wednesday: a tool-using language agent on a refund ticket.</p>
+            <div class="links">
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/01-Module-1-Agent-Loop/Monday-Fundamentals.ipynb">Monday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/01-Module-1-Agent-Loop/Wednesday-Practice.ipynb">Wednesday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/Homework/HW1-Refund-Cap.ipynb">Homework</a>
+            </div>
+            <figure class="figure">
+              <img src="figures/agent-loop.png" alt="Diagram of observe, decide, act, and feedback">
+              <figcaption>Observe, decide, act, feedback. The return arrow is the next observation.</figcaption>
+            </figure>
+          </article>
+
+          <article class="module" id="module-2">
+            <div class="tags"><span class="tag">Module 2</span><span class="tag tag-llm">Monday: LLM</span><span class="tag tag-rl">Wednesday: RL</span></div>
+            <h3>Retrieval, then bandits</h3>
+            <p>Monday: a researcher, analyst, and reviewer handoff. Wednesday: one offer at a time, with the other rewards hidden.</p>
+            <div class="links">
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/02-Module-2-RAG-and-Bandits/Monday-Fundamentals.ipynb">Monday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/02-Module-2-RAG-and-Bandits/Wednesday-Practice.ipynb">Wednesday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/Homework/HW2-Fourth-Offer.ipynb">Homework</a>
+            </div>
+            <figure class="figure">
+              <img src="figures/rag-handoff.png" alt="Researcher, analyst, and reviewer handoff">
+              <figcaption>The reviewer stops the handoff when the citation is not real.</figcaption>
+            </figure>
+          </article>
+
+          <article class="module" id="module-3">
+            <div class="tags"><span class="tag">Module 3</span><span class="tag tag-rl">Monday: RL</span><span class="tag tag-both">Wednesday: both</span></div>
+            <h3>Inventory, then a go/no-go memo</h3>
+            <p>Monday: stock, order, demand, and reward. Wednesday: design one process both ways and vote before the memo.</p>
+            <div class="links">
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/03-Module-3-MDP-and-Go-No-Go/Monday-Fundamentals.ipynb">Monday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/03-Module-3-MDP-and-Go-No-Go/Wednesday-Practice.ipynb">Wednesday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/Homework/HW3-Pricing-Memo.ipynb">Homework</a>
+            </div>
+            <figure class="figure">
+              <img src="figures/mdp-inventory.png" alt="Inventory decision as a Markov decision process">
+              <figcaption>Ending stock becomes tomorrow's state.</figcaption>
+            </figure>
+          </article>
+
+          <article class="module" id="module-4">
+            <div class="tags"><span class="tag">Module 4</span><span class="tag tag-rl">RL-based agent</span></div>
+            <h3>Bellman updates and Q-learning</h3>
+            <p>Monday: value iteration, Monte Carlo, and one temporal-difference update. Wednesday: run the unfinished agent, then write the update together.</p>
+            <div class="links">
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/04-Module-4-Bellman-and-Q-Learning/Monday-Fundamentals.ipynb">Monday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/04-Module-4-Bellman-and-Q-Learning/Wednesday-Practice.ipynb">Wednesday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/Homework/HW4-Stockout-Penalty.ipynb">Homework</a>
+            </div>
+            <figure class="figure">
+              <img src="figures/q-update.png" alt="Q-learning update from reward and the next state">
+              <figcaption>Epsilon-greedy sometimes tries a random order so the table can learn.</figcaption>
+            </figure>
+          </article>
+
+          <article class="module" id="module-5">
+            <div class="tags"><span class="tag">Module 5</span><span class="tag tag-rl">RL-based agent</span></div>
+            <h3>Deep Q-learning</h3>
+            <p>Monday: why a table breaks, then replay and a target network. Wednesday: compare a short training run with base-stock and make the deploy call.</p>
+            <div class="links">
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/05-Module-5-Deep-RL/Monday-Fundamentals.ipynb">Monday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/05-Module-5-Deep-RL/Wednesday-Practice.ipynb">Wednesday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/Homework/HW5-Exploration.ipynb">Homework</a>
+            </div>
+            <figure class="figure">
+              <img src="figures/dqn.png" alt="Deep Q-network with replay and a target network">
+              <figcaption>Train in a simulator. A bad live order hits real stock.</figcaption>
+            </figure>
+          </article>
+
+          <article class="module" id="module-6">
+            <div class="tags"><span class="tag">Module 6</span><span class="tag tag-both">Both families</span></div>
+            <h3>Hybrids and governance</h3>
+            <p>Monday: the language agent reads the exception and the learned policy releases the daily order. Wednesday: score both pilots on one sheet.</p>
+            <div class="links">
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/06-Module-6-Hybrids-and-Governance/Monday-Fundamentals.ipynb">Monday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/06-Module-6-Hybrids-and-Governance/Wednesday-Practice.ipynb">Wednesday in Colab</a>
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/Homework/HW6-Second-Pilot.ipynb">Homework</a>
+            </div>
+            <figure class="figure">
+              <img src="figures/hybrid.png" alt="Hybrid of a language agent, a controller, and a reinforcement-learning agent">
+              <figcaption>The controller can veto. The system that releases the action owns the KPI.</figcaption>
+            </figure>
+          </article>
+
+          <article class="module" id="module-7">
+            <div class="tags"><span class="tag">Module 7</span><span class="tag tag-both">Project</span></div>
+            <h3>Presentations</h3>
+            <p>One meeting. Groups of 1 to 3. About 7 minutes. State the loop, justify the family, compare a baseline, and include a governance note.</p>
+            <div class="links">
+              <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/07-Module-7-Project/Project-Session.ipynb">Project notebook in Colab</a>
+              <a href="https://github.com/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/07-Module-7-Project/Report-Template.md">Report template</a>
+            </div>
+            <figure class="figure">
+              <img src="figures/scorecard.png" alt="Scorecard used for both agent families">
+              <figcaption>Task success, cost, safety, and one shared business number.</figcaption>
+            </figure>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="families">
+      <div class="container">
+        <h2 class="section-title">Two families, one loop</h2>
+        <p class="section-subtitle">A chatbot is a poor inventory controller. A deep Q-network is a poor contract reviewer. Match the family to the input and the feedback.</p>
+        <div class="schedule">
+          <article class="card">
+            <strong>LLM-based agent</strong>
+            <p>The input is language or a document. The model acts by calling a tool. Feedback is a citation and a review. Weeks 1 and 2 Monday.</p>
+          </article>
+          <article class="card">
+            <strong>RL-based agent</strong>
+            <p>The input is a repeated numeric state. A learned policy picks the action. Feedback is a reward. Bandits, MDPs, Q-learning, and deep Q-networks.</p>
+          </article>
+        </div>
+        <figure class="figure" style="margin-top:20px;">
+          <img src="figures/two-families.png" alt="The same agent loop split into an LLM-based agent and an RL-based agent">
+          <figcaption>A project may use either family, or a hybrid with a person or a hard rule that can veto.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="grades">
+      <div class="container">
+        <h2 class="section-title">Grades and tools</h2>
+        <table class="grades">
+          <thead>
+            <tr><th>Work</th><th>Share</th><th>Where</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Quizzes, lowest score dropped</td><td>30%</td><td>Canvas, before Monday</td></tr>
+            <tr><td>Homework</td><td>20%</td><td>Individual, after Wednesday</td></tr>
+            <tr><td>Wednesday labs</td><td>15%</td><td>In class</td></tr>
+            <tr><td>Project</td><td>30%</td><td>Module 7</td></tr>
+            <tr><td>Lab participation</td><td>5%</td><td>In class</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Using the agent code in an assigned lab is allowed. Using Copilot, ChatGPT, or a similar tool to write a quiz, a homework write-up, or the project report is not allowed unless that assignment says you may, and then you cite how you used it. Prerequisites: DAT 5565 or DAT 6565. Software: Colab, Python, NumPy, and Matplotlib. Questions: salihtutun@wustl.edu.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <span>DAT 5668 · Washington University in St. Louis · Olin Business School</span>
+    <a href="https://salihtutun.github.io/">Salih Tutun, PhD</a>
+  </footer>
+  <script src="course.js"></script>
+</body>
+</html>
