@@ -122,7 +122,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .banner img { width: 100%; }
 
-.section { padding: 64px 0; }
+.section { padding: 64px 0; scroll-margin-top: 110px; }
 .section-title { font-size: 2.2rem; color: var(--accent-primary); margin-bottom: 10px; }
 .section-subtitle { color: var(--text-secondary); max-width: 680px; margin-bottom: 28px; }
 
