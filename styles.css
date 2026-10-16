@@ -8,21 +8,19 @@
   --font-heading: 'Lora', Georgia, "Times New Roman", serif;
   --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  /* Theme: Dark Mode (Default) - Professional Crimson & Warm Slate */
-  --bg-primary: hsl(220, 24%, 6%);
-  --bg-secondary: hsl(220, 24%, 9%);
-  --bg-card: rgba(18, 22, 33, 0.6);
-  --bg-card-hover: rgba(26, 32, 48, 0.8);
-  --border-color: rgba(255, 255, 255, 0.05);
-  --border-color-glow: rgba(189, 32, 38, 0.25);
-  --text-primary: hsl(210, 40%, 98%);
-  --text-secondary: hsl(215, 20%, 80%);
-  --text-muted: hsl(215, 12%, 58%);
-  
-  /* Accent Colors - WashU Crimson & Warm Ivy Gold */
-  --accent-primary: hsl(355, 68%, 46%); /* WashU Crimson */
-  --accent-primary-rgb: 189, 32, 38;
-  --accent-secondary: hsl(40, 50%, 55%); /* Ivy Gold */
+  /* Light academic theme. WashU crimson on warm paper. */
+  --bg-primary: hsl(36, 24%, 96%);
+  --bg-secondary: hsl(36, 18%, 91%);
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-card-hover: #ffffff;
+  --border-color: rgba(34, 24, 18, 0.1);
+  --border-color-glow: rgba(189, 32, 38, 0.22);
+  --text-primary: hsl(222, 47%, 12%);
+  --text-secondary: hsl(215, 25%, 28%);
+  --text-muted: hsl(215, 12%, 40%);
+  --accent-primary: hsl(355, 75%, 38%);
+  --accent-primary-rgb: 168, 28, 36;
+  --accent-secondary: hsl(40, 60%, 32%);
   --accent-secondary-rgb: 197, 160, 89;
   --accent-risk: hsl(0, 85%, 60%); /* Alert Coral */
   --accent-risk-rgb: 239, 68, 68;
@@ -30,9 +28,9 @@
   --accent-success-rgb: 21, 128, 61;
   
   /* Shadow & Blur */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.65);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.12);
   --card-blur: blur(20px);
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --radius-sm: 6px;
@@ -174,7 +172,7 @@ button {
   border-radius: 40px;
   transition: var(--transition-smooth);
   padding: 0 24px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .navbar.scrolled {
@@ -251,6 +249,46 @@ button {
 .nav-link:hover::after, .nav-link.active::after {
   width: 100%;
 }
+
+.nav-item { position: relative; }
+.nav-sub {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 210px;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: var(--shadow-md);
+  z-index: 30;
+}
+.nav-item:hover .nav-sub,
+.nav-item:focus-within .nav-sub { display: block; }
+.nav-sub a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.nav-sub a:hover { background: rgba(168, 28, 36, 0.08); color: var(--accent-primary); }
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.course-code {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+}
+.course-meta { color: var(--text-muted); font-size: 0.9rem; margin: 8px 0 16px; }
 
 .nav-actions {
   display: flex;
@@ -410,10 +448,9 @@ button {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.04);
+  background: #fff;
   color: var(--text-primary);
   border: 1px solid var(--border-color);
-  backdrop-filter: var(--card-blur);
 }
 
 .btn-secondary:hover {
@@ -1301,7 +1338,8 @@ input[type="range"]::-moz-range-thumb:hover {
     grid-template-columns: 1fr;
   }
   
-  .projects-grid {
+  .projects-grid,
+  .course-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1323,6 +1361,16 @@ input[type="range"]::-moz-range-thumb:hover {
   
   .nav-menu.active {
     display: flex;
+  }
+
+  .nav-sub {
+    position: static;
+    display: block;
+    box-shadow: none;
+    background: transparent;
+    border: none;
+    padding: 4px 0 0 8px;
+    min-width: 0;
   }
   
   .menu-toggle-btn {
