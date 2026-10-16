@@ -162,8 +162,8 @@ button {
   top: 24px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 1100px;
+  width: 96%;
+  max-width: 1240px;
   z-index: 1000;
   background: var(--bg-card);
   backdrop-filter: var(--card-blur);
@@ -209,25 +209,27 @@ button {
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-primary);
+  white-space: nowrap;
 }
 
 .nav-menu {
   display: flex;
-  gap: 28px;
+  gap: 16px;
   align-items: center;
 }
 
 .nav-link {
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   font-weight: 500;
   color: var(--text-secondary);
   position: relative;
   padding: 6px 0;
+  white-space: nowrap;
 }
 
 .nav-link:hover, .nav-link.active {
