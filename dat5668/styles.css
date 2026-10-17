@@ -166,6 +166,12 @@ img { max-width: 100%; height: auto; display: block; }
 .grades th { color: var(--text-muted); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; }
 
 .note { color: var(--text-secondary); margin-top: 14px; }
+.prose h2 { margin-top: 2.2rem; }
+.prose h3 { margin: 1.4rem 0 0.4rem; font-size: 1.25rem; }
+.prose p, .prose li { color: var(--text-secondary); }
+.prose ul, .prose ol { margin: 0.4rem 0 1rem 1.2rem; }
+.prose li { margin: 0.25rem 0; }
+.prose a { color: var(--accent-primary); }
 
 footer {
   border-top: 1px solid var(--border-color);

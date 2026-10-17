@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syllabus · DAT 5668 · Fall 2026</title>
+  <meta name="description" content="Fall 2026 syllabus for DAT 5668, Agentic AI: Autonomous Decision-Making, Olin Business School.">
+  <meta name="author" content="Salih Tutun and Gerald Onwujekwe">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a class="logo" href="https://salihtutun.github.io/">Salih Tutun, PhD</a>
+      <nav class="nav-menu" id="nav-menu">
+        <div class="nav-item">
+          <a class="nav-link" href="https://salihtutun.github.io/courses/">Courses</a>
+          <div class="nav-sub">
+            <a href="https://salihtutun.github.io/dat5668/">DAT 5668</a>
+          </div>
+        </div>
+        <a class="nav-link" href="index.html">Course</a>
+        <a class="nav-link" href="#sessions">Sessions</a>
+        <a class="nav-link" href="#grades">Grades</a>
+        <a class="nav-link" href="#policies">Policies</a>
+      </nav>
+      <button class="menu-toggle-btn" id="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="kicker">Olin Business School · Fall 2026 · Section 21 · 1.5 credits</p>
+        <h1 class="hero-title">DAT 5668<br><span>Syllabus</span></h1>
+        <p class="hero-subtitle">Agentic AI: Autonomous Decision-Making. Thirteen in-person sessions. Concepts are taught in the room. There are no lecture recordings to watch before class.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="index.html">Course page</a>
+          <a class="btn btn-secondary" href="#sessions">Session outline</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section prose">
+      <div class="container">
+        <h2>How the course runs</h2>
+        <p>The course meets in the lab, in person, for about 80 minutes. There are seven modules and 13 meetings: Modules 1–6 each have a concept session and a practice session. Module 7 is the project session. Passing time between labs is 10 minutes. Confirm the final contact-hour schedule with the Registrar.</p>
+        <p>Each credit hour requires at least 700 minutes of instructional time and about 28 hours of out-of-class work. For 1.5 credits, expect at least 1,050 instructional minutes across the 13 meetings, and at least 42 hours of independent work: readings, quizzes, programming homework, and the project.</p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Instructors</h3>
+            <p>Salih Tutun, PhD, and Gerald Onwujekwe, PhD. Course questions go to <a href="mailto:salihtutun@wustl.edu">salihtutun@wustl.edu</a>.</p>
+          </article>
+          <article class="card">
+            <h3>Office hours</h3>
+            <p>Tuesday 1:00–2:00 pm and Thursday 1:00–2:00 pm, Simon Hall 289. Other times by appointment. Hours are tentative.</p>
+          </article>
+          <article class="card">
+            <h3>Modality</h3>
+            <p>In person. A Zoom link is used only in an emergency. Ask an instructor for the link.</p>
+          </article>
+        </div>
+
+        <h2>What you do each session</h2>
+        <ol>
+          <li>Come to the concept session (Sessions 1, 3, 5, 7, 9, and 11). We teach the ideas there. There is no video to watch first.</li>
+          <li>Take the quiz on Canvas at least one hour before the next practice session. Quiz 1 is due before Session 2 and covers Session 1. The same pattern continues: Quiz 2 before Session 4 (covers Session 3), Quiz 3 before Session 6 (Session 5), Quiz 4 before Session 8 (Session 7), Quiz 5 before Session 10 (Session 9), and Quiz 6 before Session 12 (Session 11). A late quiz is not accepted except with an excused absence. The lowest quiz score is dropped.</li>
+          <li>In the practice session (Sessions 2, 4, 6, 8, 10, and 12), fill the notebook and submit the lab.</li>
+          <li>Finish the homework after the practice session. Homework is individual.</li>
+          <li>Session 13 is the project presentation.</li>
+        </ol>
+        <p>Students who have not completed that module’s quiz cannot receive full credit on the in-lab assignment. Repeated non-completion after a warning can reduce lab participation. An optional help session is offered for setup and review.</p>
+
+        <h2>Prerequisites</h2>
+        <p>Graduate: DAT 5565 (Deep Learning for Predictions of Business Outcomes) or DAT 6565, or instructor permission. Proposed BSBA cross-listing: DAT 5565 or equivalent preparation (Python plus supervised machine learning and deep learning), or instructor permission. There are no co-requisites. MSA and BSBA students follow the same sessions and the same labs.</p>
+        <p>The course is applied AI for business. It is proposed for the BSBA Major in AI and the Minor in Business Analytics and AI. Students leave able to design, evaluate, and govern an agent: tool use, grounding, Markov decision processes, Q-learning, deep Q-networks, hybrids, and a managerial scorecard. That is the work hiring teams ask for. Students who want large-scale systems or compiler-level work should take a McKelvey elective.</p>
+
+        <h2>Why both families are in one course</h2>
+        <p>An agent observes, decides, acts, and uses feedback. A large language model that calls tools, and a policy learned from reward, are two implementations of that loop. The course teaches both because a firm has to choose: language and documents, a repeated numeric decision, a hybrid, or no automation. Splitting them into two electives would hide that choice. The project may be an LLM agent, an RL agent, or a hybrid, and it must state the loop, justify the family, compare a baseline, and include a short governance note.</p>
+
+        <h2>Materials and software</h2>
+        <p>Bring a laptop. Labs use Google Colab, Python, NumPy, and Matplotlib. The notebooks run with a local tool-calling stand-in, so class does not require an API key. If an instructor enables Gemini for a session, the course key is used in class and the local stand-in remains. Do not paste confidential data into a public tool.</p>
+        <p>For the reinforcement-learning sessions, the main book is Richard S. Sutton and Andrew G. Barto, <em>Reinforcement Learning: An Introduction</em>, 2nd ed., MIT Press, 2018 (print, or the free author PDF and HTML). Optional: Enes Bilgin, <em>Mastering Reinforcement Learning with Python</em>, Packt, 2020. LLM-agent sessions use the instructor notebooks and selected readings on tool use and retrieval. You are assessed on both families. The free Sutton and Barto text is the book of record. Do not rely on a copied PDF from a third party.</p>
+
+        <h2>Description</h2>
+        <p>Agentic AI is the design of systems that act toward a goal. LLM agents fit knowledge work: retrieval, tools, multi-step workflows, and handoffs. RL agents fit repeated sequential control, such as inventory or pricing, where a state, an action, and a reward can be specified. Industry systems often combine them: a language model plans or handles exceptions, and a learned policy executes a repeated decision. A chatbot is a poor inventory controller. A deep Q-network is a poor contract reviewer.</p>
+
+        <h2>Learning objectives</h2>
+        <ul>
+          <li>Explain the shared agent loop and choose, with a business reason, an LLM-based agent, an RL-based agent, or a hybrid.</li>
+          <li>Build a prototype LLM agent with tool use and retrieval, and evaluate grounding, cost, and human oversight.</li>
+          <li>Formulate a sequential business problem as a Markov decision process and apply tabular Q-learning, including ε-greedy exploration.</li>
+          <li>Build and train a deep Q-network with experience replay, diagnose failure modes, and compare it with a baseline.</li>
+          <li>Compare, combine, and govern both families, and write a short evaluation note for managers.</li>
+        </ul>
+
+        <h2 id="sessions">Thirteen sessions</h2>
+        <p>Dates are posted on Canvas and may move for the university calendar. The topics below are what we teach in the room.</p>
+        <div class="table-wrap">
+          <table class="grades">
+            <thead>
+              <tr><th>Session</th><th>Module</th><th>What we teach</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>1 · concept</td><td>The agent loop. When work should be autonomous. LLM agents and RL agents as two implementations. The cost of the wrong family.</td></tr>
+              <tr><td>2</td><td>1 · practice</td><td>From a chatbot to an agent: goals, memory, and tools. Grounding. A policy-checker prototype. Quiz 1, on Session 1, is due one hour before this session.</td></tr>
+              <tr><td>3</td><td>2 · concept</td><td>Retrieval over business documents, planning, short-term memory, and a light handoff. Retrieval errors as a management problem.</td></tr>
+              <tr><td>4</td><td>2 · practice</td><td>Repeated decisions under uncertainty. Multi-armed bandits and exploration versus exploitation. Quiz 2, on Session 3, is due before this session.</td></tr>
+              <tr><td>5</td><td>3 · concept</td><td>States, actions, transitions, rewards, and discounting. An inventory or pricing problem as a Markov decision process. When RL is the right tool.</td></tr>
+              <tr><td>6</td><td>3 · practice</td><td>One firm process written two ways: an LLM-agent design and an MDP. A one-page go or no-go memo. Quiz 3, on Session 5, is due before this session.</td></tr>
+              <tr><td>7</td><td>4 · concept</td><td>Value functions and the Bellman equation. Dynamic programming when the model is known. Monte Carlo returns and temporal-difference learning. Credit assignment.</td></tr>
+              <tr><td>8</td><td>4 · practice</td><td>Tabular Q-learning, ε-greedy exploration, and learning rates in a small operations environment. Quiz 4, on Session 7, is due before this session.</td></tr>
+              <tr><td>9</td><td>5 · concept</td><td>Why a Q-table breaks in a large state space. Deep Q-networks: function approximation, experience replay, and target networks. Sample cost, simulators, and reward hacking.</td></tr>
+              <tr><td>10</td><td>5 · practice</td><td>Train a short deep Q-network and compare it with a baseline. A write-up on whether you would deploy it, and what human override is required. Quiz 5, on Session 9, is due before this session.</td></tr>
+              <tr><td>11</td><td>6 · concept</td><td>Hybrids: a language model as planner or exception handler, and a policy or a rule as the high-frequency executor. Latency and accountability.</td></tr>
+              <tr><td>12</td><td>6 · practice</td><td>One scorecard for both families: task success, cost, latency, safety, grounding or reward misspecification, and business KPIs. Buy versus build. Quiz 6, on Session 11, is due before this session.</td></tr>
+              <tr><td>13</td><td>7 · project</td><td>Team presentations, about 7 minutes. The project may be an LLM agent, an RL agent, or a hybrid. It must state the loop, justify the family, report a baseline, and include a governance note. The written report is due on Canvas.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="grades">Grades</h2>
+        <div class="table-wrap">
+          <table class="grades">
+            <thead><tr><th>Category</th><th>Weight</th></tr></thead>
+            <tbody>
+              <tr><td>Quizzes (six; lowest score dropped)</td><td>30%</td></tr>
+              <tr><td>In-class labs</td><td>15%</td></tr>
+              <tr><td>Homework</td><td>20%</td></tr>
+              <tr><td>Project</td><td>30%</td></tr>
+              <tr><td>Participation</td><td>5%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Labs, homework, and the project lose 10 percent of the grade for each day late. After five days they are not accepted. Quizzes are not in that window. Groups for labs and the project are 1–3 students. Homework is individual.</p>
+        <p>Deadlines are otherwise strict. A deadline can move if you give notice and the instructor accepts it well before the due date. Contact the instructor as soon as you can about an excused absence.</p>
+        <p>Grading follows Olin guidelines. Those guidelines recommend average GPAs in the range of 3.4–3.5, so grades are consistent across the program. The usual distribution is about 30–40 percent in the A range (A+, A, A−), about 30–60 percent in the B range (B+, B, B−), and about 0–5 percent at C or below. Verify grades on Canvas. A request to change a grade must be in writing, by email, within one week after the work is returned.</p>
+
+        <h2>How to do well</h2>
+        <ul>
+          <li>Attend each session and take part. If the work is not landing, come to office hours.</li>
+          <li>Practice the notebook examples until you can name the problem type and write the result so a manager can use it.</li>
+          <li>Plan on about six hours a week outside class, plus time to get comfortable in Python. That varies by person.</li>
+          <li>Ask in the session when something is unclear.</li>
+        </ul>
+        <p>Olin students embody a values-based and data-driven ethos, understand global opportunities and challenges, apply experiential knowledge with technical skill, and pursue work with an entrepreneurial mindset.</p>
+
+        <h2 id="policies">Attendance and conduct</h2>
+        <p>Arrive on time and be ready to work. You are responsible for material covered if you miss a session. Email the instructor if you know you will be absent, or as soon as you can after an unexpected absence. Notes for the course are the session notebooks and this site.</p>
+        <p>A positive room depends on arriving on time, listening when someone else is speaking, and using professional language. Phones and unrelated browsing stay away during class. A laptop or tablet for the notebook and for notes is appropriate. Recording the class requires the instructor’s prior approval. No recording device is otherwise permitted.</p>
+        <p>Except as authorized by the instructor or the university, students may not record, stream, reproduce, display, publish, or further distribute classroom activities or course materials. This includes lectures, discussions, office hours, assessments, answers, slides, and screenshots. A student who needs assistive technology as an accommodation contacts the Office of Disability Resources first. If recording is permitted, unauthorized use or distribution of that recording is still prohibited.</p>
+
+        <h2>Academic integrity</h2>
+        <p>The Olin Business School expects integrity in academic work. In all academic work, the ideas and contributions of others, including generative artificial intelligence, must be acknowledged, and work presented as original must be original. Read the academic integrity policy for your program and the Olin Code of Conduct. Ask before you are unsure: what collaboration means, and what a quiz allows.</p>
+        <ul>
+          <li>Quizzes are your own work.</li>
+          <li>Discussion of homework and of ungraded class material is encouraged. The file you submit is your own.</li>
+          <li>Signing attendance for someone else, or asking someone to sign for you, is prohibited.</li>
+          <li>Passing notes, handouts, or solutions to students who have not yet taken the course, or to another section, is prohibited. An archive of past materials beyond what the instructor provides is prohibited.</li>
+          <li>Attending a different section without prior approval is prohibited.</li>
+          <li>Every member of a group contributes. Every member is responsible for the integrity of the group work.</li>
+          <li>Plagiarism is a violation. Cite sources.</li>
+          <li>Submitting similar work in more than one class requires approval from every instructor involved.</li>
+        </ul>
+        <p>Generative AI tools such as Copilot, ChatGPT, or DeepSeek are not permitted unless an assignment says so. Using the course notebooks, including the local tool loop or a course-approved model when the lab requires it, is part of the assignment. Submitting an AI-written report as your own, using unauthorized AI on a quiz, or pasting confidential data into a public tool is not. You may tell the instructor, anonymously if you wish, if you suspect improper behavior. An indicated honor-code violation goes to the disciplinary process.</p>
+        <p>Papers and assignments may be submitted through Turnitin. If you do not use Turnitin, the instructor may upload the work for review.</p>
+
+        <h2>University policies</h2>
+        <h3>Disability resources</h3>
+        <p>WashU supports an equitable education. If a barrier related to a disability affects your inclusion, contact <a href="https://disability.washu.edu/">Disability Resources</a>. Send the instructor your WashU Accommodation Letter as soon as you receive it. Accommodations are not applied retroactively, so start the request before or at the beginning of the term.</p>
+        <h3>Sexual harassment and assault</h3>
+        <p>If you experience sex discrimination, sexual harassment, or violence, speak with someone as soon as you can. An instructor who receives a disclosure must report it to the department chair, the dean, or the Gender Equity and Title IX Compliance Office. Confidential support is available through the Relationship and Sexual Violence Prevention Center. See <a href="https://titleix.wustl.edu/students/confidentiality-resources-support/">confidentiality, resources, and support</a>.</p>
+        <h3>Religious holidays</h3>
+        <p>If you will miss class, an assignment, or an exam for a religious holiday, tell the instructor in writing before the end of the third week of class, or as soon as possible if the holiday falls in the first three weeks. See the university Religious Holiday Class Absence Policy and the <a href="https://orsel.washu.edu/support/religious-spiritual-holidays/">list of religious holidays</a>.</p>
+        <h3>Emergency preparedness</h3>
+        <p>Download the WashU SAFE app before an emergency. Each classroom has a Quick Guide for Emergencies near the door.</p>
+        <h3>Military service leave</h3>
+        <p>Students serving in the U.S. Armed Forces, and their family members, may need to withdraw with little notice. Contact the Office of Military and Veteran Services at (314) 935-2609 or <a href="mailto:veterans@wustl.edu">veterans@wustl.edu</a>, and your academic dean. See <a href="https://veterans.washu.edu/policies/policy-for-military-students/">the policy for military students</a>.</p>
+        <h3>Names and pronouns</h3>
+        <p>WashU recognizes preferred names and asks that we check pronouns. See the university pages on pronouns and preferred names.</p>
+        <h3>Bias reporting</h3>
+        <p>Students, faculty, staff, and community members can report incidents of bias, prejudice, or discrimination against a student through the Bias Report and Support System. The process is non-punitive.</p>
+
+        <h2>Support on campus</h2>
+        <ul>
+          <li><strong>Center for Career Engagement.</strong> Coaching, resume review, and interviewing. Appointments are in Handshake: Career Center, then Appointments. Danforth University Center, Suite 110, with additional offices in Knight Hall 210, Bauer Hall 250, Steinberg Hall, and Brown Hall.</li>
+          <li><strong>Counseling and Psychological Services.</strong> Individual, conjoint, and group therapy, plus off-campus referrals. TimelyCare adds after-hours medical care and 24/7 mental telehealth for students who pay the Health and Wellness fee, including 12 counseling visits at no charge at the time of the visit.</li>
+          <li><strong>WashU Cares.</strong> Referrals for mental health, medical health, financial, and academic needs. If an instructor is concerned about a student, the report goes to <a href="https://carestream.washu.edu">Carestream</a>.</li>
+          <li><strong>The Writing Center.</strong> Free writing support for any WashU student, at any stage of a draft. Mallinckrodt. Appointments at <a href="https://writingcenter.wustl.edu">writingcenter.wustl.edu</a> or <a href="mailto:writing@wustl.edu">writing@wustl.edu</a>.</li>
+          <li><strong>The Learning Center.</strong> Peer mentoring and academic-skills coaching for undergraduates. <a href="mailto:learningcenter@wustl.edu">learningcenter@wustl.edu</a>.</li>
+          <li><strong>Center for Diversity and Inclusion.</strong> Danforth University Center Suite 150 and the Women’s Building Room 102, including Cross-Cultural Connections, the Office for International Student Engagement, the Office for Religious, Spiritual and Ethical Life, and the Spectrum Office.</li>
+          <li><strong>Dialogue Across Difference.</strong> Danforth University Center 340.</li>
+          <li><strong>Gephardt Institute.</strong> Voter registration and civic engagement at <a href="https://washuvotes.washu.edu">washuvotes.washu.edu</a> and <a href="https://gephardtinstitute.washu.edu">gephardtinstitute.washu.edu</a>.</li>
+          <li><strong>University Libraries.</strong> Subject librarians, research guides, and collections across the Danforth Campus.</li>
+        </ul>
+        <p>Questions about this syllabus go to the instructor team. We look forward to the semester.</p>
+        <p>Salih Tutun, PhD, and Gerald Onwujekwe, PhD</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>DAT 5668 · Agentic AI: Autonomous Decision-Making · Fall 2026</p>
+      <p>Salih Tutun, PhD, and Gerald Onwujekwe, PhD · Olin Business School · Washington University in St. Louis</p>
+    </div>
+  </footer>
+  <script src="course.js"></script>
+</body>
+</html>
