@@ -110,7 +110,7 @@ img { max-width: 100%; height: auto; display: block; }
   overflow: hidden;
   box-shadow: var(--shadow-lg);
 }
-.banner img { width: 100%; }
+.banner img { width: 100%; aspect-ratio: 2560 / 960; object-fit: cover; }
 
 .section { padding: 64px 0; scroll-margin-top: 110px; }
 .section-title { font-size: 2.2rem; color: var(--accent-primary); margin-bottom: 10px; }
