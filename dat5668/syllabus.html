@@ -73,13 +73,13 @@
 
         <h2>Prerequisites</h2>
         <p>Graduate: DAT 5565 (Deep Learning for Predictions of Business Outcomes) or DAT 6565, or instructor permission. Proposed BSBA cross-listing: DAT 5565 or equivalent preparation (Python plus supervised machine learning and deep learning), or instructor permission. There are no co-requisites. MSA and BSBA students follow the same sessions and the same labs.</p>
-        <p>The course is applied AI for business. It is proposed for the BSBA Major in AI and the Minor in Business Analytics and AI. Students leave able to design, evaluate, and govern an agent: tool use, grounding, Markov decision processes, Q-learning, deep Q-networks, hybrids, and a managerial scorecard. That is the work hiring teams ask for. Students who want large-scale systems or compiler-level work should take a McKelvey elective.</p>
+        <p>The course is applied AI for business. It is proposed for the BSBA Major in AI and the Minor in Business Analytics and AI. Students leave able to design, evaluate, and govern an agent: tool use, grounding, Markov decision processes, Q-learning, deep Q-networks, hybrids, and a managerial scorecard. They also leave with a reusable agent artifact for a business process they choose. That is the work hiring teams ask for. Students who want large-scale systems or compiler-level work should take a McKelvey elective.</p>
 
         <h2>Why both families are in one course</h2>
-        <p>An agent observes, decides, acts, and uses feedback. A large language model that calls tools, and a policy learned from reward, are two implementations of that loop. The course teaches both because a firm has to choose: language and documents, a repeated numeric decision, a hybrid, or no automation. Splitting them into two electives would hide that choice. For the project, the group picks any real business problem, designs an agentic system, and runs the loop on public or simulated data. The project may be an LLM agent, an RL agent, or a hybrid, and it must state the loop, justify the family, compare a baseline, and include a short governance note.</p>
+        <p>An agent observes, decides, acts, and uses feedback. A large language model that calls tools, and a policy learned from reward, are two implementations of that loop. The course teaches both because a firm has to choose: language and documents, a repeated numeric decision, a hybrid, or no automation. Splitting them into two electives would hide that choice. Odd sessions teach the idea; even sessions practice it in the room. For the project, the group picks any real business problem, designs a reusable agent artifact, and runs the loop on simulated data, public data, or a free API from <a href="https://github.com/public-apis/public-apis">public-apis</a>. The project may be an LLM agent, an RL agent, or a hybrid, and it must state the loop, justify the family, compare a baseline, and include a short governance note.</p>
 
         <h2>Materials and software</h2>
-        <p>Bring a laptop. Labs use Google Colab, Python, NumPy, and Matplotlib. The notebooks run with a local tool-calling stand-in, so class does not require an API key. If an instructor enables Gemini for a session, the course key is used in class and the local stand-in remains. Do not paste confidential data into a public tool.</p>
+        <p>Bring a laptop. Labs use Google Colab, Python, NumPy, and Matplotlib. The notebooks run with a local tool-calling stand-in, so class does not require an API key. If an instructor enables Gemini for a session, the course key is used in class and the local stand-in remains. For the project, you may call a free API listed in <a href="https://github.com/public-apis/public-apis">public-apis</a>; prefer rows marked No under Auth. Do not paste confidential data into a public tool.</p>
         <p>For the reinforcement-learning sessions, the main book is Richard S. Sutton and Andrew G. Barto, <em>Reinforcement Learning: An Introduction</em>, 2nd ed., MIT Press, 2018 (print, or the free author PDF and HTML). Optional: Enes Bilgin, <em>Mastering Reinforcement Learning with Python</em>, Packt, 2020. LLM-agent sessions use the instructor notebooks and selected readings on tool use and retrieval. You are assessed on both families. The free Sutton and Barto text is the book of record. Do not rely on a copied PDF from a third party.</p>
 
         <h2>Description</h2>
@@ -92,6 +92,7 @@
           <li>Formulate a sequential business problem as a Markov decision process and apply tabular Q-learning, including ε-greedy exploration.</li>
           <li>Build and train a deep Q-network with experience replay, diagnose failure modes, and compare it with a baseline.</li>
           <li>Compare, combine, and govern both families, and write a short evaluation note for managers.</li>
+          <li>Leave with a reusable agent artifact for a business process they choose, ready to run on a new day of work.</li>
         </ul>
 
         <h2 id="sessions">Thirteen sessions</h2>
@@ -114,7 +115,7 @@
               <tr><td>10</td><td>5 · practice</td><td>Train a short deep Q-network and compare it with a baseline. A write-up on whether you would deploy it, and what human override is required. Quiz 5, on Session 9, is due before this session.</td></tr>
               <tr><td>11</td><td>6 · concept</td><td>Hybrids: a language model as planner or exception handler, and a policy or a rule as the high-frequency executor. Latency and accountability.</td></tr>
               <tr><td>12</td><td>6 · practice</td><td>One scorecard for both families: task success, cost, latency, safety, grounding or reward misspecification, and business KPIs. Buy versus build. Quiz 6, on Session 11, is due before this session.</td></tr>
-              <tr><td>13</td><td>7 · project</td><td>Team presentations, about 7 minutes. The group picks any real business problem, designs an agent, and runs it. The project may be an LLM agent, an RL agent, or a hybrid. It must state the loop, justify the family, report a baseline against a running notebook, and include a governance note. The written report is due on Canvas.</td></tr>
+              <tr><td>13</td><td>7 · project</td><td>Team presentations, about 7 minutes. The group picks any real business problem and leaves with a reusable agent artifact. The project may be an LLM agent, an RL agent, or a hybrid. It must state the loop, justify the family, report a baseline against a running notebook, and include a governance note. Data may be simulated, public, or a free API from public-apis. The written report is due on Canvas.</td></tr>
             </tbody>
           </table>
         </div>
