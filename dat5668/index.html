@@ -34,7 +34,7 @@
       <div class="container">
         <p class="kicker">Washington University in St. Louis · Olin Business School · Fall 2026 · 1.5 credits</p>
         <h1 class="hero-title">DAT 5668<br><span>Agentic AI</span></h1>
-        <p class="hero-subtitle">Autonomous Decision-Making. Design agents that observe, decide, act, and use feedback. The course teaches language-model agents and reinforcement-learning agents as two ways to run that same loop.</p>
+        <p class="hero-subtitle">Autonomous Decision-Making. An agent takes a state, sends an action to an environment, and gets a reward or penalty plus the next state. That is RL. A language model can sit in the same loop. You already know the machine-learning models; we use them as tools and we evaluate every agent.</p>
         <div class="hero-buttons">
           <a class="btn btn-primary" href="#sessions">Open the 13 sessions</a>
           <a class="btn btn-secondary" href="https://github.com/salihtutun/Agentic-AI_Autonomous_Decision_Making">Student files on GitHub</a>
@@ -54,7 +54,7 @@
           <article class="card"><span class="step-num">In the room</span>There are no lecture recordings. Sessions 1, 3, 5, 7, 9, and 11 teach the concepts. Run the notebook from the top and fill the cells marked Fill this with me. Guess before you run.</article>
           <article class="card"><span class="step-num">Before practice</span>Submit the Canvas quiz at least one hour before Sessions 2, 4, 6, 8, 10, and 12. It covers the concept session you just had. A late quiz is not accepted except with an excused absence.</article>
           <article class="card"><span class="step-num">Sessions 2, 4, 6, 8, 10, 12</span>Finish the practice notebook in class. Groups may be 1 to 3 students. Homework for that pair is individual after class.</article>
-          <article class="card"><span class="step-num">Session 13</span>Project presentations. Groups of 1 to 3. About 7 minutes. State the loop, the family, a baseline, and a governance note.</article>
+          <article class="card"><span class="step-num">Session 13</span>Project presentations. Groups of 1 to 3. About 7 minutes. State the loop, the family, a baseline, and a governance note. An ML model may be a tool, not the whole artifact.</article>
         </div>
         <p class="note">Open a notebook in Colab, or download the folder and run it in Python with NumPy. The cases are simulated course examples. Do not paste confidential data into a public tool. Session 1 still runs if no API key is set. Quizzes stay on Canvas, so this page does not include quiz questions or answer keys.</p>
       </div>
@@ -69,7 +69,7 @@
           <article class="module" id="session-1">
             <div class="tags"><span class="tag">Session 1</span><span class="tag tag-both">Both families</span></div>
             <h3>The agent loop</h3>
-            <p>One loop for both families: observe, decide, act, feedback. The decide step uses a local stand-in, or Gemini when the instructor sets a key. The quiz on this session is due one hour before Session 2.</p>
+            <p>One loop: state, action, environment, reward, next state. An LLM can sit in decide. A DAT 5565 model can help form the state. The decide step uses a local stand-in, or Gemini when the instructor sets a key. The quiz on this session is due one hour before Session 2.</p>
             <div class="links">
               <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/01-Module-1-Agent-Loop/Session-01.ipynb">Open in Colab</a>
             </div>
@@ -123,7 +123,7 @@
           <article class="module" id="session-5">
             <div class="tags"><span class="tag">Session 5</span><span class="tag tag-rl">RL-based agent</span></div>
             <h3>Inventory as a decision process</h3>
-            <p>Stock, order, demand, and reward. Guess the empty-shelf reward before you run it. The quiz on this session is due one hour before Session 6.</p>
+            <p>The course loop as an MDP: state, action, environment, reward or penalty, next state. Guess the empty-shelf reward before you run it. The quiz on this session is due one hour before Session 6.</p>
             <div class="links">
               <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/03-Module-3-MDP-and-Go-No-Go/Session-05.ipynb">Open in Colab</a>
             </div>
@@ -213,7 +213,7 @@
           <article class="module" id="session-12">
             <div class="tags"><span class="tag">Session 12</span><span class="tag tag-both">Both families</span></div>
             <h3>Scorecard and governance</h3>
-            <p>Vote, then score both pilots on one sheet. Homework scores a second pilot and writes the governance lines.</p>
+            <p>Required evaluation. Vote, then score both pilots on one sheet against a baseline. Homework scores a second pilot and writes the governance lines.</p>
             <div class="links">
               <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/06-Module-6-Hybrids-and-Governance/Session-12.ipynb">Open in Colab</a>
               <a href="https://colab.research.google.com/github/salihtutun/Agentic-AI_Autonomous_Decision_Making/blob/main/Students/Homework/HW6-Second-Pilot.ipynb">Homework</a>
@@ -241,15 +241,15 @@
     <section class="section" id="families">
       <div class="container">
         <h2 class="section-title">Two families, one loop</h2>
-        <p class="section-subtitle">A chatbot is a poor inventory controller. A deep Q-network is a poor contract reviewer. Match the family to the input and the feedback.</p>
+        <p class="section-subtitle">State in, action out, reward and next state back. That is RL. An LLM can sit in the same loop. A DAT 5565 model is a tool, not the agent. Every agent faces a baseline.</p>
         <div class="schedule">
           <article class="card">
             <strong>LLM-based agent</strong>
-            <p>The input is language or a document. The model acts by calling a tool. Feedback is a citation and a review. Sessions 2 and 3.</p>
+            <p>Still the same loop. The state may be a document. The policy calls tools, then finishes. Feedback is a citation and a review. Sessions 2 and 3.</p>
           </article>
           <article class="card">
             <strong>RL-based agent</strong>
-            <p>The input is a repeated numeric state. A learned policy picks the action. Feedback is a reward. Sessions 4 through 10: bandits, MDPs, Q-learning, and deep Q-networks.</p>
+            <p>The policy is learned from the reward. Sessions 4 through 10: bandits, MDPs, Q-learning, and deep Q-networks.</p>
           </article>
         </div>
         <figure class="figure" style="margin-top:20px;">
