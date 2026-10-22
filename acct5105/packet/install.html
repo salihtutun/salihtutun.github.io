@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Jupyter in 15 minutes · ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</title>
+<link rel="stylesheet" href="assets/course.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="index.html">ACCT 5105-01
+      <span>Financial Reporting &amp; Assurance in a Blockchain World</span>
+    </a>
+    <nav aria-label="Course"><a href="index.html">Syllabus</a><a href="sessions/index.html">Sessions</a><a href="setup.html" aria-current="page">Setup</a><a href="handbook.html">Handbook</a><a href="assessment.html">What to turn in</a><a href="assignments/index.html">Assignments</a><a href="labs/index.html">Labs L1–L3</a><a href="examples/index.html">Samples</a><a href="quizzes/index.html">Quizzes</a></nav>
+  </div>
+</header>
+<div class="page">
+  <div class="layout">
+    
+    <article class="article" id="main">
+      <p class="kicker">ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</p>
+      <h1 id="open-jupyter-in-15-minutes">Open Jupyter in 15 minutes</h1>
+<p><strong>Done when</strong> the Session 1 <strong>Demo</strong> of three jobs prints four lines (<code>concert_ticket -&gt; exchange</code>, and so on). Then stop. You do not need MetaMask today.</p>
+<p>Use the folder that contains <code>requirements.txt</code> (the student files).</p>
+<hr>
+<h2 id="1-python-3">1. Python 3</h2>
+<p>You need Python 3.10 or newer.</p>
+<p><strong>Windows.</strong> Install from <a href="https://www.python.org/downloads/" target="_blank" rel="noreferrer">python.org</a> (tick “Add python.exe to PATH”) or the Microsoft Store. In PowerShell:</p>
+<pre><code>py --version</code></pre>
+<p><strong>Mac / Linux.</strong> In Terminal:</p>
+<pre><code>python3 --version</code></pre>
+<p>If that fails, install Python first, then come back.</p>
+<hr>
+<h2 id="2-get-the-files">2. Get the files</h2>
+<p>Either clone:</p>
+<pre><code>git clone https://github.com/salihtutun/intro-to-blockchain-and-cryptocurrency.git</code></pre>
+<p>or download the ZIP from that GitHub page and unzip it. Then open a terminal <strong>inside</strong> the cloned/unzipped folder (the one with <code>requirements.txt</code>).</p>
+<hr>
+<h2 id="3-install-the-course-packages">3. Install the course packages</h2>
+<p><strong>Windows (PowerShell):</strong></p>
+<pre><code>py -m pip install -r requirements.txt</code></pre>
+<p><strong>Mac / Linux:</strong></p>
+<pre><code>python3 -m pip install -r requirements.txt</code></pre>
+<p>Wait until it finishes. You only do this once (or when we change <code>requirements.txt</code>).</p>
+<hr>
+<h2 id="4-open-session-1">4. Open Session 1</h2>
+<p><strong>Windows:</strong></p>
+<pre><code>py -m jupyter notebook notebooks/sessions/S01_community_money.ipynb</code></pre>
+<p><strong>Mac / Linux:</strong></p>
+<pre><code>python3 -m jupyter notebook notebooks/sessions/S01_community_money.ipynb</code></pre>
+<p>A browser tab should open. Cursor or VS Code also works: File → Open the same <code>.ipynb</code>.</p>
+<p>Pick the <strong>Python 3</strong> kernel if it asks.</p>
+<hr>
+<h2 id="5-run-the-first-demo">5. Run the first Demo</h2>
+<p>Find the cell that starts <code># Demo — three jobs</code>. Click it. Run it (the play button, or Shift+Enter).</p>
+<p>You should see four job labels, then <code>A token with no job is a sticker.</code></p>
+<p>That is the whole check. In class we run the rest together.</p>
+<p><code>???</code> in <strong>YOUR TURN</strong> cells is on purpose. Those will not run until you type.</p>
+<hr>
+<h2 id="if-it-breaks">If it breaks</h2>
+<table><thead><tr><th>What you see</th><th>Try</th></tr></thead><tbody><tr><td><code>python</code> / <code>py</code> not found</td><td>Reinstall Python and tick PATH (Windows), then open a <strong>new</strong> terminal</td></tr><tr><td><code>No module named jupyter</code></td><td>You are not in the folder with <code>requirements.txt</code>, or pip went to a different Python. Run the <code>pip install</code> line again with <code>py -m</code> / <code>python3 -m</code></td></tr><tr><td>Notebook opens but will not run</td><td>Kernel menu → Python 3. Not “Julia” or an empty kernel</td></tr><tr><td>Plots fail later (L1–L3)</td><td><code>matplotlib</code> is in <code>requirements.txt</code>. Re-run the install line</td></tr></tbody></table>
+<p>Do not paste a seed phrase, a private key, or a mainnet address into any notebook.</p>
+<p>Need the course site? <a href="setup.html">Setup</a> · <a href="index.html">Syllabus</a> · <a href="sessions/S01_community_money.html">Session 1</a></p>
+    </article>
+  </div>
+</div>
+<footer class="site">ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World · testnet only · 13 × 62 minutes · Print this page to PDF if your LMS wants a file.</footer>
+
+</body>
+</html>

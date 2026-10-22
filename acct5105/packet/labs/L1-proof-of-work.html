@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L1 — Break a tiny chain (due end of Module 2) · ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="../index.html">ACCT 5105-01
+      <span>Financial Reporting &amp; Assurance in a Blockchain World</span>
+    </a>
+    <nav aria-label="Course"><a href="../index.html">Syllabus</a><a href="../sessions/index.html">Sessions</a><a href="../setup.html">Setup</a><a href="../handbook.html">Handbook</a><a href="../assessment.html">What to turn in</a><a href="../assignments/index.html">Assignments</a><a href="../labs/index.html" aria-current="page">Labs L1–L3</a><a href="../examples/index.html">Samples</a><a href="../quizzes/index.html">Quizzes</a></nav>
+  </div>
+</header>
+<div class="page">
+  <div class="layout">
+    
+    <article class="article" id="main">
+      <p class="kicker">Lab wrapper</p>
+      <h1 id="l1-break-a-tiny-chain-due-end-of-week-2">L1 — Break a tiny chain (due end of Module 2)</h1>
+<p><strong>In one sentence.</strong> Run <strong>our</strong> lab notebook: hash a receipt, mine three blocks, quietly change a payment, re-mine. The PDF is the write-up.</p>
+<div class="meta-grid"><div><strong><strong>Due</strong></strong><span>End of Module 2 (with A2)</span></div><div><strong><strong>Who</strong></strong><span>Individual (talking with a teammate is OK; written answers must be yours)</span></div><div><strong><strong>Time</strong></strong><span>About 60–75 minutes</span></div><div><strong><strong>Turn in</strong></strong><span>PDF: Q1–Q5 + three PNGs from <code>notebooks/labs/lab_output/</code> named <code>L1-hash.png</code>, <code>L1-mine.png</code>, <code>L1-tamper.png</code></span></div><div><strong><strong>Points</strong></strong><span>20 (one-third of the 20% lab bucket)</span></div></div>
+<p><strong>Stuck?</strong> Open the handbook → Session 3, then the notebook. Same words: hash, nonce, <code>prev_hash</code>, verify.</p>
+<h2 id="you-will-actually-do-this">You will actually do this</h2>
+<ol><li>Clone the course repo if you have not: https://github.com/salihtutun/intro-to-blockchain-and-cryptocurrency</li><li>Open <code>notebooks/labs/L1_proof_of_work.ipynb</code> in Jupyter.</li><li><strong>Run All</strong>. Stay at difficulty = 3.</li><li>Check that <code>notebooks/labs/lab_output/</code> now has the three PNGs.</li><li>Write Q1–Q5 in a short PDF <strong>in your words</strong>. Attach the three PNGs.</li></ol>
+<p>You do <strong>not</strong> have to finish Naranjo’s notebooks to get the points. They are optional extra (same verbs, different file):<br>https://www.lorenzonaranjo.com/class-materials/fintech/notebooks.html</p>
+<h2 id="questions-20-points">Questions (20 points)</h2>
+<p>Each question is one section of the notebook. Quote a print if it helps; do not paste the whole file.</p>
+<p><strong>Q1 (4).</strong> The notebook hashed a receipt, changed one character, and hashed again. In finance language, what did you just show (a tamper-evident seal)? 2–4 sentences. Attach <code>L1-hash.png</code>.</p>
+<p><strong>Q2 (4).</strong> In your own words: what is a <strong>nonce</strong>, what is <strong>difficulty</strong>, and when does a block pass? At most 8 sentences. Attach <code>L1-mine.png</code>.</p>
+<p><strong>Q3 (4).</strong> You changed a payment in an <strong>early</strong> block and ran the verifier <strong>without</strong> re-mining. What fails first, and why? Paste True/False plus two sentences. Attach <code>L1-tamper.png</code>.</p>
+<p><strong>Q4 (4).</strong> You re-mined from the tampered block forward until the chain verified. How many blocks did you re-mine? Why is that expensive on a long public chain? Four sentences.</p>
+<p><strong>Q5 (4).</strong> Name <strong>two</strong> Bitcoin pieces you used in this notebook (hash, nonce, <code>prev_hash</code>, verify, …) and <strong>two</strong> you did <strong>not</strong> need to issue a class ERC-20 (P2P gossip, energy market, native coin, mining pools, …). That is the unbundle. Tie one sentence to <em>your</em> A2 coin.</p>
+<h2 id="you-will-not">You will not</h2>
+<ul><li>paste Naranjo’s (or our) notebook as the PDF</li><li>raise difficulty above 3 “to be more realistic”</li><li>claim you re-mined one block and the rest magically worked</li></ul>
+    </article>
+  </div>
+</div>
+<footer class="site">ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World · testnet only · 13 × 62 minutes · Print this page to PDF if your LMS wants a file.</footer>
+
+</body>
+</html>

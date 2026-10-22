@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAMPLE A3 — SpinHour runbook (not Eagecoin) · ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body class="assign-paper">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="../index.html">ACCT 5105-01
+      <span>Financial Reporting &amp; Assurance in a Blockchain World</span>
+    </a>
+    <nav aria-label="Course"><a href="../index.html">Syllabus</a><a href="../sessions/index.html">Sessions</a><a href="../setup.html">Setup</a><a href="../handbook.html">Handbook</a><a href="../assessment.html">What to turn in</a><a href="../assignments/index.html">Assignments</a><a href="../labs/index.html">Labs L1–L3</a><a href="../examples/index.html" aria-current="page">Samples</a><a href="../quizzes/index.html">Quizzes</a></nav>
+  </div>
+</header>
+<div class="page">
+  <div class="layout">
+    
+    <article class="article" id="main">
+      <p class="kicker">Sample — steal the shape, not the community</p>
+      <h1 id="sample-a3-spinhour-runbook-not-eagecoin">SAMPLE A3 — SpinHour runbook (not Eagecoin)</h1>
+<p><strong>This is a SAMPLE.</strong> It is <strong>not</strong> Eagecoin, <strong>not</strong> a live contract, and <strong>not</strong> a template to paste. Steal the <em>headings</em> and the failed-tx paragraph. Invent your own network line from the <strong>board</strong>. Never invent CLASSUSD.</p>
+<p>Working title: <strong>SpinHour</strong> · ticker <strong>SPIN</strong></p>
+<p>Every <code>0x</code> below is a <strong>placeholder</strong>. Your PDF must use hashes from the explorer.</p>
+<hr>
+<h2 id="runbook-1-page">Runbook (1 page)</h2>
+<ol><li>Network: Sepolia (chain id 11155111) — <strong>only if that is what the board says</strong>. Switch if the instructor posted a different class testnet.</li><li>Contract: <code>0x_EXAMPLE_SPIN_NOT_LIVE</code> (SPIN). Copy <em>your</em> address from Remix after deploy, then paste it on the class registry.</li><li>Token: SpinHour / SPIN · decimals 0 · cap 800 · mintable, pausable.</li><li>Admin / minter / pauser: <code>0x_EXAMPLE_RA_ADMIN</code> (the two RAs share this locker — still never a seed).</li><li>How to read a balance: Sepolia explorer → token page → holder&#x27;s <code>0x</code>. Or Remix <code>balanceOf(address)</code>.</li><li>If a tx sits forever: MetaMask network name, then the Canvas faucet. Wrong country on the envelope (Ethereum vs Sepolia) is the usual fail.</li></ol>
+<p>CLASSUSD address: <strong>copy from the instructor registry</strong>. This SAMPLE does not invent one.</p>
+<hr>
+<h2 id="evidence-pack-appendix-labeled-example">Evidence pack (appendix — labeled EXAMPLE)</h2>
+<table><thead><tr><th>What</th><th>EXAMPLE only</th></tr></thead><tbody><tr><td>Deploy tx</td><td><code>0x_EXAMPLE_DEPLOY</code></td></tr><tr><td>Airdrop / mint tx</td><td><code>0x_EXAMPLE_AIRDROP</code></td></tr><tr><td>Ava (floor 2)</td><td><code>0x_EXAMPLE_AVA</code> · 20 SPIN</td></tr><tr><td>Ben (floor 3)</td><td><code>0x_EXAMPLE_BEN</code> · 20 SPIN</td></tr><tr><td>Cara (not on the RA team)</td><td><code>0x_EXAMPLE_CARA</code> · 20 SPIN</td></tr><tr><td>Treasury</td><td>200 SPIN on <code>0x_EXAMPLE_RA_ADMIN</code></td></tr><tr><td>Registry row</td><td>screenshot of the SPIN line (network + address)</td></tr></tbody></table>
+<p><strong>One failed tx.</strong> First airdrop reverted: MetaMask still said <strong>Ethereum</strong>. Fix: switch to Sepolia, get test ETH from the Canvas faucet, resend. Hash of the fail: <code>0x_EXAMPLE_FAIL</code>. That paragraph is points.</p>
+<p>Cap math (must match A2): 12 residents × 20 + pool 200 + treasury 200 = <strong>640 ≤ 800</strong>.</p>
+<hr>
+<h2 id="this-would-fail-do-not-write-this">This would fail (do not write this)</h2>
+<ul><li>A contract address you typed from memory</li><li>“We deployed” with no network name</li><li>No failed tx because “everything worked”</li><li>A seed phrase “for backup”</li><li>CLASSUSD address invented in this PDF</li></ul>
+    </article>
+  </div>
+</div>
+<footer class="site">ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World · testnet only · 13 × 62 minutes · Print this page to PDF if your LMS wants a file.</footer>
+
+</body>
+</html>

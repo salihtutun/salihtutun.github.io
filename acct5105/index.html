@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACCT 5105 — Financial Reporting &amp; Assurance in a Blockchain World</title>
+  <meta name="description" content="Fall 2026 course page for ACCT 5105 at Olin Business School. Students follow seven Monday modules, run the notebooks, and design a testnet coin.">
+  <meta name="author" content="Salih Tutun">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .follow-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    .follow-table th, .follow-table td { text-align: left; padding: 14px 12px; border-bottom: 1px solid var(--border-color); vertical-align: top; }
+    .follow-table th { color: var(--accent-primary); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .follow-table a { font-weight: 600; }
+    .module-block { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 28px; margin-bottom: 20px; }
+    .module-block h3 { margin: 8px 0 6px; font-size: 1.45rem; }
+    .when { color: var(--text-muted); margin: 0 0 12px; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px 16px; margin-top: 12px; }
+    .links a { font-weight: 600; }
+    .grade-note { color: var(--text-secondary); margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../" class="logo">SALIH TUTUN, PhD</a>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="../#about" class="nav-link">About</a>
+        <a href="../#experience" class="nav-link">Experience</a>
+        <a href="../#education" class="nav-link">Education</a>
+        <a href="../#projects" class="nav-link">Projects</a>
+        <div class="nav-item">
+          <a href="../courses/" class="nav-link active">Courses</a>
+          <div class="nav-sub">
+            <a href="../dat5668/">DAT 5668</a>
+            <a href="./">ACCT 5105</a>
+          </div>
+        </div>
+        <a href="../#publications" class="nav-link">Publications</a>
+        <a href="../#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle navigation menu">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 24px; height: 24px;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" style="padding-top: 140px;">
+      <p class="course-code">Washington University in St. Louis · Olin Business School · Fall 2026</p>
+      <h1 class="section-title" style="display:block; text-align:left;">ACCT 5105</h1>
+      <p class="section-subtitle" style="margin-left:0; max-width: 760px;">Financial Reporting &amp; Assurance in a Blockchain World. Seven Monday sessions, 6:15–9:15 p.m., Bauer Room BH130. You design a testnet coin, put it into circulation, and say what an assurer can stand behind.</p>
+      <div class="hero-buttons" style="margin-top: 28px;">
+        <a class="btn btn-primary" href="#modules">Open the 7 modules</a>
+        <a class="btn btn-secondary" href="packet/index.html">Syllabus</a>
+        <a class="btn btn-secondary" href="packet/setup.html">Setup</a>
+        <a class="btn btn-secondary" href="packet/handbook.html">Handbook</a>
+      </div>
+    </section>
+
+    <section class="section container" id="follow" style="padding-top: 20px;">
+      <h2 class="section-title" style="display:block; text-align:left;">How to follow</h2>
+      <p class="section-subtitle" style="margin-left:0; max-width: 760px;">Each module is one Monday. Modules 1–6 have two parts. Module 7 is demo day and does not split.</p>
+      <table class="follow-table">
+        <thead>
+          <tr><th>When</th><th>What you do</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Before the session</td><td>Read the two session pages. Jupyter before Module 1, a wallet before Module 1’s second part, Remix before Module 3. Publish an address. Never a seed.</td></tr>
+          <tr><td>6:15–7:17 p.m.</td><td>First part. Run every Demo, read Keep this straight, then fill YOUR TURN.</td></tr>
+          <tr><td>7:30–8:32 p.m.</td><td>Second part. Same pattern. The buffer until 9:15 p.m. is for the quiz, Remix, or help.</td></tr>
+          <tr><td>After the session</td><td>The module gate, and a lab in Modules 2, 4, and 6. Due at 9:15 p.m. that Monday unless the page says otherwise.</td></tr>
+          <tr><td>Final project</td><td>A team of 1, 2, or 3. Sign up on Canvas under People → Final project teams before Module 3 (Nov 9). One memo and one live defense.</td></tr>
+        </tbody>
+      </table>
+      <p class="grade-note">Quizzes are closed notes and stay on Canvas. This site has the student pages and notebooks only. It has no quiz questions and no solutions. Testnet only. No mainnet, no real money, and no public sale.</p>
+    </section>
+
+    <section class="section container" id="modules" style="padding-top: 10px;">
+      <h2 class="section-title" style="display:block; text-align:left;">Seven modules</h2>
+
+      <article class="module-block" id="module-1">
+        <p class="course-code">Module 1 · Monday, Oct 26</p>
+        <h3>Community money and wallets</h3>
+        <p class="when">First part: a balance is a claim. Second part: an address, never a seed. Turn in A1 at 9:15 p.m.</p>
+        <div class="links">
+          <a href="packet/sessions/S01_community_money.html">Read S1</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S01_community_money.ipynb">S1 notebook</a>
+          <a href="packet/sessions/S02_keys_and_wallets.html">Read S2</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S02_keys_and_wallets.ipynb">S2 notebook</a>
+          <a href="packet/assignments/A1-coin-intent.html">A1</a>
+          <a href="packet/examples/sample-a1-laundry.html">Sample</a>
+          <a href="packet/wallet.html">Wallet setup</a>
+        </div>
+      </article>
+
+      <article class="module-block" id="module-2">
+        <p class="course-code">Module 2 · Monday, Nov 2</p>
+        <h3>Tiny chain and markets</h3>
+        <p class="when">First part: hash, mine, tamper. Second part: price versus index. The ticker freezes with A2. Turn in A2 and Lab L1 at 9:15 p.m.</p>
+        <div class="links">
+          <a href="packet/sessions/S03_tiny_chain.html">Read S3</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S03_tiny_chain.ipynb">S3 notebook</a>
+          <a href="packet/sessions/S04_markets_and_index.html">Read S4</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S04_markets_and_index.ipynb">S4 notebook</a>
+          <a href="packet/assignments/A2-issuance-and-distribution.html">A2</a>
+          <a href="packet/labs/L1-proof-of-work.html">Lab L1</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/labs/L1_proof_of_work.ipynb">L1 notebook</a>
+        </div>
+      </article>
+
+      <article class="module-block" id="module-3">
+        <p class="course-code">Module 3 · Monday, Nov 9</p>
+        <h3>Contracts, create, and airdrop</h3>
+        <p class="when">Quiz 1 opens on Canvas at 6:15 p.m. Then the contract, the cap, and the airdrop. Teams are locked before this session. Turn in A3 at 9:15 p.m.</p>
+        <div class="links">
+          <a href="packet/sessions/S05_smart_contracts.html">Read S5</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S05_smart_contracts.ipynb">S5 notebook</a>
+          <a href="packet/sessions/S06_create_and_airdrop.html">Read S6</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S06_create_and_airdrop.ipynb">S6 notebook</a>
+          <a href="packet/assignments/A3-deploy-and-airdrop.html">A3</a>
+          <a href="packet/examples/sample-a3-laundry.html">Sample</a>
+          <a href="packet/remix.html">Remix setup</a>
+        </div>
+      </article>
+
+      <article class="module-block" id="module-4">
+        <p class="course-code">Module 4 · Monday, Nov 16</p>
+        <h3>Payments and the class AMM</h3>
+        <p class="when">Five peer payments and one swap. Seed a pool against CLASSUSD and keep a quote. Turn in A4 and Lab L2 at 9:15 p.m.</p>
+        <div class="links">
+          <a href="packet/sessions/S07_payments.html">Read S7</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S07_payments.ipynb">S7 notebook</a>
+          <a href="packet/sessions/S08_amm_lemonade.html">Read S8</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S08_amm_lemonade.ipynb">S8 notebook</a>
+          <a href="packet/assignments/A4-circulate-and-list.html">A4</a>
+          <a href="packet/labs/L2-amm.html">Lab L2</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/labs/L2_amm.ipynb">L2 notebook</a>
+          <a href="packet/examples/sample-a4-laundry.html">Sample</a>
+        </div>
+      </article>
+
+      <article class="module-block" id="module-5">
+        <p class="course-code">Module 5 · Monday, Nov 23</p>
+        <h3>Claims, delivery, and netting</h3>
+        <p class="when">Quiz 2 opens on Canvas at 6:15 p.m. Bring a calculator. Separate a claim from a receipt, then show what the books still owe. Turn in A5 at 9:15 p.m.</p>
+        <div class="links">
+          <a href="packet/sessions/S09_claims_and_dvp.html">Read S9</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S09_claims_and_dvp.ipynb">S9 notebook</a>
+          <a href="packet/sessions/S10_netting_and_public_money.html">Read S10</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S10_netting_and_public_money.ipynb">S10 notebook</a>
+          <a href="packet/assignments/A5-claim-and-netting.html">A5</a>
+          <a href="packet/examples/sample-a5-laundry.html">Sample</a>
+        </div>
+      </article>
+
+      <article class="module-block" id="module-6">
+        <p class="course-code">Module 6 · Monday, Nov 30</p>
+        <h3>Runs, depegs, and if this left the lab</h3>
+        <p class="when">A kill rule with a number. Quiz 3 opens on Canvas at 9:15 p.m. and is due the night before demo day. Turn in A6 and Lab L3 at 9:15 p.m.</p>
+        <div class="links">
+          <a href="packet/sessions/S11_runs_and_depegs.html">Read S11</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S11_runs_and_depegs.ipynb">S11 notebook</a>
+          <a href="packet/sessions/S12_if_this_left_the_lab.html">Read S12</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S12_if_this_left_the_lab.ipynb">S12 notebook</a>
+          <a href="packet/assignments/A6-risk-and-compliance.html">A6</a>
+          <a href="packet/labs/L3-peg-risk.html">Lab L3</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/labs/L3_peg_risk.ipynb">L3 notebook</a>
+          <a href="packet/examples/sample-a6-laundry.html">Sample</a>
+        </div>
+      </article>
+
+      <article class="module-block" id="module-7">
+        <p class="course-code">Module 7 · Monday, Dec 7 · demo day</p>
+        <h3>Design the coin and defend it</h3>
+        <p class="when">One block, 6:15–9:15 p.m. The memo is due at 6:15 p.m. The demo is about 8 minutes: contract, a classmate who is not on the team holding the coin, a pool quote, a transfer and a redemption, then go, partner, or pass.</p>
+        <div class="links">
+          <a href="packet/assignments/A7-design-memo.html">A7 memo</a>
+          <a href="packet/assignments/A8-demo-day.html">A8 demo</a>
+          <a href="packet/sessions/S13_demo_day.html">Read S13</a>
+          <a href="https://colab.research.google.com/github/salihtutun/salihtutun.github.io/blob/master/acct5105/notebooks/sessions/S13_demo_day.ipynb">S13 notebook</a>
+          <a href="packet/examples/sample-a7-unbundle.html">Sample unbundle</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section container" id="grades" style="padding-top: 10px;">
+      <h2 class="section-title" style="display:block; text-align:left;">Grades</h2>
+      <table class="follow-table">
+        <thead>
+          <tr><th>Work</th><th>Share</th><th>Who</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Module gates A1–A6</td><td>29%</td><td>Team of 1–3</td></tr>
+          <tr><td>Labs L1–L3</td><td>39%</td><td>Individual</td></tr>
+          <tr><td>Final project, memo and demo</td><td>30%</td><td>Team of 1–3. Memo 40 points, demo 60 points.</td></tr>
+          <tr><td>Participation</td><td>2%</td><td>In the room</td></tr>
+          <tr><td>Quizzes Q1–Q3</td><td>0%</td><td>Individual, diagnostic, on Canvas</td></tr>
+        </tbody>
+      </table>
+      <p class="grade-note">Python setup is on the <a href="packet/setup.html">setup page</a>. The package list is <a href="requirements.txt">requirements.txt</a>. Questions: salihtutun@wustl.edu.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">SALIH TUTUN, PhD</div>
+      <p>ACCT 5105 · testnet only · Washington University in St. Louis · Olin Business School</p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
