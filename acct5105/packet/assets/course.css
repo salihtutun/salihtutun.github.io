@@ -201,8 +201,28 @@ pre.mermaid {
   text-align: center;
   overflow-x: auto;
 }
-  padding: 0;
+
+.pic {
+  margin: 1rem 0 1.25rem;
 }
+
+.pic img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: var(--card);
+}
+
+blockquote.example,
+blockquote.easy,
+blockquote.mixup {
+  color: var(--ink);
+}
+
+blockquote.example { border-left-color: var(--ok); background: #eef3ef; }
+blockquote.easy { border-left-color: var(--accent); background: var(--accent-soft); }
+blockquote.mixup { border-left-color: #7a4a12; background: #f6ead8; }
 
 table {
   width: 100%;

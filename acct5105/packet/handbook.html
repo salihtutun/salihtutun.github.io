@@ -13,7 +13,7 @@
     <a class="brand" href="index.html">ACCT 5105-01
       <span>Financial Reporting &amp; Assurance in a Blockchain World</span>
     </a>
-    <nav aria-label="Course"><a href="index.html">Syllabus</a><a href="sessions/index.html">Sessions</a><a href="setup.html">Setup</a><a href="handbook.html" aria-current="page">Handbook</a><a href="assessment.html">What to turn in</a><a href="assignments/index.html">Assignments</a><a href="labs/index.html">Labs L1–L3</a><a href="examples/index.html">Samples</a><a href="quizzes/index.html">Quizzes</a></nav>
+    <nav aria-label="Course"><a href="index.html">Syllabus</a><a href="fundamentals.html">Start here</a><a href="sessions/index.html">Sessions</a><a href="setup.html">Setup</a><a href="handbook.html" aria-current="page">Handbook</a><a href="assessment.html">What to turn in</a><a href="assignments/index.html">Assignments</a><a href="labs/index.html">Labs L1–L3</a><a href="examples/index.html">Samples</a><a href="quizzes/index.html">Quizzes</a></nav>
   </div>
 </header>
 <div class="page">
@@ -22,6 +22,7 @@
     <article class="article" id="main">
       <p class="kicker">ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</p>
       <h1 id="concept-handbook">Concept handbook</h1>
+<p><strong>Never studied finance or blockchain?</strong> Open <strong><a href="fundamentals.html">Start here</a></strong> first. Cafeteria punches, house keys, and worked examples. Then come back.</p>
 <p><strong>This file is meant to make the course easier, not harder.</strong> If you missed class, or a notebook word still does not land, read that session here. Each idea has a cafeteria / house-key / lemonade picture, the mechanism, why Eagecoin needs it, and the mix-up that costs points.</p>
 <p>Class still runs in 62 minutes. The <strong>session notebook is the lesson</strong>: run every Demo cell, then fill YOUR TURN. This handbook is the missed-class / quiz-review copy — not a required pre-read.</p>
 <hr>
@@ -35,11 +36,12 @@
 <p><strong>CLASSUSD</strong> is the instructor’s chip — the class <em>unit of account</em>.<br><strong>EAGE</strong> (Eagecoin) is the running example. Your team may use that name or another.<br><strong>Testnet only.</strong> No mainnet, no real money, no public sale, no seed phrase in a PDF.</p>
 <hr>
 <h2 id="session-1-community-money">Session 1 — Community money</h2>
-<p><strong>What you do this week.</strong> In class, run the Session 1 <strong>Demo</strong> cells, then fill YOUR TURN. This session, write <strong>A1</strong> — one page, six headings, no code. Missed class? Read this section (about 10 minutes of pictures), then re-run the notebook. There is a <a href="examples/sample-a1-laundry.html">SAMPLE one-pager</a> that uses a dorm laundry club, <strong>not</strong> Eagecoin. Steal the headings. Invent your own community.</p>
+<p><strong>What you do this week.</strong> In class, run the Session 1 <strong>Demo</strong> cells, then fill YOUR TURN. When A1 opens on Canvas: one page, six headings, no code. Missed class? Read this section (about 10 minutes of pictures), then re-run the notebook. There is a <a href="examples/sample-a1-laundry.html">SAMPLE one-pager</a> that uses a dorm laundry club, <strong>not</strong> Eagecoin. Steal the headings. Invent your own community.</p>
+<p><strong>Easy.</strong> Punch = one <strong>meal credit</strong> on a cafeteria card (a stamp, not a fist). Pay = spend now. Sit = save for later. Price = the <strong>yardstick</strong> on the tag.</p>
 <h3 id="three-jobs-of-money">Three jobs of money</h3>
 <p><strong>In one sentence.</strong> Money can pay for stuff, sit for later, and write prices. One object does not automatically do all three.</p>
 <p><strong>School picture.</strong> A cafeteria punch card.</p>
-<table><thead><tr><th>Job</th><th>Fancy name</th><th>Punch card</th></tr></thead><tbody><tr><td>Pay</td><td>Medium of exchange</td><td>Punch → pizza</td></tr><tr><td>Sit</td><td>Store of value</td><td>Save punches for Friday</td></tr><tr><td>Price</td><td>Unit of account</td><td>“A slice = 2 punches”</td></tr></tbody></table>
+<table><thead><tr><th>Job</th><th>Short name</th><th>Fancy name</th><th>Punch card</th></tr></thead><tbody><tr><td>Spend now</td><td>Pay</td><td>Medium of exchange</td><td>Punch → pizza</td></tr><tr><td>Save for later</td><td>Sit</td><td>Store of value</td><td>Save punches for Friday</td></tr><tr><td>Yardstick on the tag</td><td>Price</td><td>Unit of account</td><td>“A slice = 2 punches”</td></tr></tbody></table>
 <p><strong>What breaks.</strong></p>
 <ul><li>Too few punches → nobody can <em>pay</em> (job 1 dies).</li><li>Punches expire at 2pm → you cannot <em>save</em> (job 2 dies).</li><li>Every table invents a slice price → you cannot <em>compare</em> (job 3 dies).</li></ul>
 <p>A concert ticket is great at job 1 (get in the door) and terrible everyday money. That is fine for a door. It is a bad design for a <em>currency</em>.</p>
@@ -66,7 +68,7 @@
 <p><strong>In one sentence.</strong> Punches spent this week ÷ punches that exist.</p>
 <p><strong>School picture.</strong> 30 punches exist. This week 3 moved. Velocity = 0.10. The club <em>looks</em> rich and <em>acts</em> frozen.</p>
 <p>If 45 punches moved (some spent more than once), velocity = 1.5. The medium of exchange is working.</p>
-<p><strong>Babysitting co-op (why this course exists).</strong> 1970s D.C. families used paper slips = one session of sitting. They printed too little paper. Families hoarded the last slip. Nobody sat. The club felt poor — parents and kids were still there. That is a shortage of the <em>medium of exchange</em> (Sweeney and Sweeney 1977; Krugman 1998). <strong>Sarafu</strong> (Kenya) is a modern community money with the same job: local shops take a local unit when national cash is tight (Mattsson, Criscione, and Takes 2023). It is not Bitcoin with a sticker.</p>
+<p><strong>Babysitting co-op (why this course exists).</strong> 1970s D.C. families used paper slips = one night of sitting. They printed too little paper. Families hoarded the last slip. Nobody sat. The club felt poor — parents and kids were still there. That is a shortage of the <em>medium of exchange</em> (Sweeney and Sweeney 1977; Krugman 1998). <strong>Sarafu</strong> (Kenya) is a modern community money with the same job: local shops take a local unit when national cash is tight (Mattsson, Criscione, and Takes 2023). It is not Bitcoin with a sticker.</p>
 <p><strong>Why Eagecoin cares.</strong> If nobody spends EAGE, you built a collectible. Demo day will show it.</p>
 <p><strong>Mix-up.</strong> “High price means success.” Price without velocity is a sticker collection.</p>
 <h3 id="asset-for-you-promise-for-the-group">Asset for you, promise for the group</h3>
@@ -78,6 +80,7 @@
 <ol><li>Three jobs, cafeteria words only. → pay / sit / price (or exchange / store / unit).</li><li>Why did the babysitting club feel poor? → too little scrip, hoarding, nobody sat — medium of exchange hid.</li><li>A punch is an asset for Ava and a <strong>liability / pizza-promise</strong> for the cafeteria.</li></ol>
 <hr>
 <h2 id="session-2-keys-and-wallets">Session 2 — Keys and wallets</h2>
+<p><strong>Easy.</strong> Hash = fingerprint (not a lock). Signature = I approved this (not a secret code). Address = locker number (public). Seed = house key (never).</p>
 <h3 id="hash">Hash</h3>
 <p><strong>In one sentence.</strong> A fingerprint of some bytes. Same input → same print. One-letter change → unrecognizable new print. You cannot walk backwards from the print to the essay.</p>
 <p><strong>School picture.</strong> Gym-bag sticker. Move a sock, the code no longer matches.</p>
@@ -104,6 +107,7 @@
 <ol><li>Change one digit in a payment. First 8 hash characters match? → No.</li><li>Signature = <strong>authorization</strong>, not encryption.</li><li>MetaMask CLASSUSD vs trading-app screenshot → MetaMask is self-custody.</li></ol>
 <hr>
 <h2 id="session-3-a-tiny-chain">Session 3 — A tiny chain</h2>
+<p><strong>Easy.</strong> Block = a page, not a city block. Nonce = guess counter, not “nonsense.” Mine = guess until zeros, not a coal mine. Stay at difficulty = 3.</p>
 <h3 id="block-previous-hash-nonce-difficulty-proof-of-work">Block, previous hash, nonce, difficulty, proof of work</h3>
 <p><strong>In one sentence.</strong> A blockchain is a notebook where every page names the fingerprint of the last page, and someone had to do a small puzzle to publish a page.</p>
 <p><strong>School picture.</strong> Numbered lockers. Locker 8’s sticker says “I come after locker 7’s code.” Swap a jacket in locker 3 → lockers 4–8 no longer match.</p>
@@ -127,6 +131,7 @@
 <ol><li><code>verify_chain</code> checks <strong>PoW zeros</strong> and <strong>parent hash</strong>.</li><li>Quiet edit without re-mine → PoW fails (and later parent links fail).</li><li>EAGE does not need its own PoW / P2P / native coin.</li></ol>
 <hr>
 <h2 id="session-4-markets-and-access">Session 4 — Markets and access</h2>
+<p><strong>Easy.</strong> Index = a playlist, not a textbook index. Beta = a dance partner in this sample, not a seatbelt. Airdrop = a gift, not rain.</p>
 <h3 id="price-index-beta">Price, index, beta</h3>
 <p><strong>In one sentence.</strong> Price is what one coin costs <em>right now</em>. An index is a playlist. Beta is a dance partner in the data — not a seatbelt.</p>
 <p><strong>School picture.</strong> If the playlist jumps 1% and your coin <em>tends</em> to jump 2%, β ≈ 2. Five handmade days do not promise tomorrow.</p>
@@ -136,7 +141,7 @@
 <h3 id="how-people-get-coins">How people get coins</h3>
 <table><thead><tr><th>Method</th><th>School picture</th><th>Feels like</th></tr></thead><tbody><tr><td>Airdrop</td><td>Teacher hands everyone 10 tickets</td><td>A gift</td></tr><tr><td>Sale for CLASSUSD</td><td>Ticket booth</td><td>A sale (and maybe a security if you hype 10×)</td></tr><tr><td>Earn</td><td>10 minutes of tutoring → 2 coins</td><td>A wage</td></tr></tbody></table>
 <p><strong>PoS in one breath.</strong> Bitcoin security ≈ energy. Proof-of-stake security ≈ coins that can be <strong>slashed</strong> if a validator cheats.</p>
-<p><strong>Why Eagecoin cares.</strong> Freeze ticker and distribution <em>before</em> Remix. Sale + 10× pitch is how you wander into Howey-shaped facts in Module 6.</p>
+<p><strong>Why Eagecoin cares.</strong> Freeze ticker and distribution <em>before</em> Remix. Sale + 10× pitch is how you wander into Howey-shaped facts in Week 6.</p>
 <p><strong>Mix-up.</strong> “Listed on an exchange” = “I hold the coin.” Often you hold a tab.</p>
 <p><strong>Check (S4).</strong></p>
 <ol><li>Beta is <strong>not</strong> a promise / seatbelt.</li><li>Self-custody package = <strong>wallet / spot</strong>.</li><li>Your method is airdrop, sale, or earn — say which, and why not the others.</li></ol>
@@ -249,7 +254,7 @@
 <h3 id="peg-depeg-run">Peg, depeg, run</h3>
 <p><strong>In one sentence.</strong> A peg is a sentence (“this chip should stay $1”). A depeg is the market laughing. A run is everyone redeeming at once — one door, Saturday rush.</p>
 <p><strong>School picture.</strong> 10,000 ice-cream gift cards, 200 scoops. The same geometry shows up in a real run (Liu, Makarov, and Schoar 2023 on Terra-Luna).</p>
-<ul><li>Poster: 1 card = 1 scoop (the peg).</li><li>If everyone ran this session: each card is really <span class="math">200/10{,}000 = 0.02</span> scoops.</li><li>Saturday 150 show up: honor 150, freezer has 50.</li><li>Next 80: honor only 50. The rest hold a PDF.</li></ul>
+<ul><li>Poster: 1 card = 1 scoop (the peg).</li><li>If everyone ran tonight: each card is really <span class="math">200/10{,}000 = 0.02</span> scoops.</li><li>Saturday 150 show up: honor 150, freezer has 50.</li><li>Next 80: honor only 50. The rest hold a PDF.</li></ul>
 <p><strong>Who gets hurt.</strong></p>
 <ul><li>LPs: the jar is the wrong mix.</li><li>Holders: exit costs a fortune (slippage).</li><li>Payers: the rail is not a known CLASSUSD value.</li></ul>
 <p><strong>Key player vs contagion.</strong> If everyone prices through <em>your</em> bowl, you are a key player. If your pause bricks three coins, you are a contagion vector. Both can be true.</p>
@@ -266,7 +271,7 @@
 <h3 id="facts-not-labels">Facts, not labels</h3>
 <p><strong>In one sentence.</strong> Law is fact-heavy. We learn <em>questions</em>, not “I am your lawyer.” A ticker and a “utility token” tweet do not win.</p>
 <p><strong>Two posters.</strong></p>
-<ul><li>A: “1 EAGE = one cookie at office hours. Not for sale to strangers.” Closed voucher. Still not mainnet.</li><li>B: “Buy EAGE this session — we will list it and it 10xes.” Public sale + profit pitch + team working the price → <strong>Howey-shaped facts</strong> (<em>SEC v. W.J. Howey Co.</em>, 328 U.S. 293 (1946)).</li></ul>
+<ul><li>A: “1 EAGE = one cookie at office hours. Not for sale to strangers.” Closed voucher. Still not mainnet.</li><li>B: “Buy EAGE tonight — we will list it and it 10xes.” Public sale + profit pitch + team working the price → <strong>Howey-shaped facts</strong> (<em>SEC v. W.J. Howey Co.</em>, 328 U.S. 293 (1946)).</li></ul>
 <p>Classroom scoring (not law): public sale +2, profit pitch +3, team-works-price +2. Score ≥ 5 → cut the pitch.</p>
 <p><strong>Travel Rule.</strong> Banks send name + account with a wire. The rule is “please don’t make crypto the one pipe with no name.”</p>
 <p><strong>Build / partner / pass.</strong></p>
@@ -298,6 +303,7 @@
 <table><thead><tr><th>Word</th><th>In this class</th></tr></thead><tbody><tr><td>Address</td><td>Public locker number. Safe on the roster.</td></tr><tr><td>Airdrop</td><td>Same gift to every mailbox.</td></tr><tr><td>AMM</td><td>Fishbowl market. <span class="math">x \times y = k</span>.</td></tr><tr><td>Asset</td><td>Treasure to the holder.</td></tr><tr><td>Atomic / DvP</td><td>Both legs or neither.</td></tr><tr><td>Beta</td><td>Dance partner vs an index. Not a seatbelt.</td></tr><tr><td>Block</td><td>A page of payments.</td></tr><tr><td>Cap</td><td>Box lid on supply.</td></tr><tr><td>CBDC</td><td>Central-bank digital currency. Not your ERC-20.</td></tr><tr><td>CLASSUSD</td><td>Instructor-issued class unit of account.</td></tr><tr><td>Contagion</td><td>Your break bricks someone else’s coin.</td></tr><tr><td>Contract address</td><td>Printer serial number. This <em>is</em> the coin.</td></tr><tr><td>Depeg</td><td>Market price left the poster.</td></tr><tr><td>Difficulty</td><td>How rare a valid hash must look.</td></tr><tr><td>EAGE / Eagecoin</td><td>Running example community coin.</td></tr><tr><td>ERC-20</td><td>Shared token buttons so one wallet works.</td></tr><tr><td>ETF</td><td>Share of a fund that holds the thing.</td></tr><tr><td>Faucet</td><td>Testnet stamp machine.</td></tr><tr><td>Gas</td><td>Paid for the attempt.</td></tr><tr><td>Hash</td><td>Tamper-evident fingerprint.</td></tr><tr><td>Howey-shaped</td><td>Public sale + profit pitch + “we work the price.”</td></tr><tr><td>IL</td><td>Jar vs hold, a snapshot gap — not a fee.</td></tr><tr><td>Index</td><td>Playlist of coins.</td></tr><tr><td>Kill criteria</td><td>If-then with numbers.</td></tr><tr><td>Ledger</td><td>List of who has what.</td></tr><tr><td>Liability</td><td>The issuer’s promise.</td></tr><tr><td>LP</td><td>Person who filled the bowl.</td></tr><tr><td>Mainnet</td><td>Real money. Out of scope.</td></tr><tr><td>Medium of exchange</td><td>The thing that <em>moves</em> when you buy.</td></tr><tr><td>Mint</td><td>Banker prints.</td></tr><tr><td>Netting</td><td>Erase a cycle of IOUs.</td></tr><tr><td>Nonce</td><td>Guess counter for PoW.</td></tr><tr><td>Pause</td><td>Freeze transfers.</td></tr><tr><td>Peg</td><td>Poster price.</td></tr><tr><td>PoS</td><td>Security from slashable stake.</td></tr><tr><td>PoW</td><td>Security from guesses / energy.</td></tr><tr><td>Rail</td><td>The pipe the payment travels.</td></tr><tr><td>Receipt / coat-check</td><td>Stub for something in the back.</td></tr><tr><td>Redemption</td><td>Stub becomes the coat.</td></tr><tr><td>Revert</td><td>State rolls back; gas may still be gone.</td></tr><tr><td>Run</td><td>Everyone redeems at once.</td></tr><tr><td>Seed</td><td>House key. Never in a PDF.</td></tr><tr><td>Self-custody</td><td>You hold the key.</td></tr><tr><td>Signature</td><td>Authorization, not a hidden balance.</td></tr><tr><td>Slippage</td><td>You moved the bowl; you paid worse than starting spot.</td></tr><tr><td>Spot price</td><td><span class="math">y/x</span> right now — the next sip.</td></tr><tr><td>Store of value</td><td>The thing you keep for later.</td></tr><tr><td>Testnet</td><td>Play chain. Where we live.</td></tr><tr><td>Travel Rule</td><td>Name + account with the payment.</td></tr><tr><td>Unbundle</td><td>Which pieces did you actually need?</td></tr><tr><td>Unit of account</td><td>The yardstick on the price tag.</td></tr><tr><td>Velocity</td><td>Spent ÷ stock. Near 0 = sticker collection.</td></tr></tbody></table>
 <hr>
 <h2 id="if-you-are-lost-start-here">If you are lost, start here</h2>
+<p>If the whole vocabulary is new, open <strong><a href="fundamentals.html">Start here</a></strong> before this table.</p>
 <table><thead><tr><th>Feeling</th><th>Open</th></tr></thead><tbody><tr><td>“I still don’t know what our coin <em>is</em>.”</td><td>S1 three jobs + S9 coat-check</td></tr><tr><td>“Wallets feel like spy movies.”</td><td>S2 house key</td></tr><tr><td>“Why did we mine anything?”</td><td>S3 linkage + unbundle</td></tr><tr><td>“AMM math is soup.”</td><td>S8 Quiz 2 table (11.11 / 1.2346)</td></tr><tr><td>“Is this a security?”</td><td>S4 distribution + S12 two posters</td></tr><tr><td>“What do we say on demo day?”</td><td>S13 five proofs</td></tr></tbody></table>
 <p>Quizzes: Q1 = S1–S4 · Q2 = S5–S8 (bring a calculator) · Q3 = S9–S12.</p>
 <hr>
@@ -309,7 +315,7 @@
 <ul><li>Nakamoto, Satoshi. 2008. “Bitcoin: A Peer-to-Peer Electronic Cash System.” <a href="https://bitcoin.org/bitcoin.pdf" target="_blank" rel="noreferrer">https://bitcoin.org/bitcoin.pdf</a></li><li>Buterin, Vitalik. 2014. “Ethereum White Paper.” <a href="https://ethereum.org/whitepaper" target="_blank" rel="noreferrer">https://ethereum.org/whitepaper</a> — introduction + applications only</li><li>Vogelsteller, Fabian, and Vitalik Buterin. 2015. “EIP-20: Token Standard.” <a href="https://eips.ethereum.org/EIPS/eip-20" target="_blank" rel="noreferrer">https://eips.ethereum.org/EIPS/eip-20</a></li><li>Adams, Hayden, Noah Zinsmeister, and Dan Robinson. 2020. “Uniswap v2 Core.” <a href="https://uniswap.org/whitepaper.pdf" target="_blank" rel="noreferrer">https://uniswap.org/whitepaper.pdf</a></li><li>Liu, Jiageng, Igor Makarov, and Antoinette Schoar. 2023. “Anatomy of a Run: The Terra Luna Crash.” NBER Working Paper 31160. <a href="https://www.nber.org/papers/w31160" target="_blank" rel="noreferrer">https://www.nber.org/papers/w31160</a></li><li>Naranjo, Lorenzo. Fintech notebooks (PoW, index/PoS, AMMs, peg risk). <a href="https://www.lorenzonaranjo.com/class-materials/fintech/notebooks.html" target="_blank" rel="noreferrer">https://www.lorenzonaranjo.com/class-materials/fintech/notebooks.html</a></li></ul>
 <h3 id="design-of-financial-systems-public-money-license-questions">Design of financial systems, public money, license questions</h3>
 <ul><li>Townsend, Robert M. 2025. <em>Blockchain and the Design of Financial Systems</em> (MIT 14.129). <a href="https://ocw.mit.edu/courses/14-129-blockchain-and-the-design-of-financial-systems-spring-2025/" target="_blank" rel="noreferrer">https://ocw.mit.edu/courses/14-129-blockchain-and-the-design-of-financial-systems-spring-2025/</a></li><li>Bech, Morten, and Rodney Garratt. 2017. “Central Bank Cryptocurrencies.” <em>BIS Quarterly Review</em> (September): 55–70. Money-flower taxonomy. <a href="https://www.bis.org/publ/qtrpdf/r_qt1709f.pdf" target="_blank" rel="noreferrer">https://www.bis.org/publ/qtrpdf/r_qt1709f.pdf</a></li><li>Harvey, Campbell R., Ashwin Ramachandran, and Joey Santoro. 2021. <em>DeFi and the Future of Finance.</em> Wiley. Selected AMM / stablecoin pages.</li><li><em>SEC v. W.J. Howey Co.</em>, 328 U.S. 293 (1946). <a href="https://supreme.justia.com/cases/federal/us/328/293/" target="_blank" rel="noreferrer">https://supreme.justia.com/cases/federal/us/328/293/</a></li><li>FATF. 2021. <em>Updated Guidance for a Risk-Based Approach to Virtual Assets and VASPs</em> (Travel Rule / Recommendation 16). <a href="https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Guidance-rba-virtual-assets-2021.html" target="_blank" rel="noreferrer">https://www.fatf-gafi.org/en/publications/Fatfrecommendations/Guidance-rba-virtual-assets-2021.html</a></li><li>Regulation (EU) 2023/1114 (MiCA). <a href="https://eur-lex.europa.eu/eli/reg/2023/1114/oj" target="_blank" rel="noreferrer">https://eur-lex.europa.eu/eli/reg/2023/1114/oj</a></li></ul>
-<p><strong>Each week also pick one primary document, not a recap blog:</strong> a spot-Bitcoin ETF factsheet (Module 2), one issuer reserve/attestation report (Module 3), one RWA or stablecoin-payments note (Modules 4–5). Post the exact PDF you chose in the LMS so the class reads the same file.</p>
+<p><strong>Each week also pick one primary document, not a recap blog:</strong> a spot-Bitcoin ETF factsheet (Week 2), one issuer reserve/attestation report (Week 3), one RWA or stablecoin-payments note (Weeks 4–5). Post the exact PDF you chose in the LMS so the class reads the same file.</p>
     </article>
   </div>
 </div>
