@@ -22,7 +22,7 @@
     <article class="article" id="main">
       <p class="kicker">ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</p>
       <h1 id="open-remix-in-15-minutes">Open Remix in 15 minutes</h1>
-<p><strong>Peek (before Session 5).</strong> Remix opens and the OpenZeppelin ERC-20 wizard shows mintable / pausable / cap. Remix’s own fake chain (Remix VM) is enough. You have <strong>not</strong> clicked Deploy on Sepolia or any public network.</p>
+<p><strong>Peek (before Session 5).</strong> Remix opens and the OpenZeppelin ERC-20 wizard shows Mintable / Pausable / Premint. Remix’s own fake chain (Remix VM) is enough. You have <strong>not</strong> clicked Deploy on Sepolia or any public network.</p>
 <p><strong>Live (Session 6).</strong> Injected Provider, network name matches the <strong>board</strong>, then deploy <strong>in the room</strong>. Do not deploy at home the night before.</p>
 <p>You are not writing Solidity from scratch.</p>
 <hr>
@@ -34,7 +34,7 @@
 <p>Either:</p>
 <ul><li>in Remix, open the <strong>OpenZeppelin Contracts Wizard</strong>, or</li><li>open <a href="https://wizard.openzeppelin.com/" target="_blank" rel="noreferrer">wizard.openzeppelin.com</a> and use <strong>Copy to Remix</strong></li></ul>
 <p>Pick <strong>ERC-20</strong>. Tick:</p>
-<ul><li><strong>Mintable</strong></li><li><strong>Pausable</strong></li><li><strong>Burnable</strong></li><li><strong>Premint / cap</strong> so there is a <strong>cap</strong> (the box lid from A2)</li></ul>
+<ul><li><strong>Mintable</strong></li><li><strong>Pausable</strong></li><li><strong>Burnable</strong></li><li><strong>Premint</strong>: type your A2 cap here (the box lid). The wizard has no separate cap box. With <strong>Mintable</strong> ticked, the minter can still mint past the premint, so your A2 minter and lost-key rules are what hold the lid on.</li></ul>
 <p>Name and symbol wait for your A2 table. For this check, placeholders are fine.</p>
 <hr>
 <h2 id="3-peek-only-session-5">3. Peek only (Session 5)</h2>

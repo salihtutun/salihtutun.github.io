@@ -28,10 +28,10 @@
 <hr>
 <h2 id="part-1-risk">Part 1 — Risk</h2>
 <p><strong>Three risks we own</strong></p>
-<table><thead><tr><th>Label</th><th>What we saw</th><th>Mitigation we actually have</th></tr></thead><tbody><tr><td>Admin key</td><td>One RA laptop holds minter + pauser</td><td>Second pauser on a teammate key (written in A2). Pause does not refill machine-hours.</td></tr><tr><td>Liquidity</td><td>Thin CLASSUSD bowl → wild SPIN quotes (L2-style 200/100, buy 40 moved spot 0.50 → 0.78)</td><td>Kill rule 1 below. We <em>are</em> the LP.</td></tr><tr><td>Redemption</td><td>An RA could flake on a Thursday slot</td><td>Public calendar + burn-on-show. Kill rule 2 if a slot waits &gt; 24 hours.</td></tr></tbody></table>
+<table><thead><tr><th>Label</th><th>What we saw</th><th>Mitigation we actually have</th></tr></thead><tbody><tr><td>Admin key</td><td>One RA laptop holds minter + pauser</td><td>Second pauser on a teammate key (written in A2). Pause does not refill machine-hours.</td></tr><tr><td>Liquidity</td><td>Thin CLASSUSD bowl → wild SPIN quotes (our 300/120 bowl: a 60-SPIN buy moved spot 0.40 → 0.625)</td><td>Kill rule 1 below. We <em>are</em> the LP.</td></tr><tr><td>Redemption</td><td>An RA could flake on a Thursday slot</td><td>Public calendar + burn-on-show. Kill rule 2 if a slot waits &gt; 24 hours.</td></tr></tbody></table>
 <p><strong>What we saw in class.</strong> Observer: when the class bowl was TEAM-poor, the next sip was worse than the start. Pause on Remix would stop transfers; it would <strong>not</strong> put more CLASSUSD in the jar.</p>
 <p><strong>Kill criteria (if-then with a number)</strong></p>
-<ol><li>IF <span class="math">\lvert P - 0.50\rvert / 0.50 &gt; 0.40</span> AND CLASSUSD depth <span class="math">&lt; 50</span> THEN pause transfers.</li><li>IF a booked slot is not honored within <strong>24 hours</strong> THEN stop mint and post the run (unhonored minutes / outstanding SPIN).</li><li>IF the owner key might be leaked THEN pause and rotate using the A2 lost-key sentence.</li></ol>
+<ol><li>IF <span class="math">\lvert P - 0.40\rvert / 0.40 &gt; 0.40</span> AND CLASSUSD depth <span class="math">&lt; 50</span> THEN pause transfers.</li><li>IF a booked slot is not honored within <strong>24 hours</strong> THEN stop mint and post the run (unhonored minutes / outstanding SPIN).</li><li>IF the owner key might be leaked THEN pause and rotate using the A2 lost-key sentence.</li></ol>
 <p>“We’ll watch the market” is not a rule.</p>
 <hr>
 <h2 id="part-2-if-this-left-the-classroom">Part 2 — If this left the classroom</h2>
