@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAMPLE Final Project memo (laundry — not Eagecoin) · ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</title>
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body class="assign-paper">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="../index.html">ACCT 5105-01
+      <span>Financial Reporting &amp; Assurance in a Blockchain World</span>
+    </a>
+    <nav aria-label="Course"><a href="../index.html">Syllabus</a><a href="../fundamentals.html">Start here</a><a href="../cheatsheet.html">Cheatsheet</a><a href="../sessions/index.html">Sessions</a><a href="../setup.html">Setup</a><a href="../handbook.html">Handbook</a><a href="../assessment.html">What to turn in</a><a href="../assignments/index.html">Assignments</a><a href="../labs/index.html">Labs L1–L3</a><a href="../examples/index.html" aria-current="page">Samples</a><a href="../quizzes/index.html">Quizzes</a></nav>
+  </div>
+</header>
+<div class="page">
+  <div class="layout">
+    
+    <article class="article" id="main">
+      <p class="kicker">Sample — steal the shape, not the community</p>
+      <h1 id="sample-final-project-memo-laundry-not-eagecoin">SAMPLE Final Project memo (laundry — not Eagecoin)</h1>
+<p><strong>This is a SAMPLE</strong> of a full A7 memo. It is <strong>not</strong> EAGE and <strong>not</strong> your team’s coin. Use it to see the <em>shape</em>: business audience, eight headings, numbers, unbundle, go/partner/pass with a kill number and a compliance line. Write your own facts from A1–A6.</p>
+<p><strong>Word count (body):</strong> about 1,800–2,000 target shape. Appendix hashes do not count.</p>
+<p><strong>To:</strong> Head of Product; CAO / campus-ops partner track<br><strong>From:</strong> Sample Team (laundry floor pilot)<br><strong>Re:</strong> SPIN rail — go / partner / pass<br><strong>Date:</strong> Demo day sample</p>
+<hr>
+<h2 id="1-the-problem-and-the-community">1. The problem and the community</h2>
+<p>The community is one WashU dorm floor (about 40 residents) that shares six washers and four dryers. The problem is not “we want a blockchain.” The problem is <strong>double-booking and unpaid make-goods</strong>: two people claim the same Thursday 8 p.m. dryer, and the person who left a wet load overnight never pays the $2 detergent fee they promised in the group chat. Chat screenshots are not a ledger. The RA clipboard is a ledger, but it does not travel with the resident and it does not show a stranger that a fee moved.</p>
+<p>A licensed campus-ops firm already sells work-order software to housing. They care because every missed slot becomes a ticket, a refund argument, and a Resident Advisor (RA) hour. Housing directors measure those hours. Controllers care when detergent fees sit in a cash box with no tie to who owed them. Assurance cares when a “digital laundry coin” shows up in a pilot budget with no clear claim definition.</p>
+<p>If a rail can show who held a slot and whether the fee moved, the firm can cut reconciliation between the chat and the RA clipboard. If it cannot — or if the only “innovation” is wrapping a spreadsheet in a token — the firm should ignore the token and keep the spreadsheet. That is the business question this memo answers.</p>
+<h2 id="2-the-mechanism">2. The mechanism</h2>
+<p><strong>Who mints.</strong> Only the RA multisig (two of three RAs) may mint SPIN. Cap is <strong>10,000 SPIN</strong>. Premint at deploy: 2,000 to the floor pool, 2,000 to a detergent treasury, 200 × 30 active residents = 6,000 airdropped once (A3 runbook). Pause role: same RA multisig. Instructor is not on the mint key. A controller map would list: issuer = RA ops role; pauser = same; no public minter; no automatic inflation.</p>
+<p><strong>What one SPIN means.</strong> One SPIN is a claim on <strong>one 30-minute dryer slot</strong> on that floor’s schedule, or a $2 CLASSUSD detergent fee at the posted redemption desk (A5). It is not a share of the dorm, not a profit right, and not a public sale. On the books, treat it as a prepaid service credit for that floor — not as an investment asset.</p>
+<p><strong>Claim / redemption.</strong> Resident shows wallet balance + QR from the booking sheet. RA burns 1 SPIN (or records redemption in the log) and either (a) unlocks the dryer calendar row or (b) hands a detergent packet and marks CLASSUSD out of treasury. Failed delivery (broken dryer) → RA refunds SPIN within 24 hours or the kill rule fires (heading 7). Delivery-versus-payment here is simple: burn happens when the calendar stamp or detergent handoff happens, not when someone “likes” a chat message.</p>
+<h2 id="3-circulation-evidence">3. Circulation evidence</h2>
+<p>What an assurer could open and vouch on demo day (testnet explorer + class registry — placeholders shaped like real rows):</p>
+<table><thead><tr><th>Artifact</th><th>What it shows</th></tr></thead><tbody><tr><td>Contract <code>0x_FROM_REGISTRY_SPIN</code> on Sepolia</td><td>Network, cap 10,000, minter = RA multisig, pausable</td></tr><tr><td>Airdrop tx batch (A3)</td><td>30 residents received 200 SPIN each</td></tr><tr><td>Non-teammate holder</td><td>Classmate Mira (not on our team) balance 180 SPIN after she paid for a slot</td></tr><tr><td>Pool SPIN/CLASSUSD</td><td>2,000 / 1,000 → spot ≈ 0.50 CLASSUSD per SPIN (L2 bowl)</td></tr><tr><td>Transfer</td><td>Mira → Ben, 20 SPIN, tx <code>0x_TRANSFER_SAMPLE</code></td></tr><tr><td>Redemption</td><td>Ben redeemed 1 dryer slot; burn log + photo of calendar stamp</td></tr></tbody></table>
+<p>An assurer can vouch <strong>balances and burns on the explorer</strong>. They cannot vouch that the dryer actually heated without the RA photo or the calendar stamp. That split is the reporting point: on-chain evidence supports existence and transfer of the <em>credit</em>; off-chain evidence still supports <em>performance</em> of the laundry service. A Monday-morning assurance memo would say exactly that — and would refuse to treat a Sepolia balance alone as proof that housing delivered a dry load.</p>
+<h2 id="4-what-the-market-revealed">4. What the market revealed</h2>
+<p>The class bowl (A4 + L2) started at 2,000 SPIN / 1,000 CLASSUSD. After three peer swaps and one detergent redemption, spot moved to about <strong>0.47–0.52</strong> CLASSUSD per SPIN. Depth stayed thin: one 100 SPIN buy moved the quote by more than 8%. Impermanent loss for the RA pool was visible but small in CLASSUSD terms because volume was class-scale, not market-scale. Average price across the lab window was near 0.50; spot swung wider than average, which is the usual thin-book pattern.</p>
+<p><strong>Risk language.</strong> Price is a dance partner for CLASSUSD in this room, not a fair value for a housing P&amp;L. Who traded: classmates and one RA testing redemption — not external market makers. A product lead should read this as <strong>proof of mechanism</strong>, not proof of a liquid market. Thin book is expected; it is not a listing pitch. If a deck said “SPIN trades at a stable 50 cents,” that would be hype. The honest line is: the bowl cleared a few classroom swaps and showed how fast a shallow pool moves.</p>
+<h2 id="5-unbundle-the-stack">5. Unbundle the stack</h2>
+<p>We needed a <strong>shared list</strong> of who had a Thursday laundry slot. A Google Sheet with an RA as registrar would have done that job: one person edits, everyone reads. We did <strong>not</strong> need a global consensus computer to stop two people booking the same dryer — the RA already sits in the building.</p>
+<p>We rented Sepolia anyway, so we borrowed someone else’s consensus. That was a <em>rail</em>, not the product. The product was the booking rule and the detergent fee.</p>
+<p>We <strong>did</strong> want a token rather than a verbal “I’ll save you a machine,” because classmates outside the floor had to pay and we had to show a tx on demo day. An escrow tab (“RA holds a sticky note”) would have been enough <em>inside</em> the dorm. The token earned its keep only when a stranger swapped SPIN for CLASSUSD in the class bowl — that is a market object, not a chat IOU.</p>
+<p><strong>Buy vs ignore for a licensed campus-ops firm:</strong></p>
+<table><thead><tr><th>Piece</th><th>Buy / rent / ignore</th></tr></thead><tbody><tr><td>Booking list + RA registrar</td><td><strong>Buy</strong> (or keep their existing work-order DB)</td></tr><tr><td>Posted fee + redemption desk</td><td><strong>Buy</strong> (ops process)</td></tr><tr><td>ERC-20 on a public testnet</td><td><strong>Ignore</strong> for laundry; optional later if they need external settlement</td></tr><tr><td>AMM bowl</td><td><strong>Ignore</strong> for housing P&amp;L; useful only as a classroom price toy</td></tr><tr><td>Kill rule (24h honor)</td><td><strong>Copy</strong> into their SLA</td></tr></tbody></table>
+<p>The unbundle is the MIT outcome of this course in miniature: name which layer did the financial work. For laundry, the registrar and the claim definition did the work. Consensus was rented. A firm that cannot say that sentence will overbuy chain and underbuy process.</p>
+<h2 id="6-what-broke">6. What broke</h2>
+<p>On Week 4 lab night, one resident’s MetaMask was on the wrong network. She showed a Sepolia balance of zero while the registry said she held 200 SPIN. The RA almost re-airdropped. The ops story: <strong>always match network + registry address before minting again</strong>. We fixed it by switching networks and refreshing the explorer — no second mint. A risk memo would keep that as a control failure (wrong chain view), not as “blockchain is hard.”</p>
+<p>A second small break: a dryer went offline after Ben burned SPIN for a slot. The 24-hour make-good rule forced a refund burn reverse in the log and a calendar note. That is the kind of ops story a firm should expect before they copy any rail — tokens do not fix broken machines; kill rules and human process do.</p>
+<h2 id="7-go-partner-pass">7. Go / partner / pass</h2>
+<p><strong>Partner.</strong></p>
+<p>A licensed campus-ops shop should <strong>partner</strong> on the booking list and redemption desk (they already have work-order databases and RA workflows). They should <strong>pass</strong> on deploying a public-chain token for laundry slots. Copy the kill rule; do not copy the chain as the product. <strong>Go</strong> would be wrong: there is no licensed need to put dryer slots on a public consensus computer. <strong>Pass</strong> on the whole idea would also be wrong: the booking-list and fee-desk problems are real, and the firm’s existing software can absorb them without a token.</p>
+<p><strong>Kill number (from A6/L3 shape).</strong> If a reserved slot is not honored within <strong>24 hours</strong>, pause mint and stop new bookings until the RA posts a make-good. If \|spot − 0.50\| / 0.50 &gt; <strong>40%</strong> and pool depth &lt; <strong>50 CLASSUSD</strong>, pause the bowl (classroom market only — not a housing valuation trigger).</p>
+<p><strong>Compliance line.</strong> No public sale of SPIN; no profit pitch; RA mint is an ops role, not an investment manager. Under a Howey-shaped classroom score, we cut any “list SPIN and 10×” language (A6 Part 2 fire drill). Travel Rule does not apply to this dorm fee rail; if the firm ever moved real value off-campus, they would need their own transfer-rule program — that is out of scope for laundry.</p>
+<h2 id="8-sources">8. Sources</h2>
+<ol><li>Sweeney and Sweeney (1977) / Krugman babysitting co-op — shortage of scrip freezes real activity; our SPIN airdrop is scrip for slots, not a growth narrative. When scrip is scarce, real coordination freezes; when scrip is confused with investment, the wrong controls get built.</li><li>Naranjo — AMM / thin-book intuition: small trades move the quote when depth is low (matches our L2 bowl). Classroom volume is not market evidence.</li><li>MIT DCI / BIS framing — separate the <strong>ledger rail</strong> from the <strong>business claim</strong>; do not treat consensus as the product when a registrar already exists. That separation is the Monday-morning skill this course trains.</li></ol>
+<hr>
+<h2 id="appendix-evidence-passport-does-not-count-toward-word-limit">Appendix — Evidence Passport (does not count toward word limit)</h2>
+<table><thead><tr><th>Field</th><th>Sample value (laundry — not your coin)</th></tr></thead><tbody><tr><td>Team + ticker</td><td>Sample Team · SPIN</td></tr><tr><td>Network + contract</td><td>Sepolia · <code>0x_FROM_REGISTRY_SPIN</code></td></tr><tr><td>Cap / minter / pauser</td><td>10,000 · RA multisig · RA multisig</td></tr><tr><td>Stranger holder</td><td>Mira (not on team) · 180 SPIN</td></tr><tr><td>Tx hashes (≥3)</td><td><code>0x_AIRDROP_SAMPLE</code> · <code>0x_TRANSFER_SAMPLE</code> · <code>0x_REDEEM_SAMPLE</code></td></tr><tr><td>Pool reserves + spot</td><td>2,000 SPIN / 1,000 CLASSUSD · spot ≈ 0.50</td></tr><tr><td>Kill number</td><td>Pause mint if slot not honored in <strong>24 hours</strong></td></tr><tr><td>Compliance line</td><td>No public sale; cut “10×” Howey-shaped pitch</td></tr><tr><td>Ops failure</td><td>Week 4 wrong-network MetaMask — match network + registry before remint</td></tr><tr><td>Changelog</td><td>none</td></tr><tr><td>GenAI disclosure</td><td><code>AI used for: none</code></td></tr></tbody></table>
+<hr>
+<p><strong>Business use of this skill.</strong> In public accounting you learn what to vouch on-chain vs off-chain (heading 3). In controllership you map mint/claim roles (heading 2). In consulting you say partner/pass with a kill number (heading 7). On a real Monday, that looks like: an assurance team refusing to treat a wallet screenshot as a complete inventory count; a controller coding a prepaid laundry credit correctly; a product advisor telling housing to buy workflow software and ignore a public-chain laundry token. That is why ACCT 5105 exists — not so you ship another coin.</p>
+<p>If this SAMPLE were a client memo, the next page would be an implementation appendix for the booking list only. We stop here because the course asks for judgment first: what the ledger proves, what to unbundle, and one verb a licensed firm can act on.</p>
+<p><strong>Your memo still needs your own A1–A6 facts.</strong> Numbers beat adjectives. No price prediction.</p>
+    </article>
+  </div>
+</div>
+<footer class="site">ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World · testnet only · 13 × 62 minutes · Print this page to PDF if your LMS wants a file.</footer>
+
+</body>
+</html>
