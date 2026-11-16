@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACCT 5105 · Class Campaign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #14110f;
+      --paper: #f3ebe0;
+      --card: #fffaf3;
+      --muted: #6a6258;
+      --accent: #9b1c1c;
+      --accent-deep: #6e1212;
+      --ok: #1f4a3a;
+      --ok-soft: #d7e8df;
+      --warn: #8a5a12;
+      --warn-soft: #f3e4c4;
+      --line: rgba(20, 17, 15, 0.12);
+      --shadow: 0 18px 50px rgba(20, 17, 15, 0.14);
+      --ava: #c45c26;
+      --ben: #2f5d8c;
+      --cara: #6b4c9a;
+      --team: #1f4a3a;
+      --ra: #8a5a12;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(155, 28, 28, 0.16), transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, rgba(31, 74, 58, 0.12), transparent 50%),
+        linear-gradient(165deg, #efe4d4 0%, var(--paper) 45%, #e7ddd0 100%);
+      min-height: 100%;
+    }
+    .shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1rem 1rem 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 980px) {
+      .shell { grid-template-columns: 1fr 300px; align-items: start; }
+      .topbar, .foot, .cast-bar { grid-column: 1 / -1; }
+    }
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .brand {
+      font-family: Syne, sans-serif; font-weight: 800;
+      letter-spacing: -0.03em;
+      font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+    }
+    .brand span { color: var(--accent); }
+    .xp {
+      font-size: 0.85rem; font-weight: 600;
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 999px; padding: 0.45rem 0.85rem;
+    }
+    .cast-bar {
+      display: flex; gap: 0.55rem; overflow-x: auto;
+      padding: 0.35rem 0.15rem 0.15rem;
+    }
+    .cast-card {
+      flex: 0 0 auto;
+      display: flex; align-items: center; gap: 0.55rem;
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 999px; padding: 0.35rem 0.75rem 0.35rem 0.35rem;
+      font-size: 0.78rem;
+    }
+    .cast-card strong { display: block; font-size: 0.82rem; }
+    .cast-card span { color: var(--muted); }
+    .avatar {
+      width: 2.35rem; height: 2.35rem; border-radius: 50%;
+      display: grid; place-items: center; flex-shrink: 0;
+      color: #fff; font-family: Syne, sans-serif; font-weight: 800; font-size: 0.85rem;
+      box-shadow: inset 0 -3px 0 rgba(0,0,0,0.12);
+    }
+    .avatar.sm { width: 1.7rem; height: 1.7rem; font-size: 0.7rem; }
+    .avatar.lg { width: 3.2rem; height: 3.2rem; font-size: 1.05rem; }
+    .avatar.ava { background: var(--ava); }
+    .avatar.ben { background: var(--ben); }
+    .avatar.cara { background: var(--cara); }
+    .avatar.team { background: var(--team); }
+    .avatar.ra { background: var(--ra); }
+
+    .stage, .passport {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 1.25rem; box-shadow: var(--shadow);
+      padding: clamp(1.1rem, 2.5vw, 1.75rem);
+      position: relative; overflow: hidden;
+    }
+    .stage::before {
+      content: ""; position: absolute; inset: 0 auto 0 0; width: 7px;
+      background: linear-gradient(180deg, var(--accent), var(--ok));
+    }
+    h1, h2 {
+      font-family: Syne, sans-serif; letter-spacing: -0.03em;
+      margin: 0 0 0.55rem; line-height: 1.15;
+    }
+    h1 { font-size: clamp(1.5rem, 3.6vw, 2.25rem); }
+    h2 { font-size: clamp(1.15rem, 2.5vw, 1.6rem); }
+    .kicker {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem;
+    }
+    .lede, .scene {
+      color: var(--muted); line-height: 1.55; margin: 0 0 1rem; max-width: 46rem;
+    }
+    .scene { color: var(--ink); font-size: 1.05rem; }
+
+    .hero-art {
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 1rem;
+      margin: 0.85rem 0 1.15rem; align-items: stretch;
+    }
+    @media (max-width: 720px) { .hero-art { grid-template-columns: 1fr; } }
+    .hero-art img, .teach-photo img {
+      width: 100%; height: 100%; max-height: 220px; object-fit: cover;
+      border-radius: 1rem; border: 1px solid var(--line); display: block;
+      background: #efe6da;
+    }
+    .teach-photo {
+      margin: 0.85rem 0 1rem;
+    }
+    .teach-photo img { max-height: 200px; }
+    .teach-photo figcaption {
+      font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.35;
+    }
+    .comic {
+      background: #fff; border: 1px solid var(--line); border-radius: 1rem;
+      padding: 0.9rem 1rem; display: grid; gap: 0.65rem;
+    }
+    .comic-line {
+      display: grid; grid-template-columns: auto 1fr; gap: 0.65rem; align-items: start;
+    }
+    .bubble {
+      background: var(--paper); border-radius: 0.85rem; padding: 0.65rem 0.8rem;
+      font-size: 0.92rem; line-height: 1.45; position: relative;
+    }
+    .bubble .who { font-weight: 700; font-size: 0.78rem; color: var(--muted); margin-bottom: 0.2rem; }
+
+    .explain {
+      display: grid; gap: 0.55rem; margin: 0.85rem 0 1rem;
+    }
+    .explain-card {
+      border-radius: 0.9rem; padding: 0.75rem 0.9rem; font-size: 0.9rem; line-height: 1.45;
+      border: 1px solid var(--line); background: #fff;
+    }
+    .explain-card .label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; margin-bottom: 0.25rem;
+    }
+    .explain-card.easy { background: #fff8ef; }
+    .explain-card.easy .label { color: var(--accent); }
+    .explain-card.why { background: var(--ok-soft); border-color: rgba(31,74,58,0.2); }
+    .explain-card.why .label { color: var(--ok); }
+    .explain-card.mix { background: var(--warn-soft); border-color: rgba(138,90,18,0.25); }
+    .explain-card.mix .label { color: var(--warn); }
+
+    .story-chip {
+      display: inline-block; background: var(--warn-soft); color: var(--warn);
+      font-size: 0.82rem; font-weight: 600; padding: 0.35rem 0.7rem;
+      border-radius: 999px; margin-bottom: 0.75rem;
+    }
+    .map { display: grid; gap: 0.65rem; }
+    .level-btn {
+      text-align: left; border: 1px solid var(--line); background: #fff;
+      border-radius: 1rem; padding: 0.85rem 1rem; cursor: pointer;
+      display: grid; grid-template-columns: auto auto 1fr auto; gap: 0.7rem;
+      align-items: center; font: inherit; color: inherit;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .level-btn:hover:not(:disabled) {
+      transform: translateY(-2px); border-color: rgba(155, 28, 28, 0.35);
+    }
+    .level-btn:disabled { opacity: 0.42; cursor: not-allowed; }
+    .level-btn.done { background: var(--ok-soft); border-color: rgba(31, 74, 58, 0.25); }
+    .badge {
+      width: 2.15rem; height: 2.15rem; border-radius: 0.7rem;
+      display: grid; place-items: center;
+      font-family: Syne, sans-serif; font-weight: 800;
+      background: var(--ink); color: var(--paper);
+    }
+    .level-btn.done .badge { background: var(--ok); }
+    .thumb {
+      width: 3.1rem; height: 3.1rem; border-radius: 0.75rem; object-fit: cover;
+      border: 1px solid var(--line); background: #efe6da;
+    }
+    .meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.15rem; }
+    .status { font-size: 0.75rem; font-weight: 600; color: var(--muted); }
+    .choices { display: grid; gap: 0.6rem; margin-top: 0.75rem; }
+    .choice, .tool-btn {
+      text-align: left; border: 1px solid var(--line); background: #fff;
+      border-radius: 0.9rem; padding: 0.85rem 1rem; cursor: pointer;
+      font: inherit; color: inherit; line-height: 1.4;
+    }
+    .choice:hover, .tool-btn:hover { border-color: rgba(155, 28, 28, 0.4); }
+    .choice.correct { background: var(--ok-soft); border-color: rgba(31, 74, 58, 0.4); }
+    .choice.wrong { background: #f7e4e0; border-color: rgba(155, 28, 28, 0.35); }
+    .choice:disabled { cursor: default; }
+    .feedback {
+      margin-top: 0.85rem; padding: 0.85rem 1rem; border-radius: 0.9rem;
+      line-height: 1.45; display: none;
+    }
+    .feedback.show { display: block; }
+    .feedback.ok { background: var(--ok-soft); color: var(--ok); }
+    .feedback.bad { background: #f7e4e0; color: var(--accent-deep); }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.15rem; }
+    button.primary, button.ghost {
+      font: inherit; font-weight: 600; border-radius: 999px;
+      padding: 0.65rem 1.1rem; cursor: pointer; border: 1px solid transparent;
+    }
+    button.primary { background: var(--accent); color: #fff; }
+    button.primary:hover { background: var(--accent-deep); }
+    button.primary:disabled { opacity: 0.4; cursor: not-allowed; }
+    button.ghost { background: transparent; border-color: var(--line); color: var(--ink); }
+    button.ghost:hover { background: rgba(20, 17, 15, 0.04); }
+    .progress { display: flex; gap: 0.3rem; margin: 0.55rem 0 1rem; }
+    .dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: rgba(20, 17, 15, 0.15); }
+    .dot.on { background: var(--accent); }
+    .dot.done { background: var(--ok); }
+    .passport h2 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+    .passport .lede { font-size: 0.85rem; margin-bottom: 0.75rem; }
+    .pass-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.45rem; }
+    .pass-list li {
+      font-size: 0.82rem; line-height: 1.35; padding: 0.55rem 0.65rem;
+      border-radius: 0.7rem; border: 1px solid var(--line); background: #fff;
+      display: grid; grid-template-columns: 1.1rem 1fr; gap: 0.4rem;
+    }
+    .pass-list li.on { background: var(--ok-soft); border-color: rgba(31, 74, 58, 0.25); }
+    .pass-list .m { font-weight: 700; color: var(--muted); }
+    .pass-list li.on .m { color: var(--ok); }
+    .machine {
+      margin-top: 0.75rem; border: 1px solid var(--line); border-radius: 1rem;
+      background: #fff; padding: 1rem;
+    }
+    .machine-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+    @media (max-width: 700px) { .machine-grid { grid-template-columns: 1fr; } }
+    .mailboxes { font-variant-numeric: tabular-nums; font-size: 0.92rem; display: grid; gap: 0.4rem; }
+    .mailboxes div {
+      display: flex; justify-content: space-between; align-items: center; gap: 0.5rem;
+      padding: 0.4rem 0.55rem; background: var(--paper); border-radius: 0.65rem;
+    }
+    .mailboxes .who { display: flex; align-items: center; gap: 0.45rem; }
+    .tool-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.65rem; }
+    .tool-btn { padding: 0.55rem 0.75rem; font-size: 0.88rem; font-weight: 600; }
+    .tool-btn.danger { border-color: rgba(155, 28, 28, 0.35); }
+    .tool-btn.okish { border-color: rgba(31, 74, 58, 0.35); }
+    .log {
+      margin-top: 0.65rem; font-size: 0.82rem; min-height: 2.4rem; color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .log.alarm { color: var(--accent-deep); font-weight: 600; }
+    .log.good { color: var(--ok); font-weight: 600; }
+    .quest {
+      display: grid; gap: 0.4rem; margin: 0.75rem 0; padding: 0.75rem 0.85rem;
+      border-radius: 0.85rem; background: var(--warn-soft); color: var(--warn); font-size: 0.9rem;
+    }
+    .quest strong { color: var(--ink); }
+    .quest li.done { text-decoration: line-through; opacity: 0.7; }
+    .sliders { display: grid; gap: 0.75rem; margin-top: 0.75rem; }
+    .slider-row label {
+      display: flex; justify-content: space-between; font-size: 0.88rem; font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    input[type="range"] { width: 100%; accent-color: var(--accent); }
+    .math-readout {
+      margin-top: 0.85rem; padding: 0.85rem 1rem; border-radius: 0.85rem;
+      background: #fff; border: 1px solid var(--line);
+      font-variant-numeric: tabular-nums; line-height: 1.5;
+    }
+    .math-readout.fits { background: var(--ok-soft); border-color: rgba(31, 74, 58, 0.3); }
+    .math-readout.blow { background: #f7e4e0; border-color: rgba(155, 28, 28, 0.3); }
+    .saybox { margin-top: 0.85rem; display: grid; gap: 0.45rem; }
+    .saybox textarea {
+      width: 100%; min-height: 4.5rem; resize: vertical; border-radius: 0.85rem;
+      border: 1px solid var(--line); padding: 0.75rem 0.85rem; font: inherit; background: #fff;
+    }
+    .next-card {
+      margin-top: 1rem; padding: 0.9rem 1rem; border-radius: 0.95rem;
+      background: #fff; border: 1px dashed rgba(155, 28, 28, 0.35);
+      font-size: 0.92rem; line-height: 1.45;
+    }
+    .next-card strong { display: block; margin-bottom: 0.25rem; }
+    .bowl-viz {
+      height: 12px; border-radius: 999px; overflow: hidden; display: flex;
+      background: #ddd; margin: 0.75rem 0;
+    }
+    .bowl-viz .spin { background: var(--accent); }
+    .bowl-viz .usd { background: var(--ok); }
+    .foot { font-size: 0.78rem; color: var(--muted); text-align: center; }
+    .words {
+      display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 0.85rem;
+    }
+    .words i {
+      font-style: normal; font-size: 0.78rem; font-weight: 600;
+      background: #fff; border: 1px solid var(--line); border-radius: 999px;
+      padding: 0.28rem 0.6rem; color: var(--muted);
+    }
+    .ra-tip {
+      display: grid; grid-template-columns: auto 1fr; gap: 0.7rem; align-items: start;
+      margin: 0.85rem 0 1rem; padding: 0.85rem 1rem; border-radius: 1rem;
+      background: linear-gradient(135deg, #f7ead0, #f3e4c4);
+      border: 1px solid rgba(138, 90, 18, 0.28);
+      animation: tipIn 0.45s ease;
+    }
+    .ra-tip .label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--ra); margin-bottom: 0.2rem;
+    }
+    .ra-tip .line { font-size: 0.95rem; line-height: 1.45; color: var(--ink); }
+    .ra-tip .line em { font-style: normal; font-weight: 700; color: var(--accent-deep); }
+    .hero-svg {
+      width: 100%; border-radius: 1rem; border: 1px solid var(--line);
+      background: #e8dcc8; display: block; max-height: 280px; object-fit: cover;
+    }
+    @keyframes tipIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="topbar">
+      <div class="brand">ACCT 5105 · <span>Class Campaign</span></div>
+      <div class="xp" id="xpPill">XP 0</div>
+    </div>
+    <div class="cast-bar" id="castBar" aria-label="Characters"></div>
+    <main class="stage" id="stage"></main>
+    <aside class="passport" id="passport"></aside>
+    <p class="foot">ACCT 5105 Class Campaign · testnet story only · no seeds · no mainnet · flight sim before Remix</p>
+  </div>
+
+  <script>
+    const STORAGE_KEY = "acct5105-class-campaign-v3";
+    const ASSET = "assets/";
+
+    const CAST = [
+      { id: "ava", name: "Ava", role: "classmate · holds SLOT", cls: "ava", letter: "A" },
+      { id: "ben", name: "Ben", role: "classmate · trades often", cls: "ben", letter: "B" },
+      { id: "cara", name: "Cara", role: "stranger holder later", cls: "cara", letter: "C" },
+      { id: "team", name: "Team", role: "minter / pauser (banker)", cls: "team", letter: "T" },
+      { id: "ra", name: "RA", role: "floor desk · redemption", cls: "ra", letter: "R" },
+    ];
+
+    const PASSPORT_FIELDS = [
+      { id: "keys", label: "Seed vs address locked in" },
+      { id: "network", label: "Sepolia / no mainnet rule" },
+      { id: "alarms", label: "Mint · cap · pause alarms lived" },
+      { id: "capmath", label: "Cap math fits before Deploy" },
+      { id: "live", label: "Registry + failed-tx honesty" },
+      { id: "bowl", label: "Thin-bowl price intuition" },
+      { id: "boss", label: "Final Project north star named" },
+    ];
+
+    const LEVELS = [
+      {
+        id: "keys",
+        title: "Locker number vs house key",
+        meta: "Module 1 · MetaMask",
+        xp: 15,
+        thumb: "fig-keys.jpg",
+        next: "Tonight: Setup Step 1 — copy your 0x from MetaMask (never the seed).",
+        type: "quiz",
+        words: ["address = locker number", "seed = house key", "wallet ticket"],
+        steps: [
+          {
+            title: "Someone asks for your seed",
+            scene: "Group chat on the floor: “Paste your recovery phrase so we can fix MetaMask.” Ava looks unsure.",
+            photo: "fig-keys.jpg",
+            photoCap: "Course picture: keys and custody. Public locker number ≠ secret house key.",
+            easy: "Address (0x…) is safe to share on the roster. The seed phrase is never shared.",
+            why: "Module 1: whoever has the seed can empty the locker. Final Project needs a real wallet ticket, not a leaked key.",
+            mix: "“Helpful classmate” is still not allowed to hold your seed.",
+            cast: ["ava", "team"],
+            choices: [
+              { text: "Paste the seed — they offered to help.", wrong: "Never. Seed = house key. Anyone with it empties the locker." },
+              { text: "Share only my 0x address.", correct: "Yes. Address = locker number (public). Seed stays secret forever." },
+              { text: "Send a screenshot that shows the seed words.", wrong: "A photo of the key is still the key. Keep seeds off screen, chat, and PDF." },
+            ],
+          },
+          {
+            title: "Which ticket is MetaMask?",
+            scene: "Three tickets to the same concert. Only one lets Team sign Deploy in Remix.",
+            photo: "fig-three-tickets.jpg",
+            photoCap: "Course picture: wallet vs ETF vs exchange tab — same story, different objects.",
+            easy: "MetaMask = you hold the key. ETF = fund share. Exchange tab = often a company promise.",
+            why: "A3 and the Final Project need a signature from your wallet, not a screenshot of an exchange balance.",
+            mix: "Holding a price chart is not the same as holding the key.",
+            cast: ["team", "ben"],
+            choices: [
+              { text: "ETF share — a fund holds the key.", wrong: "Useful in markets class; not the key we sign with tonight." },
+              { text: "Exchange app balance — often a company IOU.", wrong: "That can be a promise, not self-custody." },
+              { text: "Wallet (MetaMask) — we hold the key.", correct: "Correct. That is the ticket Remix needs." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "network",
+        title: "Wrong country on the envelope",
+        meta: "Module 3 setup · Sepolia",
+        xp: 15,
+        thumb: "fig-custody.jpg",
+        next: "Canvas Module 3 → faucet link, then confirm MetaMask shows Sepolia.",
+        type: "quiz",
+        words: ["Sepolia = play chain", "gas = stamps", "no mainnet"],
+        steps: [
+          {
+            title: "Network check",
+            scene: "Ben’s MetaMask says Ethereum Mainnet. The board says Sepolia. RA shakes her head.",
+            photo: "fig-custody.jpg",
+            photoCap: "Wrong network = wrong country on the envelope. Stamps burn in the wrong place.",
+            easy: "Sepolia is the classroom play chain. Ethereum Mainnet is real money — never for this course.",
+            why: "A mistaken mainnet click can spend real ETH and earns a zero on the project.",
+            mix: "“I’ll just Deploy quickly” is how envelopes go to the wrong country.",
+            cast: ["ben", "ra"],
+            choices: [
+              { text: "Deploy anyway — gas is cheap enough.", wrong: "Mainnet = real money. Hard rule: never." },
+              { text: "Switch to Sepolia (show test networks if needed).", correct: "Play chain only. Sepolia is our classroom." },
+              { text: "Invent a contract address so A3 looks done.", wrong: "No invented addresses. Honest fail stories beat fake proofs." },
+            ],
+          },
+          {
+            title: "Empty faucet",
+            scene: "Deploy fails: insufficient funds. Cara has no Sepolia ETH.",
+            photo: "fig-get-coins.jpg",
+            photoCap: "Course picture: how coins (and gas) get into a wallet. Faucet first.",
+            easy: "Faucet = stamp machine for test ETH. Empty faucet → MetaMask says insufficient funds.",
+            why: "On-chain, every attempt costs gas — even failed ones. Colab errors are free; Sepolia is not.",
+            mix: "Jumping to mainnet “because I already have ETH” breaks the hard rule.",
+            cast: ["cara", "team"],
+            choices: [
+              { text: "Gas is optional if the mint is educational.", wrong: "Every attempt needs stamps." },
+              { text: "Use the class faucet; stay on Sepolia.", correct: "Faucet = stamp machine. Then retry Deploy." },
+              { text: "Switch to mainnet where I already have ETH.", wrong: "Hard rule: no mainnet." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "alarms",
+        title: "Three alarms on the machine",
+        meta: "Session 5 · operate ClassCoin",
+        xp: 25,
+        thumb: "fig-two-updates.jpg",
+        next: "Canvas → S5 Smart contracts (Colab). Demo first, then YOUR TURN three alarms.",
+        type: "machine",
+        words: ["minter = banker", "cap = box lid", "pause = freeze"],
+        easy: "A smart contract is a vending machine: same bad input → same reject.",
+        why: "You practice the alarms in Python before MetaMask pop-ups cost gas.",
+        mix: "“Smart” does not mean wise. It only does the if-then you posted.",
+        photo: "fig-two-updates.jpg",
+        photoCap: "Transfer = two mailbox updates. Pause freezes those moves.",
+      },
+      {
+        id: "capmath",
+        title: "Yearbook stickers must fit",
+        meta: "Session 6 · cap math sliders",
+        xp: 20,
+        thumb: "fig-get-coins.jpg",
+        next: "Canvas → S6 Create and airdrop (Colab). Plug your A2 numbers before Remix.",
+        type: "sliders",
+        words: ["airdrop × N", "pool + treasury", "Premint = cap"],
+        easy: "Planned mint must fit under the lid before anyone clicks Deploy.",
+        why: "Remix Premint is your A2 cap. There is no separate “cap” checkbox that saves a bad plan.",
+        mix: "Secretly raising the lid in Remix is not a fix — cut airdrop or pool instead.",
+        photo: "fig-ledger.jpg",
+        photoCap: "Shared numbers beat private napkins. Cap math is the shared plan.",
+      },
+      {
+        id: "live",
+        title: "Go live without breaking rules",
+        meta: "Session 6 · Remix checklist",
+        xp: 20,
+        thumb: "fig-hash-vs-lock.jpg",
+        next: "Remix: Injected Provider → Sepolia Deploy → paste registry → document one fail.",
+        type: "quiz",
+        words: ["Injected Provider", "contract address = asset", "failed tx = points"],
+        steps: [
+          {
+            title: "Leave the fake chain",
+            scene: "Team finished the Remix VM peek. RA points at Injected Provider.",
+            photo: "fig-hash-vs-lock.jpg",
+            photoCap: "Flight sim (VM) vs live signature (MetaMask). Different doors.",
+            easy: "Remix VM = fake practice chain. Injected Provider = MetaMask signs on Sepolia.",
+            why: "Module 1 (signature) meets Module 3 (posted house rules) only when MetaMask is connected.",
+            mix: "Staying on VM forever never puts an address on the class registry.",
+            cast: ["team", "ra"],
+            choices: [
+              { text: "Stay on Remix VM forever — safer.", wrong: "VM is the flight sim. Live gate needs Injected Provider." },
+              { text: "Injected Provider — MetaMask, still on Sepolia.", correct: "MetaMask signs. Network still Sepolia." },
+              { text: "Injected Provider on Ethereum Mainnet for credibility.", wrong: "Hard rule: no mainnet." },
+            ],
+          },
+          {
+            title: "A3 points hiding in a failure",
+            scene: "First Deploy pop-up fails. Ben wants to paste a fake 0x. Ava says no.",
+            photo: "fig-scrip-jobs.jpg",
+            photoCap: "Ops honesty is part of the job — same as real assurance work.",
+            easy: "Write one failed-tx story + how you fixed it. Keep the real contract address.",
+            why: "Explorer pages and fail stories feed the Final Project Evidence Passport.",
+            mix: "Invented hashes look fine in a PDF and fall apart on demo day.",
+            cast: ["ava", "ben"],
+            choices: [
+              { text: "Hide it and paste a made-up 0x.", wrong: "Invented addresses are a zero." },
+              { text: "Write the failed-tx story + keep the real address.", correct: "Ops honesty is graded. Explorer = receipt book." },
+              { text: "Skip the registry until after Thanksgiving.", wrong: "Paste network, address, admin now — passport seed." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "bowl",
+        title: "Lemonade bowl moves",
+        meta: "Module 4 preview · thin book",
+        xp: 15,
+        thumb: "fig-scrip-jobs.jpg",
+        next: "After Module 3: Module 4 payments + class AMM (L2 bowl).",
+        type: "bowl",
+        words: ["CLASSUSD = yardstick", "spot vs depth", "thin book"],
+        easy: "The class bowl prices SLOT against CLASSUSD. One small trade can move a shallow pool a lot.",
+        why: "Final Project live proof #3 is a pool quote — practice reading spot without calling it “the fair value of housing.”",
+        mix: "Classroom volume is not a listing pitch.",
+        photo: "fig-ledger.jpg",
+        photoCap: "Price on a shared list ≠ proof of a deep market.",
+      },
+      {
+        id: "boss",
+        title: "Boss teaser · Final Project",
+        meta: "Dec 14 · memo + live proofs",
+        xp: 10,
+        thumb: "fig-scrip-jobs.jpg",
+        next: "Assignments → Final Project. Evidence Passport cites A1–A6 — not slogans.",
+        type: "say",
+        words: ["one project", "Evidence Passport", "go / partner / pass"],
+        easy: "One Final Project: memo PDF + live proofs the same night. Not separate A7/A8 homework.",
+        why: "Firms hire people who can vouch an address, a stranger holder, a quote, and a kill number.",
+        mix: "A slogan deck with invented hashes fails authenticity.",
+        photo: "fig-custody.jpg",
+        photoCap: "What can we vouch — and what still needs traditional evidence?",
+      },
+    ];
+
+    let state = loadState();
+
+    function defaultState() {
+      return {
+        xp: 0, cleared: {}, step: {}, passport: {}, say: "",
+        machineDone: { cap: false, nonMinter: false, pause: false },
+      };
+    }
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return defaultState();
+        return Object.assign(defaultState(), JSON.parse(raw));
+      } catch { return defaultState(); }
+    }
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      const n = Object.keys(state.cleared).length;
+      document.getElementById("xpPill").textContent = `XP ${state.xp} · ${n}/${LEVELS.length} cleared`;
+      renderPassport();
+    }
+    function isUnlocked(i) { return i === 0 || !!state.cleared[LEVELS[i - 1].id]; }
+    function el(html) {
+      const t = document.createElement("template");
+      t.innerHTML = html.trim();
+      return t.content.firstElementChild;
+    }
+    function avatar(id, size) {
+      const c = CAST.find((x) => x.id === id) || CAST[0];
+      return `<div class="avatar ${size || ""} ${c.cls}" title="${c.name}">${c.letter}</div>`;
+    }
+    function wordsRow(words) {
+      if (!words || !words.length) return "";
+      return `<div class="words">${words.map((w) => `<i>${w}</i>`).join("")}</div>`;
+    }
+    function explainBlock(easy, why, mix) {
+      return `<div class="explain">
+        <div class="explain-card easy"><div class="label">Easy</div>${easy}</div>
+        <div class="explain-card why"><div class="label">Why it matters</div>${why}</div>
+        <div class="explain-card mix"><div class="label">Common mix-up</div>${mix}</div>
+      </div>`;
+    }
+    function photoBlock(src, cap) {
+      if (!src) return "";
+      return `<figure class="teach-photo">
+        <img src="${ASSET}${src}" alt="" />
+        <figcaption>${cap || ""}</figcaption>
+      </figure>`;
+    }
+    function castLine(ids) {
+      if (!ids || !ids.length) return "";
+      const people = ids.map((id) => CAST.find((c) => c.id === id)).filter(Boolean);
+      return `<div class="comic">${people.map((p) => `
+        <div class="comic-line">
+          ${avatar(p.id)}
+          <div class="bubble"><div class="who">${p.name} · ${p.role}</div>On stage for this scene.</div>
+        </div>`).join("")}</div>`;
+    }
+    function storyChip() {
+      return `<div class="story-chip">Story · Dryer-slot credits (SLOT) on one dorm floor — shape only, not your ticker</div>`;
+    }
+    function nextCard(level) {
+      return `<div class="next-card"><strong>After this level · open on Canvas</strong>${level.next}</div>`;
+    }
+    function raTip(text) {
+      return `<div class="ra-tip" role="note">
+        ${avatar("ra", "lg")}
+        <div>
+          <div class="label">RA tip · say this out loud</div>
+          <div class="line">${text}</div>
+        </div>
+      </div>`;
+    }
+    const RA_TIPS = {
+      home: "Sticky notes disappear. We need a <em>shared machine</em>: gift credits, a lid, a freeze switch — then prove it on Sepolia.",
+      keys: "Address is the <em>locker number</em>. Seed is the <em>house key</em>. If it’s on screen, chat, or PDF — you’ve already lost.",
+      network: "Look at the <em>top</em> of MetaMask before every click. Wrong country on the envelope wastes stamps and can earn a zero.",
+      alarms: "Don’t just read the alarms — <em>cause</em> them. Same three fails you’ll trigger in Colab S5.",
+      capmath: "Say your numbers out loud: airdrop × N + pool + treasury ≤ cap. Remix <em>Premint</em> is that lid.",
+      live: "Injected Provider + Sepolia. A failed pop-up is not shame — write the story. Invented 0x is a zero.",
+      bowl: "One classroom buy can move a thin bowl a lot. That is <em>mechanism proof</em>, not a listing pitch.",
+      boss: "Dec 14: vouch an address, a stranger holder, a quote, a kill number. Slogans don’t clear cold questions.",
+    };
+
+    function renderCastBar() {
+      document.getElementById("castBar").innerHTML = CAST.map((c) => `
+        <div class="cast-card">${avatar(c.id)}<div><strong>${c.name}</strong><span>${c.role}</span></div></div>
+      `).join("");
+    }
+
+    function renderPassport() {
+      const box = document.getElementById("passport");
+      const items = PASSPORT_FIELDS.map((f) => {
+        const on = !!state.passport[f.id] || !!state.cleared[f.id];
+        return `<li class="${on ? "on" : ""}"><span class="m">${on ? "✓" : "·"}</span><span>${f.label}</span></li>`;
+      }).join("");
+      box.innerHTML = `
+        <div class="kicker">Evidence Passport</div>
+        <h2>What an assurer can vouch</h2>
+        <p class="lede">Lights up as you clear levels. Same spine as the Final Project appendix.</p>
+        <ul class="pass-list">${items}</ul>
+        <figure class="teach-photo" style="margin-top:0.85rem">
+          <img src="${ASSET}fig-scrip-jobs.jpg" alt="Course figure: jobs of the coin" />
+          <figcaption>Keep the business job in view — not “we want a blockchain.”</figcaption>
+        </figure>
+      `;
+    }
+
+    function renderHome() {
+      const stage = document.getElementById("stage");
+      stage.innerHTML = "";
+      const wrap = el(`<div>
+        ${storyChip()}
+        <div class="kicker">Play → operate → passport</div>
+        <h1>Help the floor fix dryer chaos — with house rules you can vouch</h1>
+        <figure class="teach-photo">
+          <img class="hero-svg" src="${ASSET}dryer-room.png" alt="Laundry room with open, running, and broken dryers priced in SLOT" />
+          <figcaption>Open · running · broken (pause / refund). One SLOT = one dryer slot. Sticky notes on the left are the old failed system.</figcaption>
+        </figure>
+        ${raTip(RA_TIPS.home)}
+        <div class="hero-art">
+          <div class="comic">
+            <div class="comic-line">
+              ${avatar("ra", "lg")}
+              <div class="bubble"><div class="who">RA</div>“Sticky-note bookings keep disappearing. We need shared credits, a lid, and a freeze switch — not another group-chat rumor.”</div>
+            </div>
+            <div class="comic-line">
+              ${avatar("team", "lg")}
+              <div class="bubble"><div class="who">Team (you)</div>“We’ll gift SLOT to the roster, keep a bowl vs CLASSUSD, and prove it on Sepolia. Flight sim first.”</div>
+            </div>
+            <div class="comic-line">
+              ${avatar("cara", "lg")}
+              <div class="bubble"><div class="who">Cara</div>“If I’m not on your team but I hold SLOT, that stranger balance is demo-day evidence.”</div>
+            </div>
+          </div>
+          <figure class="teach-photo" style="margin:0">
+            <img src="${ASSET}fig-get-coins.jpg" alt="How coins get into wallets" style="max-height:100%; height:100%" />
+            <figcaption>Course photo: gifts, sales, and wages are different objects — this campaign starts with a gift airdrop.</figcaption>
+          </figure>
+        </div>
+        ${explainBlock(
+          "Each level teaches class words with pictures, then makes you click or operate a tiny sim.",
+          "Same arc as the course: keys → posted rules → cap math → live registry → bowl → Final Project.",
+          "This is not a trading game. Win = explain evidence, not “token go up.”"
+        )}
+        <div class="map" id="map"></div>
+        <div class="actions">
+          <button class="ghost" type="button" id="resetBtn">Reset progress</button>
+          <a class="ghost" href="cast-sheet.html" style="display:inline-flex;align-items:center;text-decoration:none">Printable cast sheet</a>
+        </div>
+      </div>`);
+      stage.appendChild(wrap);
+      const map = wrap.querySelector("#map");
+      LEVELS.forEach((level, i) => {
+        const done = !!state.cleared[level.id];
+        const locked = !isUnlocked(i);
+        const btn = el(`<button class="level-btn ${done ? "done" : ""}" type="button" ${locked ? "disabled" : ""}>
+          <div class="badge">${i + 1}</div>
+          <img class="thumb" src="${ASSET}${level.thumb}" alt="" />
+          <div><div><strong>${level.title}</strong></div><div class="meta">${level.meta}</div></div>
+          <div class="status">${locked ? "Locked" : done ? "Cleared" : "Play"}</div>
+        </button>`);
+        if (!locked) btn.addEventListener("click", () => openLevel(i));
+        map.appendChild(btn);
+      });
+      wrap.querySelector("#resetBtn").addEventListener("click", () => {
+        if (confirm("Reset XP, passport, and cleared levels?")) {
+          state = defaultState();
+          saveState();
+          renderHome();
+        }
+      });
+      saveState();
+    }
+
+    function openLevel(index) {
+      const level = LEVELS[index];
+      state.step[level.id] = 0;
+      if (level.type === "machine") state.machineDone = { cap: false, nonMinter: false, pause: false };
+      saveState();
+      if (level.type === "machine") return renderMachine(index);
+      if (level.type === "sliders") return renderSliders(index);
+      if (level.type === "bowl") return renderBowl(index);
+      if (level.type === "say") return renderSay(index);
+      return renderQuiz(index);
+    }
+
+    function clearLevel(index) {
+      const level = LEVELS[index];
+      const first = !state.cleared[level.id];
+      if (first) {
+        state.cleared[level.id] = true;
+        state.passport[level.id] = true;
+        state.xp += level.xp;
+      }
+      saveState();
+      const stage = document.getElementById("stage");
+      const allDone = LEVELS.every((l) => state.cleared[l.id]);
+      const next = LEVELS[index + 1];
+      stage.innerHTML = "";
+      if (allDone) {
+        stage.appendChild(el(`<div>
+          ${storyChip()}
+          <div class="kicker">Campaign cleared</div>
+          <h1>Registry-ready · passport lit</h1>
+          <div class="comic" style="margin:1rem 0">
+            <div class="comic-line">${avatar("ra", "lg")}<div class="bubble"><div class="who">RA</div>“Now do it on Sepolia for real. Same words. Real explorer links.”</div></div>
+            <div class="comic-line">${avatar("team", "lg")}<div class="bubble"><div class="who">Team</div>“XP ${state.xp}. Next stop: Canvas Colab → Deploy → Evidence Passport.”</div></div>
+          </div>
+          ${nextCard({ next: "Module 3 S5/S6 Colab → registry row → keep filling Final Project." })}
+          <div class="actions"><button class="primary" type="button" id="homeBtn">Back to map</button></div>
+        </div>`));
+        stage.querySelector("#homeBtn").addEventListener("click", renderHome);
+        return;
+      }
+      stage.appendChild(el(`<div>
+        <div class="kicker">Level cleared</div>
+        <h1>${level.title}</h1>
+        <p class="lede">${first ? `+${level.xp} XP.` : "Already cleared."} Passport updated.</p>
+        ${nextCard(level)}
+        <div class="actions">
+          <button class="ghost" type="button" id="mapBtn">Campaign map</button>
+          ${next ? `<button class="primary" type="button" id="nextLevel">Play next</button>` : ""}
+        </div>
+      </div>`));
+      stage.querySelector("#mapBtn").addEventListener("click", renderHome);
+      const nl = stage.querySelector("#nextLevel");
+      if (nl) nl.addEventListener("click", () => openLevel(index + 1));
+    }
+
+    function renderQuiz(index) {
+      const level = LEVELS[index];
+      const stepIndex = state.step[level.id] || 0;
+      const step = level.steps[stepIndex];
+      const stage = document.getElementById("stage");
+      const dots = level.steps.map((_, i) =>
+        `<div class="dot ${i < stepIndex ? "done" : i === stepIndex ? "on" : ""}"></div>`
+      ).join("");
+      stage.innerHTML = "";
+      const root = el(`<div>
+        ${storyChip()}
+        <div class="kicker">${level.meta}</div>
+        <h2>${step.title}</h2>
+        <div class="progress">${dots}</div>
+        ${wordsRow(level.words)}
+        ${raTip(RA_TIPS[level.id] || RA_TIPS.home)}
+        <p class="scene">${step.scene}</p>
+        ${castLine(step.cast)}
+        ${photoBlock(step.photo, step.photoCap)}
+        ${explainBlock(step.easy, step.why, step.mix)}
+        <div class="choices" id="choices"></div>
+        <div class="feedback" id="feedback"></div>
+        <div class="actions">
+          <button class="ghost" type="button" id="backMap">Map</button>
+          <button class="primary" type="button" id="nextBtn" disabled>Continue</button>
+        </div>
+      </div>`);
+      stage.appendChild(root);
+      wireChoices(root, step, () => {
+        if (stepIndex + 1 < level.steps.length) {
+          state.step[level.id] = stepIndex + 1;
+          saveState();
+          renderQuiz(index);
+        } else clearLevel(index);
+      });
+      root.querySelector("#backMap").addEventListener("click", renderHome);
+    }
+
+    function wireChoices(root, step, onContinue) {
+      const choices = root.querySelector("#choices");
+      const feedback = root.querySelector("#feedback");
+      const nextBtn = root.querySelector("#nextBtn");
+      let answered = false;
+      step.choices.forEach((c) => {
+        const b = el(`<button class="choice" type="button">${c.text}</button>`);
+        b.addEventListener("click", () => {
+          if (answered) return;
+          answered = true;
+          [...choices.children].forEach((n) => (n.disabled = true));
+          if (c.correct) {
+            b.classList.add("correct");
+            feedback.className = "feedback show ok";
+            feedback.textContent = c.correct;
+            nextBtn.disabled = false;
+          } else {
+            b.classList.add("wrong");
+            feedback.className = "feedback show bad";
+            feedback.textContent = c.wrong + " Try another.";
+            setTimeout(() => {
+              answered = false;
+              [...choices.children].forEach((n) => { n.disabled = false; n.classList.remove("wrong"); });
+              feedback.className = "feedback";
+            }, 1200);
+          }
+        });
+        choices.appendChild(b);
+      });
+      nextBtn.addEventListener("click", onContinue);
+    }
+
+    function makeCoin() {
+      return {
+        cap: 10000, minter: "team", pauser: "team", paused: false,
+        balances: { Ava: 0, Ben: 0, Cara: 0 }, supply: 0,
+        mint(caller, to, amount) {
+          if (caller !== this.minter) throw new Error("only the banker prints");
+          if (this.supply + amount > this.cap) throw new Error("box lid -- cap");
+          this.balances[to] = (this.balances[to] || 0) + amount;
+          this.supply += amount;
+          return `mint ${amount} → ${to} · supply ${this.supply}`;
+        },
+        transfer(caller, to, amount) {
+          if (this.paused) throw new Error("frozen");
+          if ((this.balances[caller] || 0) < amount) throw new Error("broke");
+          this.balances[caller] -= amount;
+          this.balances[to] = (this.balances[to] || 0) + amount;
+          return `${caller} → ${to} · ${amount}`;
+        },
+        pause(caller, value) {
+          if (caller !== this.pauser) throw new Error("not the freeze person");
+          this.paused = value;
+          return value ? "freeze ON" : "freeze OFF";
+        },
+      };
+    }
+
+    function renderMachine(index) {
+      const level = LEVELS[index];
+      const coin = makeCoin();
+      coin.mint("team", "Ava", 200);
+      coin.mint("team", "Ben", 200);
+      const stage = document.getElementById("stage");
+      const nameCls = { Ava: "ava", Ben: "ben", Cara: "cara" };
+      stage.innerHTML = "";
+      const root = el(`<div>
+        ${storyChip()}
+        <div class="kicker">${level.meta}</div>
+        <h2>Operate the vending machine</h2>
+        ${wordsRow(level.words)}
+        ${raTip(RA_TIPS.alarms)}
+        <p class="scene">Ava and Ben already have 200 SLOT each (gift). Cause each alarm on purpose — same as S5 YOUR TURN.</p>
+        ${photoBlock(level.photo, level.photoCap)}
+        ${explainBlock(level.easy, level.why, level.mix)}
+        <ul class="quest" id="quests">
+          <li data-q="cap"><strong>1.</strong> Cap alarm — mint way over the lid</li>
+          <li data-q="nonMinter"><strong>2.</strong> Banker alarm — Ava tries to mint</li>
+          <li data-q="pause"><strong>3.</strong> Freeze alarm — pause, then transfer</li>
+        </ul>
+        <div class="machine">
+          <div class="machine-grid">
+            <div>
+              <div class="meta" style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.45rem">
+                ${avatar("team", "sm")} Banker = Team · supply <span id="supply">${coin.supply}</span> / ${coin.cap}
+              </div>
+              <div class="mailboxes" id="mailboxes"></div>
+              <div class="meta" style="margin-top:0.5rem">Paused? <strong id="pausedLab">${coin.paused}</strong></div>
+            </div>
+            <div>
+              <div class="meta">Click to operate</div>
+              <div class="tool-row">
+                <button class="tool-btn okish" type="button" data-act="goodMint">Mint 50 to Cara (banker)</button>
+                <button class="tool-btn" type="button" data-act="xfer">Ava → Ben · 6</button>
+                <button class="tool-btn danger" type="button" data-act="cap">Mint 1,000,000 (over lid)</button>
+                <button class="tool-btn danger" type="button" data-act="avaMint">Ava mints 1 to Ava</button>
+                <button class="tool-btn" type="button" data-act="pauseOn">Pause ON</button>
+                <button class="tool-btn danger" type="button" data-act="xferFrozen">Ben → Cara · 1 (frozen)</button>
+                <button class="tool-btn" type="button" data-act="pauseOff">Pause OFF</button>
+              </div>
+              <div class="log" id="log">Ready. Trigger the three alarms.</div>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="ghost" type="button" id="backMap">Map</button>
+          <button class="primary" type="button" id="nextBtn" disabled>Clear level</button>
+        </div>
+        ${nextCard(level)}
+      </div>`);
+      stage.appendChild(root);
+      const mailboxes = root.querySelector("#mailboxes");
+      const log = root.querySelector("#log");
+      const nextBtn = root.querySelector("#nextBtn");
+
+      function paint() {
+        mailboxes.innerHTML = Object.keys(coin.balances).map((n) => `
+          <div><span class="who">${avatar(n.toLowerCase(), "sm")}<span>${n}</span></span><strong>${coin.balances[n]}</strong></div>
+        `).join("");
+        root.querySelector("#supply").textContent = coin.supply;
+        root.querySelector("#pausedLab").textContent = coin.paused;
+        ["cap", "nonMinter", "pause"].forEach((q) => {
+          if (state.machineDone[q]) root.querySelector(`[data-q="${q}"]`).classList.add("done");
+        });
+        nextBtn.disabled = !(state.machineDone.cap && state.machineDone.nonMinter && state.machineDone.pause);
+      }
+      function run(fn, mark) {
+        try {
+          const msg = fn();
+          log.className = "log good";
+          log.textContent = msg;
+        } catch (e) {
+          log.className = "log alarm";
+          log.textContent = "ALARM · " + e.message;
+          if (mark) { state.machineDone[mark] = true; saveState(); }
+        }
+        paint();
+      }
+      root.querySelectorAll("[data-act]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const act = btn.getAttribute("data-act");
+          if (act === "goodMint") run(() => coin.mint("team", "Cara", 50));
+          if (act === "xfer") run(() => coin.transfer("Ava", "Ben", 6));
+          if (act === "cap") run(() => coin.mint("team", "Ava", 1000000), "cap");
+          if (act === "avaMint") run(() => coin.mint("Ava", "Ava", 1), "nonMinter");
+          if (act === "pauseOn") run(() => coin.pause("team", true));
+          if (act === "xferFrozen") run(() => coin.transfer("Ben", "Cara", 1), "pause");
+          if (act === "pauseOff") run(() => coin.pause("team", false));
+        });
+      });
+      paint();
+      root.querySelector("#backMap").addEventListener("click", renderHome);
+      nextBtn.addEventListener("click", () => clearLevel(index));
+    }
+
+    function renderSliders(index) {
+      const level = LEVELS[index];
+      const stage = document.getElementById("stage");
+      const vals = { n: 4, airdrop: 200, pool: 2000, treasury: 2000, cap: 10000 };
+      stage.innerHTML = "";
+      const root = el(`<div>
+        ${storyChip()}
+        <div class="kicker">${level.meta}</div>
+        <h2>Fit the yearbook stickers under the lid</h2>
+        ${wordsRow(level.words)}
+        ${raTip(RA_TIPS.capmath)}
+        <p class="scene">RA wants every roommate to get the same gift. Team must prove the plan fits before Remix Premint.</p>
+        ${photoBlock(level.photo, level.photoCap)}
+        ${explainBlock(level.easy, level.why, level.mix)}
+        <div class="sliders" id="sliders"></div>
+        <div class="math-readout" id="readout"></div>
+        <div class="actions">
+          <button class="ghost" type="button" id="backMap">Map</button>
+          <button class="primary" type="button" id="nextBtn" disabled>Clear level (must fit)</button>
+        </div>
+        ${nextCard(level)}
+      </div>`);
+      stage.appendChild(root);
+      const sliders = root.querySelector("#sliders");
+      const readout = root.querySelector("#readout");
+      const nextBtn = root.querySelector("#nextBtn");
+      const specs = [
+        { key: "n", label: "Roster N (Ava, Ben, Cara…)", min: 2, max: 40, step: 1 },
+        { key: "airdrop", label: "Airdrop each (gift)", min: 0, max: 1000, step: 25 },
+        { key: "pool", label: "Pool reserve (bowl)", min: 0, max: 8000, step: 100 },
+        { key: "treasury", label: "Treasury (promises)", min: 0, max: 8000, step: 100 },
+        { key: "cap", label: "Cap / Remix Premint", min: 1000, max: 20000, step: 500 },
+      ];
+      specs.forEach((s) => {
+        sliders.appendChild(el(`<div class="slider-row">
+          <label><span>${s.label}</span><span id="v-${s.key}">${vals[s.key]}</span></label>
+          <input type="range" min="${s.min}" max="${s.max}" step="${s.step}" value="${vals[s.key]}" data-key="${s.key}" />
+        </div>`));
+      });
+      function paint() {
+        const planned = vals.airdrop * vals.n + vals.pool + vals.treasury;
+        const fits = planned <= vals.cap;
+        specs.forEach((s) => { root.querySelector(`#v-${s.key}`).textContent = vals[s.key].toLocaleString(); });
+        readout.className = "math-readout " + (fits ? "fits" : "blow");
+        readout.innerHTML = `<strong>planned</strong> = ${vals.airdrop} × ${vals.n} + ${vals.pool} + ${vals.treasury}
+          = <strong>${planned.toLocaleString()}</strong><br/>
+          <strong>cap</strong> = ${vals.cap.toLocaleString()} ·
+          ${fits ? "FITS — say these numbers out loud before Deploy." : "OVER LID — cut airdrop or pool. Do not secretly raise the lid."}`;
+        nextBtn.disabled = !fits;
+      }
+      sliders.querySelectorAll("input").forEach((input) => {
+        input.addEventListener("input", () => { vals[input.dataset.key] = Number(input.value); paint(); });
+      });
+      paint();
+      root.querySelector("#backMap").addEventListener("click", renderHome);
+      nextBtn.addEventListener("click", () => clearLevel(index));
+    }
+
+    function renderBowl(index) {
+      const level = LEVELS[index];
+      let spin = 2000, usd = 1000, moved = false;
+      const stage = document.getElementById("stage");
+      stage.innerHTML = "";
+      const root = el(`<div>
+        ${storyChip()}
+        <div class="kicker">${level.meta}</div>
+        <h2>Thin lemonade bowl</h2>
+        ${wordsRow(level.words)}
+        ${raTip(RA_TIPS.bowl)}
+        <p class="scene">Ben buys 100 SLOT from the class bowl. Cara watches the spot jump — classroom depth, not a housing valuation.</p>
+        ${photoBlock(level.photo, level.photoCap)}
+        ${explainBlock(level.easy, level.why, level.mix)}
+        <div class="machine">
+          <div class="meta" style="display:flex;gap:0.5rem;align-items:center;margin-bottom:0.45rem">
+            ${avatar("ben", "sm")} buys · ${avatar("cara", "sm")} watches quote
+          </div>
+          <div class="mailboxes">
+            <div><span>SLOT in bowl</span><strong id="spinAmt">${spin}</strong></div>
+            <div><span>CLASSUSD in bowl</span><strong id="usdAmt">${usd}</strong></div>
+            <div><span>Spot (CLASSUSD / SLOT)</span><strong id="spot">—</strong></div>
+          </div>
+          <div class="bowl-viz"><div class="spin" id="spinBar"></div><div class="usd" id="usdBar"></div></div>
+          <div class="tool-row">
+            <button class="tool-btn" type="button" id="buy">Ben buys 100 SLOT</button>
+            <button class="tool-btn" type="button" id="resetBowl">Reset bowl</button>
+          </div>
+          <div class="log" id="log">Spot starts near 0.50. One classroom trade moves it.</div>
+        </div>
+        <div class="actions">
+          <button class="ghost" type="button" id="backMap">Map</button>
+          <button class="primary" type="button" id="nextBtn" disabled>I saw the quote move — clear</button>
+        </div>
+        ${nextCard(level)}
+      </div>`);
+      stage.appendChild(root);
+      const nextBtn = root.querySelector("#nextBtn");
+      function paint(msg) {
+        const spot = usd / spin;
+        root.querySelector("#spinAmt").textContent = spin.toFixed(2);
+        root.querySelector("#usdAmt").textContent = usd.toFixed(2);
+        root.querySelector("#spot").textContent = spot.toFixed(4);
+        const total = spin + usd;
+        root.querySelector("#spinBar").style.width = (100 * spin / total) + "%";
+        root.querySelector("#usdBar").style.width = (100 * usd / total) + "%";
+        if (msg) { const log = root.querySelector("#log"); log.className = "log good"; log.textContent = msg; }
+        nextBtn.disabled = !moved;
+      }
+      root.querySelector("#buy").addEventListener("click", () => {
+        const k = spin * usd; const buy = 100;
+        if (buy >= spin - 1) return;
+        const newSpin = spin - buy; const newUsd = k / newSpin;
+        const spent = newUsd - usd; const oldSpot = usd / spin;
+        spin = newSpin; usd = newUsd; moved = true;
+        paint(`Ben spent ~${spent.toFixed(2)} CLASSUSD. Spot ${oldSpot.toFixed(4)} → ${(usd / spin).toFixed(4)}. Thin book moves fast.`);
+      });
+      root.querySelector("#resetBowl").addEventListener("click", () => {
+        spin = 2000; usd = 1000; moved = false; paint("Bowl reset.");
+        root.querySelector("#log").className = "log";
+      });
+      paint();
+      root.querySelector("#backMap").addEventListener("click", renderHome);
+      nextBtn.addEventListener("click", () => clearLevel(index));
+    }
+
+    function renderSay(index) {
+      const level = LEVELS[index];
+      const stage = document.getElementById("stage");
+      stage.innerHTML = "";
+      const root = el(`<div>
+        ${storyChip()}
+        <div class="kicker">${level.meta}</div>
+        <h2>Say what you will vouch</h2>
+        ${wordsRow(level.words)}
+        ${raTip(RA_TIPS.boss)}
+        <p class="scene">Dec 14: memo at 6:15, then live proofs. Type one sentence an assurer would accept.</p>
+        ${photoBlock(level.photo, level.photoCap)}
+        ${explainBlock(level.easy, level.why, level.mix)}
+        <div class="comic" style="margin-bottom:0.85rem">
+          <div class="comic-line">${avatar("ra")}<div class="bubble"><div class="who">RA (cold question)</div>“Point to the stranger holder. How do we know they are not on your team?”</div></div>
+        </div>
+        <div class="saybox">
+          <label for="say"><strong>Your sentence</strong> — use evidence words</label>
+          <textarea id="say" placeholder="e.g. We vouch our Sepolia registry address, Cara holding a gift balance, the bowl quote, and one kill number — not a slogan deck.">${state.say || ""}</textarea>
+        </div>
+        <div class="feedback" id="feedback"></div>
+        <div class="actions">
+          <button class="ghost" type="button" id="backMap">Map</button>
+          <button class="primary" type="button" id="nextBtn">Save + clear level</button>
+        </div>
+        ${nextCard(level)}
+      </div>`);
+      stage.appendChild(root);
+      const feedback = root.querySelector("#feedback");
+      root.querySelector("#backMap").addEventListener("click", renderHome);
+      root.querySelector("#nextBtn").addEventListener("click", () => {
+        const text = root.querySelector("#say").value.trim();
+        if (text.length < 24) {
+          feedback.className = "feedback show bad";
+          feedback.textContent = "Write a real sentence with evidence words.";
+          return;
+        }
+        const lower = text.toLowerCase();
+        const ok = ["address", "registry", "holder", "balance", "quote", "pool", "kill", "passport", "explorer", "sep"]
+          .some((w) => lower.includes(w));
+        if (!ok) {
+          feedback.className = "feedback show bad";
+          feedback.textContent = "Name evidence (address / holder / quote / kill / passport).";
+          return;
+        }
+        state.say = text;
+        saveState();
+        clearLevel(index);
+      });
+    }
+
+    renderCastBar();
+    renderPassport();
+    renderHome();
+  </script>
+</body>
+</html>

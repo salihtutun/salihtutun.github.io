@@ -13,7 +13,7 @@
     <a class="brand" href="index.html">ACCT 5105-01
       <span>Financial Reporting &amp; Assurance in a Blockchain World</span>
     </a>
-    <nav aria-label="Course"><a href="index.html">Syllabus</a><a href="fundamentals.html">Start here</a><a href="sessions/index.html">Sessions</a><a href="setup.html" aria-current="page">Setup</a><a href="handbook.html">Handbook</a><a href="assessment.html">What to turn in</a><a href="assignments/index.html">Assignments</a><a href="labs/index.html">Labs L1–L3</a><a href="examples/index.html">Samples</a><a href="quizzes/index.html">Quizzes</a></nav>
+    <nav aria-label="Course"><a href="index.html">Syllabus</a><a href="fundamentals.html">Start here</a><a href="cheatsheet.html">Cheatsheet</a><a href="game/class-campaign.html">Class Campaign</a><a href="sessions/index.html">Sessions</a><a href="setup.html" aria-current="page">Setup</a><a href="handbook.html">Handbook</a><a href="assessment.html">What to turn in</a><a href="assignments/index.html">Assignments</a><a href="labs/index.html">Labs L1–L3</a><a href="examples/index.html">Samples</a><a href="quizzes/index.html">Quizzes</a></nav>
   </div>
 </header>
 <div class="page">
@@ -23,8 +23,17 @@
       <p class="kicker">ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</p>
       <h1 id="open-jupyter-in-15-minutes">Open Jupyter in 15 minutes</h1>
 <p><strong>Done when</strong> the Session 1 <strong>Demo</strong> of three jobs prints four lines (<code>concert_ticket -&gt; pay</code>, and so on). Then stop. You do not need MetaMask today.</p>
-<p>Use one folder for the whole course (for example <code>acct5105</code> in Documents). Everything you download from Canvas goes there.</p>
+<p><strong>Fastest path in class:</strong> open the Canvas item that ends in <strong><code>-COLAB.html</code></strong>, click <strong>Open in Google Colab</strong>, then File → <strong>Save a copy in Drive</strong>. That is enough for tonight. The steps below are for running notebooks on your own laptop.</p>
+<p>Use one folder for the whole course (for example <code>acct5105</code> in Documents) if you prefer local Jupyter. Everything you download from Canvas goes there.</p>
 <hr>
+<h2 id="option-a-google-colab-recommended-in-the-room">Option A — Google Colab (recommended in the room)</h2>
+<ol><li>On Canvas, open that night’s module.</li><li>Click the file named like <code>S03-tiny-chain-COLAB.html</code> (or the module link “Open in Colab”).</li><li>Sign in with Google if asked.</li><li>File → <strong>Save a copy in Drive</strong> (so your <code>???</code> work is yours).</li><li>Run Demo cells with the play button. Fill YOUR TURN with a friend.</li></ol>
+<p>If a plot cell says a package is missing, run once in a new cell:</p>
+<pre><code>!pip install -q matplotlib numpy pandas</code></pre>
+<p>Then Runtime → Run all (or re-run from the top).</p>
+<p>Do <strong>not</strong> paste a seed phrase into Colab.</p>
+<hr>
+<h2 id="option-b-jupyter-on-your-laptop">Option B — Jupyter on your laptop</h2>
 <h2 id="1-python-3">1. Python 3</h2>
 <p>You need Python 3.10 or newer.</p>
 <p><strong>Windows.</strong> Install from <a href="https://www.python.org/downloads/" target="_blank" rel="noreferrer">python.org</a> (tick “Add python.exe to PATH”) or the Microsoft Store. In PowerShell:</p>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ACCT 5105 · Class Campaign cast sheet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #14110f; --paper: #f3ebe0; --accent: #9b1c1c; --ok: #1f4a3a;
+      --muted: #6a6258; --ava: #c45c26; --ben: #2f5d8c; --cara: #6b4c9a;
+      --team: #1f4a3a; --ra: #8a5a12;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: "IBM Plex Sans", system-ui, sans-serif; color: var(--ink);
+      background: var(--paper); padding: 1.25rem;
+    }
+    .sheet {
+      max-width: 900px; margin: 0 auto; background: #fffaf3;
+      border: 1px solid rgba(20,17,15,0.12); border-radius: 1rem; padding: 1.5rem;
+    }
+    h1 {
+      font-family: Syne, sans-serif; letter-spacing: -0.03em; margin: 0 0 0.35rem;
+      font-size: 1.75rem;
+    }
+    h1 span { color: var(--accent); }
+    .sub { color: var(--muted); margin: 0 0 1.25rem; line-height: 1.45; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      border: 1px solid rgba(20,17,15,0.12); border-radius: 0.9rem; padding: 0.9rem 1rem;
+      display: grid; grid-template-columns: auto 1fr; gap: 0.75rem; align-items: start;
+    }
+    .avatar {
+      width: 3rem; height: 3rem; border-radius: 50%; display: grid; place-items: center;
+      color: #fff; font-family: Syne, sans-serif; font-weight: 800; font-size: 1.1rem;
+    }
+    .ava { background: var(--ava); } .ben { background: var(--ben); }
+    .cara { background: var(--cara); } .team { background: var(--team); }
+    .ra { background: var(--ra); }
+    .card h2 { margin: 0 0 0.2rem; font-size: 1.05rem; font-family: Syne, sans-serif; }
+    .card p { margin: 0; font-size: 0.9rem; color: var(--muted); line-height: 1.4; }
+    .card .say { margin-top: 0.45rem; font-size: 0.88rem; color: var(--ink); line-height: 1.4; }
+    .hero { width: 100%; border-radius: 0.85rem; border: 1px solid rgba(20,17,15,0.12); margin: 1rem 0; }
+    .tips {
+      margin-top: 1rem; padding: 0.9rem 1rem; border-radius: 0.85rem;
+      background: #f3e4c4; color: var(--ra);
+    }
+    .tips strong { color: var(--ink); }
+    .tips ol { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+    .tips li { margin: 0.25rem 0; line-height: 1.4; }
+    .actions { margin-top: 1.25rem; display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    button, a.btn {
+      font: inherit; font-weight: 600; border-radius: 999px; padding: 0.6rem 1rem;
+      border: 1px solid rgba(20,17,15,0.15); background: #fff; cursor: pointer;
+      text-decoration: none; color: inherit;
+    }
+    button.primary { background: var(--accent); color: #fff; border-color: transparent; }
+    .foot { margin-top: 1rem; font-size: 0.78rem; color: var(--muted); }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .sheet { border: none; border-radius: 0; max-width: none; padding: 0; }
+      .actions { display: none; }
+      .hero { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <h1>ACCT 5105 · <span>Class Campaign</span> cast</h1>
+    <p class="sub">Projector / handout · dryer-floor story (shape only — not the student ticker) · open with the HTML game</p>
+
+    <img class="hero" src="assets/dryer-room.png" alt="Laundry room: open, running, and broken dryers priced in SLOT" />
+
+    <div class="grid">
+      <div class="card">
+        <div class="avatar ava">A</div>
+        <div>
+          <h2>Ava</h2>
+          <p>Classmate · holds SLOT</p>
+          <div class="say">“I’ll share my <strong>0x</strong> — never my seed.”</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="avatar ben">B</div>
+        <div>
+          <h2>Ben</h2>
+          <p>Classmate · trades · wrong-network risk</p>
+          <div class="say">“Check the top of MetaMask: <strong>Sepolia</strong>, not Mainnet.”</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="avatar cara">C</div>
+        <div>
+          <h2>Cara</h2>
+          <p>Stranger holder (not on your team)</p>
+          <div class="say">“If I hold your gift, that’s <strong>demo-day evidence</strong>.”</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="avatar team">T</div>
+        <div>
+          <h2>Team</h2>
+          <p>Minter / pauser (banker)</p>
+          <div class="say">“Only we print. Cap is the <strong>lid</strong>. Pause freezes transfers.”</div>
+        </div>
+      </div>
+      <div class="card" style="grid-column: 1 / -1">
+        <div class="avatar ra">R</div>
+        <div>
+          <h2>RA</h2>
+          <p>Floor desk · redemption · cold questions</p>
+          <div class="say">“Point to the registry address. What does the explorer prove — and what does it <strong>not</strong> prove?”</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tips">
+      <strong>RA tips for Monday (read aloud)</strong>
+      <ol>
+        <li>Green box on slides = click with me. This game = flight sim before Remix.</li>
+        <li>Address is public. Seed is secret. Mainnet is never.</li>
+        <li>Three alarms: lid, banker, freeze — then Colab S5.</li>
+        <li>Cap math must fit before Deploy. Premint = A2 cap.</li>
+        <li>Failed txs are points if you write the story. Invented 0x = zero.</li>
+      </ol>
+    </div>
+
+    <div class="actions">
+      <button class="primary" type="button" onclick="window.print()">Print cast sheet</button>
+      <a class="btn" href="class-campaign.html">Open the game</a>
+    </div>
+    <p class="foot">ACCT 5105 · open with the Class Campaign game · testnet story only</p>
+  </div>
+</body>
+</html>
