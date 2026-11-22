@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A3 — Deploy the coin and airdrop the roster (Module 3) · ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</title>
+<title>A3: Deploy the coin and airdrop the roster (Module 3) · ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</title>
 <link rel="stylesheet" href="../assets/course.css">
 </head>
 <body class="assign-paper">
@@ -21,19 +21,23 @@
     
     <article class="article" id="main">
       <p class="kicker">Assignment</p>
-      <h1 id="a3-deploy-the-coin-and-airdrop-the-roster-module-3">A3 — Deploy the coin and airdrop the roster (Module 3)</h1>
-<p><strong>In one sentence.</strong> Put the A2 rules on the class testnet and mail every roster address their coins. Failed transactions are normal — document one.</p>
-<div class="meta-grid"><div><strong><strong>Due</strong></strong><span>Wed Nov 25, 11:59 p.m.</span></div><div><strong><strong>Who</strong></strong><span>Team</span></div><div><strong><strong>Turn in</strong></strong><span>1-page runbook + evidence pack (screenshots OK)</span></div><div><strong><strong>Points</strong></strong><span>15 (gates)</span></div></div>
-<p><strong>Stuck?</strong> Handbook → Session 6. Class notebook S5 (dry-run) and S6 (live deploy). Use Remix + the OpenZeppelin ERC-20 wizard. You are <strong>not</strong> writing Solidity from scratch. Need the shape of a runbook? <a href="../examples/sample-a3-laundry.html">SAMPLE laundry runbook</a> — steal the headings and the failed-tx paragraph, not the dorm, and <strong>do not copy the example <code>0x</code></strong>.</p>
+      <h1 id="a3-deploy-the-coin-and-airdrop-the-roster-module-3">A3: Deploy the coin and airdrop the roster (Module 3)</h1>
+<p><strong>In one sentence.</strong> Put the A2 rules on the class testnet and mail every roster address their coins. Failed transactions are normal. Document one.</p>
+<p><strong>Practice on testnet (from here to Dec 14).</strong> Modules 1-2 gave you the words. Starting tonight you <strong>click</strong>: Remix + OpenZeppelin → MetaMask on Sepolia → explorer → class registry. Sitting and watching does not create a registry row. This coin is the <strong>product</strong> you show on Final Project day.</p>
+<div class="meta-grid"><div><strong><strong>Due</strong></strong><span>Mon Nov 30, 11:59 p.m.</span></div><div><strong><strong>Who</strong></strong><span>Team</span></div><div><strong><strong>Turn in</strong></strong><span><strong>PDF only</strong>: 1-page runbook + evidence pack (screenshots or explorer links OK). <strong>Do not</strong> submit a notebook or Colab file.</span></div><div><strong><strong>Points</strong></strong><span>15 (gates)</span></div></div>
+<p><strong>Tools (same as Module 3 class).</strong> Remix + OpenZeppelin ERC-20 wizard → class testnet (Sepolia or the board) → MetaMask → explorer (e.g. Sepolia Etherscan). You are <strong>not</strong> writing Solidity from scratch. Python / Colab is an <strong>optional</strong> ops helper so you can print a runbook draft. It is <strong>not</strong> the grade.</p>
+<p><strong>Stuck?</strong> Handbook → Session 6. Class notebooks S5 (dry-run) and S6 (live deploy). Need the shape of a runbook? <a href="../examples/sample-a3-laundry.html">SAMPLE laundry runbook</a>. Steal the headings and the failed-tx paragraph, not the dorm, and <strong>do not copy the example <code>0x</code></strong>.</p>
+<p><strong>Feeds the Final Project.</strong> Passport wants network + contract address on the registry, deploy/airdrop links, three classmate balances, one failed-tx story. Dec 14 proof 1 opens this same contract.</p>
 <h2 id="hard-rules">Hard rules</h2>
-<ul><li>Class testnet only (Sepolia or the instructor chain). <strong>No mainnet. No public sale.</strong></li><li>Do not put a seed phrase or private key in the PDF.</li></ul>
+<ul><li>Class testnet only (Sepolia or the instructor chain). <strong>No mainnet. No public sale.</strong></li><li>Do not put a seed phrase or private key in the PDF.</li><li>Practice in Session 5 (Remix VM) before Session 6 (live Sepolia). Live deploy only when I say go.</li></ul>
 <h2 id="five-tasks-in-order">Five tasks (in order)</h2>
-<ol><li>Dry-run on Remix’s fake chain in Session 5.</li><li>Deploy on the <strong>class</strong> testnet in Session 6, using the A2 table.</li><li>Verify the contract — or, if verify is down, screenshot the compiler settings.</li><li>Airdrop the A2 amount to <strong>every</strong> address on the posted roster.</li><li>Send the instructor the contract address for the class registry.</li></ol>
-<h2 id="runbook-1-page-5-8-numbered-lines">Runbook (1 page, 5–8 numbered lines)</h2>
+<ol><li>Dry-run on Remix’s fake chain in Session 5.</li><li>Deploy on the <strong>class</strong> testnet in Session 6, using the A2 table.</li><li>Verify the contract on the explorer : or, if verify is down, screenshot the Remix compiler settings.</li><li>Airdrop the A2 amount to <strong>every</strong> address on the posted roster.</li><li>Send the instructor the contract address for the class registry.</li></ol>
+<h2 id="runbook-1-page-5-8-numbered-lines">Runbook (1 page, 5-8 numbered lines)</h2>
 <p>A classmate who missed class should be able to find the contract, check a balance, and see who holds the admin keys.</p>
 <p>Must include: network name, contract address, token name/symbol, admin addresses, how to read a balance, what to do if a transaction sits forever (wrong network / no test ETH).</p>
 <h2 id="evidence-pack-appendix">Evidence pack (appendix)</h2>
-<ul><li>Deploy transaction hash</li><li>One mint or airdrop transaction hash</li><li>Balances of <strong>three</strong> classmates (address + amount)</li><li>Your treasury balance</li><li>Photo or export of your row on the class registry</li><li><strong>One failed transaction and the fix</strong> (empty faucet, wrong network, pause, cap). That paragraph is part of the grade.</li></ul>
+<p>Paste <strong>explorer links</strong> (preferred) and/or screenshots. Each hash or address must open on the class testnet explorer.</p>
+<ul><li>Deploy transaction hash (or explorer link)</li><li>One mint or airdrop transaction hash (or explorer link)</li><li>Balances of <strong>three</strong> classmates (address + amount; explorer token page OK)</li><li>Your treasury balance</li><li>Photo or export of your row on the class registry</li><li><strong>One failed transaction and the fix</strong> (empty faucet, wrong network, pause, cap). That paragraph is part of the grade.</li></ul>
 <p>If a teammate leaves, rotate the admin role in the memo. Never paste a seed.</p>
     </article>
   </div>

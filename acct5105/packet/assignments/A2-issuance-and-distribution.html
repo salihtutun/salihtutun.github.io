@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A2 — Issuance spec and distribution plan (Module 2) · ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</title>
+<title>A2 : Issuance spec and distribution plan (Module 2) · ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</title>
 <link rel="stylesheet" href="../assets/course.css">
 </head>
 <body class="assign-paper">
@@ -21,26 +21,26 @@
     
     <article class="article" id="main">
       <p class="kicker">Assignment</p>
-      <h1 id="a2-issuance-spec-and-distribution-plan-module-2">A2 — Issuance spec and distribution plan (Module 2)</h1>
+      <h1 id="a2-issuance-spec-and-distribution-plan-module-2">A2 : Issuance spec and distribution plan (Module 2)</h1>
 <p><strong>In one sentence.</strong> Freeze the house rules <em>on paper</em> before anyone opens Remix. A3 will type this table into the wizard (premint = your cap).</p>
-<div class="meta-grid"><div><strong><strong>Due</strong></strong><span>Fri Nov 20, 11:59 p.m. America/Chicago</span></div><div><strong><strong>Who</strong></strong><span>Team (1–3; same team as A1 when possible)</span></div><div><strong><strong>Turn in</strong></strong><span><strong>PDF</strong> on Canvas: ≤2 pages of prose + the parameter table (required)</span></div><div><strong><strong>Helper</strong></strong><span>Optional: Canvas <strong>A2 notebook / Colab</strong> — run the math cell so <code>planned ≤ cap</code> before you paste the table into the PDF</span></div><div><strong><strong>Points</strong></strong><span>10 (gates)</span></div></div>
-<p><strong>Stuck?</strong> <a href="../handbook.html#session-3-tiny-chain">Handbook → Session 3</a> (unbundle) and <a href="../handbook.html#session-5-smart-contracts">Session 5</a> (mint / cap / pause). Names must match <a href="../assignments/A1-coin-intent.html">A1</a>, or add a one-line changelog. Shape only: <a href="../examples/sample-a2-laundry.html">SAMPLE laundry A2</a> — steal headings, not SpinHour as your coin.</p>
+<div class="meta-grid"><div><strong><strong>Due</strong></strong><span>Fri Nov 20, 11:59 p.m. America/Chicago</span></div><div><strong><strong>Who</strong></strong><span>Team (1-3; same team as A1 when possible)</span></div><div><strong><strong>Turn in</strong></strong><span><strong>PDF only</strong> on Canvas: ≤2 pages of prose + the parameter table (required). Do <strong>not</strong> submit a notebook or Colab file.</span></div><div><strong><strong>Helper</strong></strong><span>Optional Colab (concept / math check so <code>planned ≤ cap</code>) : <strong>not</strong> the grade</span></div><div><strong><strong>Points</strong></strong><span>10 (gates)</span></div></div>
+<p><strong>Stuck?</strong> <a href="../handbook.html#session-3-tiny-chain">Handbook → Session 3</a> (unbundle) and <a href="../handbook.html#session-5-smart-contracts">Session 5</a> (mint / cap / pause). Names must match <a href="../assignments/A1-coin-intent.html">A1</a>, or add a one-line changelog. Shape only: <a href="../examples/sample-a2-laundry.html">SAMPLE laundry A2</a> : steal headings, not SpinHour as your coin.</p>
 <p><strong>Honor / closed notes.</strong> Do <strong>not</strong> paste this assignment into ChatGPT (or any AI) to write your lost-key sentence, method choice, or “why gift ≠ sale ≠ wage.” Class words only. AI for spelling is fine if you disclose one line at the end of the PDF.</p>
-<p><strong>Feeds Module 3.</strong> Session 5 freezes these roles out loud; Session 6 / <a href="../assignments/A3-deploy-and-airdrop.html">A3</a> deploy with <strong>this</strong> cap math. Final Project Evidence Passport will cite the same minter / pauser / cap.</p>
+<p><strong>Feeds Module 3.</strong> Session 5 freezes these roles out loud; Session 6 / <a href="../assignments/A3-deploy-and-airdrop.html">A3</a> deploy with <strong>this</strong> cap math on the <strong>class testnet</strong>. From Module 3 forward you <strong>practice every week</strong> on Sepolia (or the board). No mainnet. The same coin becomes the Dec 14 product. Final Project Evidence Passport will cite the same minter / pauser / cap.</p>
 <h2 id="you-will-not">You will not</h2>
-<ul><li>deploy anything yet (Remix live is Session 6 / A3)</li><li>invent Solidity</li><li>leave the math so airdrop × N + pool + treasury <strong>exceeds</strong> the cap</li><li>paste a seed phrase into the PDF</li><li>“fix” a bad plan by secretly raising the cap after A1 promised a lid</li></ul>
+<ul><li>deploy anything yet (Remix live is Session 6 / A3, <strong>testnet only</strong>)</li><li>invent Solidity</li><li>leave the math so airdrop × N + pool + treasury <strong>exceeds</strong> the cap</li><li>paste a seed phrase into the PDF</li><li>“fix” a bad plan by secretly raising the cap after A1 promised a lid</li></ul>
 <h2 id="board-this-inequality">Board this inequality</h2>
 <p>\[ \text{airdrop}\times N + \text{pool} + \text{treasury} \le \textbf{cap} \]</p>
 <p>Cap ≠ pause. Cap stops <em>minting</em> past the lid. Pause freezes <em>transfers</em>. Name both jobs.</p>
-<h2 id="part-1-rules-1-page">Part 1 — Rules (≈1 page)</h2>
+<h2 id="part-1-rules-1-page">Part 1 : Rules (≈1 page)</h2>
 <p>Write in issuance language, not slogans.</p>
-<ol><li><strong>Minter</strong> — Which role (or wallet) may create new units? What happens if that key is lost?</li><li><strong>Cap</strong> — The numeric max supply (or write “uncapped” and why that is dangerous in a class system). This number is what A3 will use as <strong>premint</strong> in the OpenZeppelin wizard (there is no separate cap box).</li><li><strong>Burn / redeem</strong> — Who may destroy units, and does that retire a real-world promise?</li><li><strong>Pause</strong> — Who may freeze transfers, under what written trigger?</li><li><strong>Decimals</strong> — 18 (usual on Ethereum) or 0 (like paper vouchers). One sentence on why.</li></ol>
-<h2 id="part-2-who-gets-coins-1-page">Part 2 — Who gets coins (≈1 page)</h2>
+<ol><li><strong>Minter</strong> : Which role (or wallet) may create new units? What happens if that key is lost?</li><li><strong>Cap</strong> : The numeric max supply (or write “uncapped” and why that is dangerous in a class system). This number is what A3 will use as <strong>premint</strong> in the OpenZeppelin wizard (there is no separate cap box).</li><li><strong>Burn / redeem</strong> : Who may destroy units, and does that retire a real-world promise?</li><li><strong>Pause</strong> : Who may freeze transfers, under what written trigger?</li><li><strong>Decimals</strong> : 18 (usual on Ethereum) or 0 (like paper vouchers). One sentence on why.</li></ol>
+<h2 id="part-2-who-gets-coins-1-page">Part 2 : Who gets coins (≈1 page)</h2>
 <p>Choose <strong>one</strong> primary method: <strong>airdrop</strong> (gift), <strong>sale</strong> for CLASSUSD, or <strong>earn</strong>. Then fill:</p>
 <ul><li>Amount each roster address gets at the start</li><li>Amount reserved for the TEAM / CLASSUSD pool (you need this in A4)</li><li>Amount reserved for the team treasury</li><li>May any classmate hold and transfer? Any restriction?</li><li>Why this method is <strong>not</strong> the same financial object as the two you rejected (gift ≠ ticket booth ≠ paycheck)</li></ul>
-<h2 id="parameter-table-required-copy-into-the-pdf">Parameter table (required — copy into the PDF)</h2>
+<h2 id="parameter-table-required-copy-into-the-pdf">Parameter table (required : copy into the PDF)</h2>
 <table><thead><tr><th>Parameter</th><th>Value</th></tr></thead><tbody><tr><td>Name</td><td></td></tr><tr><td>Symbol</td><td></td></tr><tr><td>Decimals</td><td></td></tr><tr><td>Cap</td><td></td></tr><tr><td>Owner / minter / pauser</td><td></td></tr><tr><td>Lost-key plan (one sentence)</td><td></td></tr><tr><td>Primary method (airdrop / sale / earn)</td><td></td></tr><tr><td>Airdrop per roster address</td><td></td></tr><tr><td>Roster size <span class="math">N</span> (count the class list)</td><td></td></tr><tr><td>Pool reserve (TEAM + CLASSUSD)</td><td></td></tr><tr><td>Treasury</td><td></td></tr><tr><td>Planned mint (<span class="math">N\times</span> airdrop + pool + treasury)</td><td></td></tr><tr><td>Fits cap? (yes/no)</td><td></td></tr></tbody></table>
-<p><strong>Check before you submit:</strong> planned mint ≤ cap. If no, shrink airdrop or pool — do not invent a larger lid unless the whole team rewrites Part 1.</p>
+<p><strong>Check before you submit:</strong> planned mint ≤ cap. If no, shrink airdrop or pool : do not invent a larger lid unless the whole team rewrites Part 1.</p>
 <h2 id="rubric-snapshot-10-pts">Rubric snapshot (10 pts)</h2>
 <table><thead><tr><th></th><th>Pts</th></tr></thead><tbody><tr><td>Minter, cap, burn, pause, decimals all filled</td><td>4</td></tr><tr><td>Lost-key sentence</td><td>1</td></tr><tr><td>Distribution math adds up</td><td>3</td></tr><tr><td>Why the chosen method is a different financial object</td><td>2</td></tr></tbody></table>
     </article>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A5 — Claim, redemption, and class netting (Module 5) · ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</title>
+<title>A5: Claim, redemption, and class netting (Module 5) · ACCT 5105-01 - Financial Reporting &amp; Assurance in a Blockchain World</title>
 <link rel="stylesheet" href="../assets/course.css">
 </head>
 <body class="assign-paper">
@@ -21,18 +21,29 @@
     
     <article class="article" id="main">
       <p class="kicker">Assignment</p>
-      <h1 id="a5-claim-redemption-and-class-netting-module-5">A5 — Claim, redemption, and class netting (Module 5)</h1>
-<p><strong>In one sentence.</strong> Say what the token stands for, honor one redemption in the room, then erase a triangle of IOUs on paper.</p>
-<div class="meta-grid"><div><strong><strong>Due</strong></strong><span>Wed Dec 9, 11:59 p.m.</span></div><div><strong><strong>Who</strong></strong><span>Team</span></div><div><strong><strong>Turn in</strong></strong><span>2 pages + a netting table</span></div><div><strong><strong>Points</strong></strong><span>10 (gates)</span></div></div>
-<p><strong>Stuck?</strong> Handbook → Sessions 9–10 (coat-check vs the coat; money flower; the $10 triangle). If the class has no real cycle, use the instructor’s 4-team example and label it “instructor example.” Need the shape? <a href="../examples/sample-a5-laundry.html">SAMPLE laundry claim + netting</a> — steal the honesty, not the dorm.</p>
-<h2 id="part-1-what-is-the-coin-a-claim-on-1-page">Part 1 — What is the coin a claim on? (1 page)</h2>
+      <h1 id="a5-claim-redemption-and-class-netting-module-5">A5: Claim, redemption, and class netting (Module 5)</h1>
+<p><strong>In one sentence.</strong> Say what the token stands for, honor one redemption in the room (on-chain stub + off-chain honor), then erase a triangle of IOUs on paper and settle what is left.</p>
+<p><strong>Practice on testnet.</strong> Burn or transfer the stub on Sepolia, then honor the coat / cookie / minutes in the room. Assurers in finance separate what the chain proves from what still needs off-chain evidence. Practice that split tonight.</p>
+<div class="meta-grid"><div><strong><strong>Due</strong></strong><span>Wed Dec 9, 11:59 p.m.</span></div><div><strong><strong>Who</strong></strong><span>Team</span></div><div><strong><strong>Turn in</strong></strong><span><strong>PDF</strong>: 2 pages + a netting table. Do <strong>not</strong> submit a notebook or Colab file.</span></div><div><strong><strong>Helper</strong></strong><span>Optional Colab / S09-S10 for classify + matrix math. Not the grade.</span></div><div><strong><strong>Points</strong></strong><span>10 (gates)</span></div></div>
+<p><strong>Tools (same stack).</strong> MetaMask on Sepolia · Remix (<strong>Injected Provider</strong>, registry <code>0x</code> via <strong>At Address</strong>) · Sepolia Etherscan · class registry. Redemption still needs a <strong>human</strong> who honors the coat, cookie, or minutes. The explorer proves the stub moved. It does not put a coat in the closet.</p>
+<p><strong>Stuck?</strong> Handbook → Sessions 9-10 (coat-check vs the coat; money flower; the $10 triangle). If the class has no real cycle, use the instructor’s example and label it “instructor example.” Need the shape? <a href="../examples/sample-a5-laundry.html">SAMPLE laundry claim + netting</a>. Steal the honesty, not the dorm.</p>
+<p><strong>Feeds the Final Project.</strong> Passport wants a claim vs receipt sentence, redemption evidence (hash and/or handoff), and who must honor if the team ghosts. Live demo proof 4 is a transfer <strong>and</strong> a redemption.</p>
+<h2 id="hard-rules">Hard rules</h2>
+<ul><li>Class testnet only. <strong>No mainnet.</strong></li><li>Do not put a seed phrase in the PDF.</li><li>CLASSUSD is the instructor’s chip. It is <strong>not</strong> a CBDC. Say that if the word appears.</li><li>“It’s on-chain so it’s backed” scores zero. Name who honors off-chain.</li></ul>
+<h2 id="go-together-session-9-redemption">Go together (Session 9 redemption)</h2>
+<ol><li>Holder shows MetaMask or explorer balance for the <strong>registry</strong> token.</li><li>Desk states the rule in one sentence (slot, cookie, minutes, voucher).</li><li>Burn or transfer the redeem amount in Remix. MetaMask on Sepolia.</li><li>Tx hash → Sepolia Etherscan → your A5 / passport row.</li><li>Honor off-chain: stamp, handoff, photo, or signed sheet. Log failures honestly.</li></ol>
+<h2 id="part-1-what-is-the-coin-a-claim-on-1-page">Part 1: What is the coin a claim on? (1 page)</h2>
 <p>Write so a careful reader could understand the object.</p>
-<ol><li>Is the token <strong>the thing itself</strong>, or a <strong>receipt</strong> (coat-check stub) for something off-chain?</li><li><strong>Redemption:</strong> who honors it, in what (CLASSUSD, a cookie, minutes, nothing), within what time.</li><li><strong>If the team disappears:</strong> what do holders actually have? Be honest (often: a PDF, not a court claim).</li><li><strong>Atomic vs fail:</strong> one sentence on how a pool swap (both sides or neither) differs from “I sent TEAM, you forgot the notes.”</li></ol>
-<p>In Session 9 you must <strong>honor one redemption</strong> in the room. Record the tx hash or a photo of the handoff.</p>
-<h2 id="part-2-obligation-matrix-1-page-table">Part 2 — Obligation matrix (1 page + table)</h2>
-<p>Use <strong>real</strong> Module 4 trades if you have them.</p>
-<ol><li>Matrix: rows = who owes, columns = who is owed, cells = CLASSUSD-equivalent.</li><li>Find one <strong>cycle</strong> and erase it (if Ava, Ben, and Cara each owe 10 around the triangle, you need <strong>zero</strong> payments).</li><li>Write what is left after the erase. (If Ava owed 15 instead of 10, leftover is Ava → Ben = 5.)</li><li>One paragraph: would a public digital dollar (CBDC-like) help this class or crowd out team coins? Pick a side.</li></ol>
-<p>CLASSUSD is the instructor’s chip. It is <strong>not</strong> a CBDC.</p>
+<ol><li>Is the token <strong>the thing itself</strong>, or a <strong>receipt</strong> (coat-check stub) for something off-chain?</li><li><strong>Redemption:</strong> who honors it, in what (CLASSUSD, a cookie, minutes, nothing), within what time.</li><li><strong>If the team disappears:</strong> what do holders actually have? Be honest (often: a PDF and a grade problem, not a court claim).</li><li><strong>Atomic vs fail:</strong> one sentence on how a pool swap (both sides or neither) differs from “I sent TEAM, you forgot the notes.”</li></ol>
+<p>In Session 9 you must <strong>honor one redemption</strong> in the room. Record the tx hash <strong>and/or</strong> a photo of the handoff. Two proofs beat one slogan: explorer hash + honor evidence.</p>
+<h2 id="part-2-obligation-matrix-1-page-table">Part 2: Obligation matrix (1 page + table)</h2>
+<p>Use <strong>real</strong> Module 4 trades if you have them. If not, label the triangle <strong>instructor example</strong>.</p>
+<ol><li>Matrix: rows = who owes, columns = who is owed, cells = CLASSUSD-equivalent.</li><li>Find one <strong>cycle</strong> and erase it (if Ava, Ben, and Cara each owe 10 around the triangle, you need <strong>zero</strong> payments for those 10s).</li><li>Write what is left after the erase. (If Ava owed 15 instead of 10, leftover is Ava → Ben = 5.)</li><li>Name how the leftover settles (CLASSUSD rail, TEAM, or another class rail you can point to).</li><li>One paragraph: would a public digital dollar (CBDC-like) help this class or crowd out team coins? Pick a side. CLASSUSD is still <strong>not</strong> a CBDC.</li></ol>
+<p>Netting saves rails. It does not make uneven promises disappear.</p>
+<h2 id="evidence-pack-what-i-open-when-i-grade">Evidence pack (what I open when I grade)</h2>
+<ul><li>One clear claim vs receipt (or “the thing”) sentence</li><li>Named honorer + time window</li><li>Honest “if we disappear” line</li><li>Atomic vs fail sentence</li><li>In-room redemption evidence (hash and/or photo / signed row)</li><li>Netting table: before, erase amount, after, leftover settlement rail</li><li>CBDC paragraph that never calls CLASSUSD a CBDC</li></ul>
+<h2 id="this-would-fail-do-not-write-this">This would fail (do not write this)</h2>
+<ul><li>“It’s on-chain so it’s backed”</li><li>No in-room redemption (and no honest fail log)</li><li>Triangle with no erase</li><li>Calling CLASSUSD a CBDC</li><li>“We will figure it out” as the redemption policy</li></ul>
     </article>
   </div>
 </div>
